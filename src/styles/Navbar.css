@@ -1,0 +1,80 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 40px; /* Убедись, что картинка загружается */
+  margin-right: 15px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}
+
+.nav-links li {
+  cursor: pointer;
+  color: blue;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.language-dropdown {
+  color: black; /* Цвет текста */
+  background-color: white; /* Чтобы не сливалось */
+  border: 1px solid #ccc; /* Для видимости */
+  padding: 5px;
+}
+
+
+.language-selector {
+  position: absolute; /* Или relative */
+  right: 20px; /* Смести левее, если нужно */
+  top: 50%;
+  transform: translateY(-50%);
+  padding-right: 10px; /* Добавляем отступ справа */
+}
+
+.language-switcher {
+  position: relative; /* Добавляем относительное позиционирование */
+}
+
+.dropdown-menu {
+  position: absolute;
+  right: 0;
+  top: 100%; /* Смещаем меню ниже кнопки */
+  background: white;
+  border: 1px solid #ccc;
+  list-style: none;
+  padding: 5px;
+  display: block;
+  min-width: 120px; /* Добавляем минимальную ширину */
+}
+
+.dropdown-menu li {
+  padding: 5px;
+  cursor: pointer;
+}
+
+.dropdown-menu li:hover {
+  background: #f0f0f0;
+}
