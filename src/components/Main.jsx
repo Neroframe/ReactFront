@@ -11,7 +11,7 @@ function Main() {
           </div>
         </div>
       </div>
-      <section className="container">
+      <section className="section-container">
         <div className="">
           <h1>Tech lessons for positive futures</h1>
           <p>The lasting value of a team tech challenge</p>
