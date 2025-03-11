@@ -1,12 +1,11 @@
-import Navbar from "./Navbar";
-import Hero from "./Hero";
-import "./App.css";
+import React from "react";
+import Navbar from "./Navbar"; 
 
 function App() {
   return (
-    <div className="app">
+    <div>
       <Navbar />
-      <Hero />
+      <h1>Welcome to the website</h1>
     </div>
   );
 }
