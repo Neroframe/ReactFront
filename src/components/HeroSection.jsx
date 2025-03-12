@@ -5,8 +5,8 @@ function HeroSection() {
     <div className="hero">
       <div className="hero-content-wrapper">
         <div className="hero-content">
-          <h1>The B2B pulse</h1>
-          <p>Top six expectations of telecom’s business customers</p>
+          <h1>Shielded Networks</h1>
+          <p>Best shield from cyber atacks on your company</p>
         </div>
       </div>
     </div>
