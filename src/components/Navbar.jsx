@@ -1,21 +1,19 @@
 import React, { useState } from "react";
+import { NavLink } from "react-router-dom";
 import "../styles/Navbar.css";
 
-// Функция для кнопки навигации
-const NavButton = ({ text }) => (
+const NavButton = ({ to, text }) => (
   <li className="nav-item">
-    <a href="#" className="nav-link">
+    <NavLink to={to} className="nav-link" activeclassname="active">
       {text}
-    </a>
+    </NavLink>
   </li>
 );
 
-// Функция для логотипа
 const Logo = () => {
   return <img src="/src/assets/logo.jpg" alt="Logo" className="logo" />;
 };
 
-// Компонент переключения языка
 const LanguageSwitcher = () => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -29,19 +27,19 @@ const LanguageSwitcher = () => {
       {isOpen && (
         <ul className="dropdown-menu show">
           <li>
-            <a className="dropdown-item" href="#">
+            <NavLink className="dropdown-item" to="#">
               Қазақша
-            </a>
+            </NavLink>
           </li>
           <li>
-            <a className="dropdown-item" href="#">
+            <NavLink className="dropdown-item" to="#">
               Русский
-            </a>
+            </NavLink>
           </li>
           <li>
-            <a className="dropdown-item" href="#">
+            <NavLink className="dropdown-item" to="#">
               English
-            </a>
+            </NavLink>
           </li>
         </ul>
       )}
@@ -49,12 +47,13 @@ const LanguageSwitcher = () => {
   );
 };
 
-// Основной компонент Navbar
 const Navbar = () => {
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-white fixed-top">
       <div className="container">
-        <Logo />
+        <NavLink to="/" className="navbar-brand">
+          <Logo />
+        </NavLink>
         <button
           className="navbar-toggler"
           type="button"
@@ -64,19 +63,17 @@ const Navbar = () => {
           <span className="navbar-toggler-icon"></span>
         </button>
         <div className="collapse navbar-collapse" id="navbarNav">
-          {/* Левая группа кнопок */}
           <ul className="navbar-nav me-auto">
-            {["Insights", "Industries", "Services", "Careers", "News"].map(
-              (item) => (
-                <NavButton key={item} text={item} />
-              )
-            )}
+            <NavButton to="/insights" text="Insights" />
+            <NavButton to="/industries" text="Industries" />
+            <NavButton to="/services" text="Services" />
+            <NavButton to="/careers" text="Careers" />
+            <NavButton to="/news" text="News" />
           </ul>
-          {/* Правая группа кнопок */}
           <ul className="navbar-nav ms-auto">
-            {["About us", "Contact us", "Investors"].map((item) => (
-              <NavButton key={item} text={item} />
-            ))}
+            <NavButton to="/about" text="About" />
+            <NavButton to="/contact" text="Contact" />
+            <NavButton to="/investors" text="Investors" />
           </ul>
           <LanguageSwitcher />
         </div>
