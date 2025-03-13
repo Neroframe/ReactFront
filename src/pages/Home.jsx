@@ -17,7 +17,7 @@ function Home() {
       <GridSection
         title="Strategic Security Consulting"
         text="Expert advice on cybersecurity strategies, policy implementation, and compliance with GDPR, HIPAA, and other regulations."
-        link="#"
+        link="/LayerOne"
         image={pic1}
       />
 

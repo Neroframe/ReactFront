@@ -11,12 +11,14 @@ import Services from "./pages/Services";
 import RequestPage from "./pages/RequestPage"; // Импортируем страницу
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
+import LayerOne from "./pages/LayerOne";
 
 function App() {
   return (
     <Router>
       <Navbar />
       <Routes>
+        {/* Navbar */}
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/Faces" element={<Careers />} />
@@ -25,7 +27,9 @@ function App() {
         <Route path="/investors" element={<Investors />} />
         <Route path="/news" element={<News />} />
         <Route path="/services" element={<Services />} />
-        <Route path="/request" element={<RequestPage />} /> {/* Добавил маршрут */}
+        <Route path="/request" element={<RequestPage />} />
+        {/* Layering */}
+        <Route path="/LayerOne" element={<LayerOne />} />
       </Routes>
     </Router>
   );

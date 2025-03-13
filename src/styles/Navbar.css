@@ -38,15 +38,12 @@
   gap: 15px;
 }
 
-
-
 .language-dropdown {
   color: black; /* Цвет текста */
   background-color: white; /* Чтобы не сливалось */
   border: 1px solid #ccc; /* Для видимости */
   padding: 5px;
 }
-
 
 .language-selector {
   position: absolute; /* Или relative */
@@ -100,4 +97,3 @@
   background-color: darkred;
   border-color: darkred;
 }
-
