@@ -38,6 +38,8 @@
   gap: 15px;
 }
 
+
+
 .language-dropdown {
   color: black; /* Цвет текста */
   background-color: white; /* Чтобы не сливалось */
@@ -78,3 +80,24 @@
 .dropdown-menu li:hover {
   background: #f0f0f0;
 }
+
+.navbar-title {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+
+.btn-danger {
+  font-weight: bold;
+  padding: 8px 16px;
+  background-color: red;
+  border-color: red;
+}
+
+.btn-danger:hover {
+  background-color: darkred;
+  border-color: darkred;
+}
+

@@ -1,7 +1,7 @@
 .hero {
   display: flex;
   height: 100vh;
-  background-image: url(../assets/bg.jpg);
+  background-image: url(../assets/bg.png);
   background-size: cover;
   box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2);
 }
@@ -32,8 +32,8 @@
   box-shadow: 0 25px 100px 0 rgba(0, 0, 0, 0.15), 0 2px 4px 0 rgba(0, 0, 0, 0.5);
   background-image: linear-gradient(
     244deg,
-    rgba(0, 123, 189, 0.9),
-    rgba(0, 63, 97, 0.9)
+    rgba(255, 255, 255, 0.9),
+    rgba(210, 0, 0, 0.9)
   );
   overflow: hidden;
   position: relative;

@@ -14,6 +14,8 @@ const Logo = () => {
   return <img src="/src/assets/logo.jpg" alt="Logo" className="logo" />;
 };
 
+
+
 const LanguageSwitcher = () => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -50,6 +52,8 @@ const LanguageSwitcher = () => {
 const Navbar = () => {
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-white fixed-top">
+      <div className="navbar-title mx-auto fw-bold fs-4">Shielded Networks</div>
+
       <div className="container">
         <NavLink to="/" className="navbar-brand">
           <Logo />
@@ -64,18 +68,22 @@ const Navbar = () => {
         </button>
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav me-auto">
-            <NavButton to="/insights" text="Insights" />
-            <NavButton to="/industries" text="Industries" />
-            <NavButton to="/services" text="Services" />
-            <NavButton to="/careers" text="Careers" />
-            <NavButton to="/news" text="News" />
+            <NavButton to="/insights" text="Проекты" />
+            <NavButton to="/services" text="Услуги" />
+            <NavButton to="/Faces" text="Лица" />
+            <NavButton to="/news" text="Статьи" />
           </ul>
           <ul className="navbar-nav ms-auto">
-            <NavButton to="/about" text="About" />
-            <NavButton to="/contact" text="Contact" />
-            <NavButton to="/investors" text="Investors" />
+            <NavButton to="/about" text="О компании" />
+            <NavButton to="/contact" text="Контакты" />
+            <NavButton to="/investors" text="Партнеры" />
           </ul>
-          <LanguageSwitcher />
+          <NavLink to="/request" className="btn btn-danger ms-3">
+            Оставить заявку
+          </NavLink>
+          <div className="ms-3">
+            <LanguageSwitcher />
+          </div>
         </div>
       </div>
     </nav>

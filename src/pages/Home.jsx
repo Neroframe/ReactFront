@@ -2,11 +2,11 @@ import GridSection from "../components/GridSection";
 import HeroSection from "../components/HeroSection";
 
 import pic1 from "../assets/pic1.jpg";
-import pic2 from "../assets/pic2.png";
+import pic2 from "../assets/pic2.jpg";
 import pic3 from "../assets/pic3.jpg";
-import pic4 from "../assets/pic4.png";
+import pic4 from "../assets/pic4.jpg";
 import pic5 from "../assets/pic5.jpg";
-import pic6 from "../assets/pic6.jpeg";
+import pic6 from "../assets/pic6.jpg";
 
 function Home() {
   return (
