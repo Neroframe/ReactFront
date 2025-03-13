@@ -68,7 +68,7 @@
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(10, 1fr);
+  grid-template-columns: repeat(20, 1fr);
 
   /* border: 5px solid red; */
   margin: 0 auto;
@@ -83,7 +83,7 @@
 }
 
 .image {
-  grid-column: 7/-1;
+  grid-column: 13/-1;
 
   height: 300px;
   width: 100%;
@@ -94,7 +94,7 @@
 }
 
 .grid-content {
-  grid-column: 1/8;
+  grid-column: 1/14;
   align-self: center;
 
   background: white;
@@ -107,11 +107,11 @@
 
 /* Reverse Layout */
 .grid.reverse .image {
-  grid-column: 1/5;
+  grid-column: 1/8;
 }
 
 .grid.reverse .grid-content {
-  grid-column: 4/-1;
+  grid-column: 7/-1;
 }
 
 /* box content */
