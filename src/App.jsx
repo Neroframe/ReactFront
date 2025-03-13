@@ -10,27 +10,30 @@ import News from "./pages/News";
 import Services from "./pages/Services";
 import RequestPage from "./pages/RequestPage"; // Импортируем страницу
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-
+import Footer from "./components/Footer";
 import LayerOne from "./pages/LayerOne";
 
 function App() {
   return (
     <Router>
-      <Navbar />
-      <Routes>
-        {/* Navbar */}
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/Faces" element={<Careers />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/insights" element={<Insights />} />
-        <Route path="/investors" element={<Investors />} />
-        <Route path="/news" element={<News />} />
-        <Route path="/services" element={<Services />} />
-        <Route path="/request" element={<RequestPage />} />
-        {/* Layering */}
-        <Route path="/LayerOne" element={<LayerOne />} />
-      </Routes>
+      <div className="app-container">
+        <Navbar />
+        <Routes>
+          {/* Navbar */}
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/Faces" element={<Careers />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/insights" element={<Insights />} />
+          <Route path="/investors" element={<Investors />} />
+          <Route path="/news" element={<News />} />
+          <Route path="/services" element={<Services />} />
+          <Route path="/request" element={<RequestPage />} />
+          {/* Layering */}
+          <Route path="/LayerOne" element={<LayerOne />} />
+        </Routes>
+        <Footer />
+      </div>
     </Router>
   );
 }
