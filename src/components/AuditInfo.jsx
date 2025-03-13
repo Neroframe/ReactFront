@@ -2,7 +2,7 @@ import { useState } from "react";
 import "../styles/AuditInfo.css"; 
 
 function AuditInfo() {
-  const [selected, setSelected] = useState(null);
+  const [selected, setSelected] = useState("hardware");
 
   const content = {
     hardware: (
