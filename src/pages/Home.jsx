@@ -25,7 +25,7 @@ function Home() {
       <GridSection
         title="Security Assessment & Penetration Testing"
         text="Comprehensive audits, penetration testing, and vulnerability management to strengthen your security posture."
-        link="#"
+        link="/LayerTwo"
         image={pic2}
         reverse={true}
       />
@@ -34,7 +34,7 @@ function Home() {
       <GridSection
         title="Security Awareness & Mobile Protection"
         text="Employee training, mobile security measures, and phishing resistance testing to improve cybersecurity awareness."
-        link="#"
+        link="/LayerThree"
         image={pic3}
       />
 
@@ -42,7 +42,7 @@ function Home() {
       <GridSection
         title="Endpoint & Access Security"
         text="Endpoint protection, identity access management, and real-time intrusion detection to safeguard critical systems."
-        link="#"
+        link="/LayerFour"
         image={pic4}
         reverse={true}
       />
@@ -51,7 +51,7 @@ function Home() {
       <GridSection
         title="Business Continuity & Risk Management"
         text="Disaster recovery, risk management, and forensic analysis to ensure long-term business resilience."
-        link="#"
+        link="/LayerFive"
         image={pic5}
       />
 
@@ -59,7 +59,7 @@ function Home() {
       <GridSection
         title="Secure Development & IoT Security"
         text="Application security audits, IoT device protection, and secure IT architecture planning."
-        link="#"
+        link="/LayerSix"
         image={pic6}
         reverse={true}
       />

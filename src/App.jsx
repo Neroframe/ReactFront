@@ -12,6 +12,11 @@ import RequestPage from "./pages/RequestPage"; // Импортируем стр�
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Footer from "./components/Footer";
 import LayerOne from "./pages/LayerOne";
+import LayerTwo from "./pages/LayerTwo";
+import LayerThree from "./pages/LayerThree";
+import LayerFour from "./pages/LayerFour";
+import LayerFive from "./pages/LayerFive";
+import LayerSix from "./pages/LayerSix";
 
 function App() {
   return (
@@ -31,6 +36,11 @@ function App() {
           <Route path="/request" element={<RequestPage />} />
           {/* Layering */}
           <Route path="/LayerOne" element={<LayerOne />} />
+          <Route path="/LayerTwo" element={<LayerTwo />} />
+          <Route path="/LayerThree" element={<LayerThree />} />
+          <Route path="/LayerFour" element={<LayerFour />} />
+          <Route path="/LayerFive" element={<LayerFive />} />
+          <Route path="/LayerSix" element={<LayerSix />} />
         </Routes>
         <Footer />
       </div>
