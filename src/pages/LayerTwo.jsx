@@ -6,32 +6,46 @@ import "../styles/LayerOne.css";
 function LayerOne() {
   const auditSections = [
     {
-      key: "hardware",
-      title: "Hardware",
+      key: "identification",
+      title: "Идентивикация уязвимостей",
       content: (
         <p>
-          <strong>Hardware Audit:</strong> Evaluates the efficiency and security
-          of physical IT assets.
+          <strong>Идентификация уязвимостей</strong>  
+          <br></br>  
+          <br></br>  
+          <br></br>  
+          <ul>Регулярное сканирование систем на предмет слабых мест.</ul>  
+          <ul>Анализ текущего уровня защиты от вредоносного ПО, программ-вымогателей и фишинга.</ul>  
+          <ul>Приоритизация рисков по степени вероятности их эксплуатации.</ul>  
         </p>
       ),
     },
     {
-      key: "software",
-      title: "Software",
+      key: "pen testing",
+      title: "Pen testing",
       content: (
         <p>
-          <strong>Software Audit:</strong> Ensures compliance and efficiency in
-          software applications.
+          <strong>Тестирование на проникновение (Pen Testing)</strong>  
+          <br></br>  
+          <br></br>  
+          <br></br>  
+          <ul>Симуляция атак для выявления слабых мест.</ul>  
+          <ul>Подробные отчёты с путями атак и рекомендациями.</ul>  
+          <ul>Улучшение безопасности на основе результатов тестирования.</ul>  
         </p>
       ),
     },
     {
-      key: "network",
-      title: "Network",
+      key: "test",
+      title: "Проверка соответствия требованиям",
       content: (
         <p>
-          <strong>Network Audit:</strong> Reviews network security,
-          configuration, and performance.
+          <strong>Проверка соответствия требованиям</strong>  
+          <br></br>  
+          <br></br>  
+          <br></br>  
+          <ul>Обеспечиваем соответствие таким стандартам, как ISO 27001, GDPR, HIPAA, а также внутренним политикам безопасности.</ul>  
+
         </p>
       ),
     },
@@ -40,11 +54,10 @@ function LayerOne() {
   return (
     <div className="navbar-fix">
       <AuditSection
-        title="IT-аудит"
+        title="Аудит информационной безопасности"
         paragraphs={[
-          "IT-аудит проводится с целью определения эффективности использования ресурсов, оценки безопасности и надежности систем, а также для установления соответствия политикам и стандартам компании и промышленным стандартам.",
-          "Аудит ИТ-инфраструктуры может быть проведен внутренними или внешними аудиторами и обычно завершается отчетом, который включает рекомендации по улучшению операций ИТ.",
-          "Аудит ИТ-инфраструктуры - это важный инструмент для обеспечения непрерывной работы бизнес-процессов, снижения рисков, связанных с IT, и оптимизации затрат на IT.",
+          "Аудит включает проверку систем на уязвимости и соответствие стандартам.",
+          "Мы проводим тестирование на проникновение для выявления слабых мест и управления уязвимостями."
         ]}
         imageURL={pic1}
         imageAlt="audit"

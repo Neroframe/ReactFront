@@ -6,32 +6,49 @@ import "../styles/LayerOne.css";
 function LayerOne() {
   const auditSections = [
     {
-      key: "hardware",
-      title: "Hardware",
+      key: "monitoring",
+      title: "Мониторинг и защита устройств",
       content: (
         <p>
-          <strong>Hardware Audit:</strong> Evaluates the efficiency and security
-          of physical IT assets.
+          <strong>Мониторинг и защита устройств</strong>  
+          <br></br>  
+          <br></br>  
+          <br></br>  
+          <ul>Отслеживание всех устройств в сети.</ul>  
+          <ul>Централизованное управление безопасностью.</ul>  
+          <ul>Предотвращение атак в режиме реального времени.</ul>  
+
         </p>
       ),
     },
     {
-      key: "software",
-      title: "Software",
+      key: "usage",
+      title: "Управление доступом и идентификацией",
       content: (
         <p>
-          <strong>Software Audit:</strong> Ensures compliance and efficiency in
-          software applications.
+          <strong>Управление доступом и идентификацией</strong>  
+          <br></br>  
+          <br></br>  
+          <br></br>  
+          <ul>Ограничение доступа по ролям.</ul>  
+          <ul>Двухфакторная аутентификация.</ul>  
+          <ul>Шифрование данных.</ul>  
         </p>
       ),
     },
     {
-      key: "network",
-      title: "Network",
+      key: "incidents",
+      title: "Выявление и реагирование на инциденты",
       content: (
         <p>
-          <strong>Network Audit:</strong> Reviews network security,
-          configuration, and performance.
+          <strong>Выявление и реагирование на инциденты</strong>  
+          <br></br>  
+          <br></br>  
+          <br></br>  
+          <ul>Системы IDS/IPS для обнаружения атак.</ul>  
+          <ul>Автоматизированные инструменты реагирования.</ul>  
+          <ul>Оповещения в реальном времени.</ul>  
+
         </p>
       ),
     },
@@ -40,11 +57,9 @@ function LayerOne() {
   return (
     <div className="navbar-fix">
       <AuditSection
-        title="IT-аудит"
+        title="Защита конечных устройств (Endpoint Security)"
         paragraphs={[
-          "IT-аудит проводится с целью определения эффективности использования ресурсов, оценки безопасности и надежности систем, а также для установления соответствия политикам и стандартам компании и промышленным стандартам.",
-          "Аудит ИТ-инфраструктуры может быть проведен внутренними или внешними аудиторами и обычно завершается отчетом, который включает рекомендации по улучшению операций ИТ.",
-          "Аудит ИТ-инфраструктуры - это важный инструмент для обеспечения непрерывной работы бизнес-процессов, снижения рисков, связанных с IT, и оптимизации затрат на IT.",
+          "Мы управляем и защищаем все конечные устройства организации (ПК, мобильные устройства, серверы)."
         ]}
         imageURL={pic1}
         imageAlt="audit"

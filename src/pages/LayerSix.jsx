@@ -6,32 +6,49 @@ import "../styles/LayerOne.css";
 function LayerOne() {
   const auditSections = [
     {
-      key: "hardware",
-      title: "Hardware",
+      key: "sageLifeCycle",
+      title: "SDLC",
       content: (
         <p>
-          <strong>Hardware Audit:</strong> Evaluates the efficiency and security
-          of physical IT assets.
+          <strong>Безопасный жизненный цикл разработки ПО (SDLC)</strong>  
+          <br></br>  
+          <br></br>  
+          <br></br>  
+          <ul>Интеграция безопасности на всех этапах разработки.</ul>  
+          <ul>Использование безопасных методов кодирования.</ul>  
+          <ul>Моделирование угроз.</ul>  
         </p>
       ),
     },
     {
       key: "software",
-      title: "Software",
+      title: "Аудиты кода",
       content: (
         <p>
-          <strong>Software Audit:</strong> Ensures compliance and efficiency in
-          software applications.
+          <strong>Аудиты кода и оценка уязвимостей</strong>  
+          <br></br>  
+          <br></br>  
+          <br></br>  
+          <ul>Статический анализ кода (SAST).</ul>  
+          <ul>Динамическое тестирование безопасности (DAST).</ul>  
+          <ul>Автоматизированные и ручные проверки.</ul>  
+
         </p>
       ),
     },
     {
       key: "network",
-      title: "Network",
+      title: "Обуччение разработчиков безопасному кодированию",
       content: (
         <p>
-          <strong>Network Audit:</strong> Reviews network security,
-          configuration, and performance.
+          <strong>Обучение разработчиков безопасному кодированию</strong>  
+          <br></br>  
+          <br></br>  
+          <br></br>  
+          <ul>Практические воркшопы по безопасному кодированию.</ul>  
+          <ul>Обучение по стандартам OWASP Top 10.</ul>  
+          <ul>Внедрение DevSecOps-практик.</ul>  
+
         </p>
       ),
     },
@@ -40,11 +57,9 @@ function LayerOne() {
   return (
     <div className="navbar-fix">
       <AuditSection
-        title="IT-аудит"
+        title="Безопасность разработки приложений"
         paragraphs={[
-          "IT-аудит проводится с целью определения эффективности использования ресурсов, оценки безопасности и надежности систем, а также для установления соответствия политикам и стандартам компании и промышленным стандартам.",
-          "Аудит ИТ-инфраструктуры может быть проведен внутренними или внешними аудиторами и обычно завершается отчетом, который включает рекомендации по улучшению операций ИТ.",
-          "Аудит ИТ-инфраструктуры - это важный инструмент для обеспечения непрерывной работы бизнес-процессов, снижения рисков, связанных с IT, и оптимизации затрат на IT.",
+          "Мы проверяем и улучшаем безопасность ПО, обучаем разработчиков безопасному кодированию и защищаем IoT-устройства."
         ]}
         imageURL={pic1}
         imageAlt="audit"

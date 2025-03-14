@@ -6,32 +6,49 @@ import "../styles/LayerOne.css";
 function LayerOne() {
   const auditSections = [
     {
-      key: "hardware",
-      title: "Hardware",
+      key: "risks",
+      title: "Оценка рисков",
       content: (
         <p>
-          <strong>Hardware Audit:</strong> Evaluates the efficiency and security
-          of physical IT assets.
+          <strong>Оценка рисков</strong>  
+          <br></br>  
+          <br></br>  
+          <br></br>  
+          <ul>Анализ потенциальных угроз (кибератаки, природные катастрофы и т. д.).</ul>  
+          <ul>Оценка влияния инцидентов на бизнес.</ul>  
+          <ul>Разработка стратегии минимизации рисков.</ul>  
+
         </p>
       ),
     },
     {
-      key: "software",
-      title: "Software",
+      key: "developmentStrategies",
+      title: "Разработка стратегий непрерывности бизнеса",
       content: (
         <p>
-          <strong>Software Audit:</strong> Ensures compliance and efficiency in
-          software applications.
+          <strong>Разработка стратегии непрерывности бизнеса</strong>  
+          <br></br>  
+          <br></br>  
+          <br></br>  
+          <ul>Обеспечение работы критически важных сервисов.</ul>  
+          <ul>Возможность удалённой работы сотрудников в экстренных ситуациях.</ul>  
+          <ul>Создание резервных копий данных.</ul>  
+
         </p>
       ),
     },
     {
-      key: "network",
-      title: "Network",
+      key: "recovery",
+      title: "Восстановление после сбоев",
       content: (
         <p>
-          <strong>Network Audit:</strong> Reviews network security,
-          configuration, and performance.
+          <strong>Восстановление после сбоев</strong>  
+          <br></br>  
+          <br></br>  
+          <br></br>  
+          <ul>Настройка регулярного резервного копирования.</ul>  
+          <ul>Планирование допустимого времени восстановления.</ul>  
+          <ul>Облачные решения для быстрого восстановления данных.</ul>  
         </p>
       ),
     },
@@ -40,11 +57,9 @@ function LayerOne() {
   return (
     <div className="navbar-fix">
       <AuditSection
-        title="IT-аудит"
+        title="Планирование обеспечения непрерывности бизнеса (BCDR)"
         paragraphs={[
-          "IT-аудит проводится с целью определения эффективности использования ресурсов, оценки безопасности и надежности систем, а также для установления соответствия политикам и стандартам компании и промышленным стандартам.",
-          "Аудит ИТ-инфраструктуры может быть проведен внутренними или внешними аудиторами и обычно завершается отчетом, который включает рекомендации по улучшению операций ИТ.",
-          "Аудит ИТ-инфраструктуры - это важный инструмент для обеспечения непрерывной работы бизнес-процессов, снижения рисков, связанных с IT, и оптимизации затрат на IT.",
+          "Разрабатываем стратегии для минимизации простоев после атак и кризисных ситуаций."
         ]}
         imageURL={pic1}
         imageAlt="audit"

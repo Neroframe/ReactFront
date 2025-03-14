@@ -6,32 +6,49 @@ import "../styles/LayerOne.css";
 function LayerOne() {
   const auditSections = [
     {
-      key: "hardware",
-      title: "Hardware",
+      key: "certification",
+      title: "Сертификация",
       content: (
         <p>
-          <strong>Hardware Audit:</strong> Evaluates the efficiency and security
-          of physical IT assets.
+          <strong>Сертификация в области кибербезопасности</strong>  
+          <br></br>  
+          <br></br>  
+          <br></br>  
+          <ul>Интерактивные сессии по реальным угрозам.</ul>  
+          <ul>Обучение, адаптированное к вашей отрасли.</ul>  
+          <ul>Постоянное обновление программ с учётом новых угроз.</ul>  
+
         </p>
       ),
     },
     {
-      key: "software",
-      title: "Software",
+      key: "phishing",
+      title: "Фишинговые симуляции",
       content: (
         <p>
-          <strong>Software Audit:</strong> Ensures compliance and efficiency in
-          software applications.
+          <strong>Фишинговые симуляции</strong>  
+            <br></br>  
+            <br></br>  
+            <br></br>  
+            <ul>Создание реалистичных фишинговых писем.</ul>  
+            <ul>Анализ реакции сотрудников и выявление проблемных мест.</ul>  
+            <ul>Персонализированная обратная связь.</ul>  
+
+
         </p>
       ),
     },
     {
-      key: "network",
-      title: "Network",
+      key: "mobile",
+      title: "Защита мобильных устройств",
       content: (
         <p>
-          <strong>Network Audit:</strong> Reviews network security,
-          configuration, and performance.
+         <strong>Защита мобильных устройств</strong>  
+        <br></br>  
+        <br></br>  
+        <br></br>  
+        <ul>Обучение по защите корпоративных и личных мобильных устройств.</ul>  
+
         </p>
       ),
     },
@@ -40,11 +57,10 @@ function LayerOne() {
   return (
     <div className="navbar-fix">
       <AuditSection
-        title="IT-аудит"
+        title="Проведение тренингов и семинаров"
         paragraphs={[
-          "IT-аудит проводится с целью определения эффективности использования ресурсов, оценки безопасности и надежности систем, а также для установления соответствия политикам и стандартам компании и промышленным стандартам.",
-          "Аудит ИТ-инфраструктуры может быть проведен внутренними или внешними аудиторами и обычно завершается отчетом, который включает рекомендации по улучшению операций ИТ.",
-          "Аудит ИТ-инфраструктуры - это важный инструмент для обеспечения непрерывной работы бизнес-процессов, снижения рисков, связанных с IT, и оптимизации затрат на IT.",
+          "Мы организуем курсы и семинары по кибербезопасности, помогаем в получении ",
+          "профессиональных сертификатов и разрабатываем меры защиты мобильных устройств."
         ]}
         imageURL={pic1}
         imageAlt="audit"
