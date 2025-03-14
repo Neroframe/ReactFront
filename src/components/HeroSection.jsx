@@ -6,7 +6,7 @@ function HeroSection() {
       <div className="hero-content-wrapper">
         <div className="hero-content">
           <h1>Shielded Networks</h1>
-          <p>Best shield from cyber atacks on your company</p>
+          <p>Лучший щит от кибер атак на вашу компанию</p>
         </div>
       </div>
     </div>

@@ -16,15 +16,15 @@ function Home() {
       {/* 1st Layer - Strategic Security Consulting */}
       <GridSection
         title="Strategic Security Consulting"
-        text="Expert advice on cybersecurity strategies, policy implementation, and compliance with GDPR, HIPAA, and other regulations."
+        text="Экспертные советы по стратегиям кибербезопасности, внедрению политик и соблюдению требований GDPR, HIPAA и других нормативов."
         link="/LayerOne"
         image={pic1}
       />
 
       {/* 2nd Layer - Security Assessment & Penetration Testing (Reversed) */}
       <GridSection
-        title="Security Assessment & Penetration Testing"
-        text="Comprehensive audits, penetration testing, and vulnerability management to strengthen your security posture."
+        title="Оценка безопасности и тестирование на проникновение"
+        text="Комплексные аудиты, тестирование на проникновение и управление уязвимостями для усиления вашей системы безопасности."
         link="/LayerTwo"
         image={pic2}
         reverse={true}
@@ -32,16 +32,16 @@ function Home() {
 
       {/* 3rd Layer - Security Awareness & Mobile Protection */}
       <GridSection
-        title="Security Awareness & Mobile Protection"
-        text="Employee training, mobile security measures, and phishing resistance testing to improve cybersecurity awareness."
+        title="Обучение безопасности и защита мобильных устройств"
+        text="Обучение сотрудников, меры по обеспечению мобильной безопасности и тестирование устойчивости к фишинговым атакам для повышения осведомленности в сфере кибербезопасности."
         link="/LayerThree"
         image={pic3}
       />
 
       {/* 4th Layer - Endpoint & Access Security (Reversed) */}
       <GridSection
-        title="Endpoint & Access Security"
-        text="Endpoint protection, identity access management, and real-time intrusion detection to safeguard critical systems."
+        title="Защита конечных устройств и управление доступом"
+        text="Защита конечных устройств, управление доступом и система обнаружения вторжений в режиме реального времени для защиты критически важных систем."
         link="/LayerFour"
         image={pic4}
         reverse={true}
@@ -49,16 +49,16 @@ function Home() {
 
       {/* 5th Layer - Business Continuity & Risk Management */}
       <GridSection
-        title="Business Continuity & Risk Management"
-        text="Disaster recovery, risk management, and forensic analysis to ensure long-term business resilience."
+        title="Непрерывность бизнеса и управление рисками"
+        text="Восстановление после сбоев, управление рисками и судебная экспертиза для обеспечения долгосрочной устойчивости бизнеса."
         link="/LayerFive"
         image={pic5}
       />
 
       {/* 6th Layer - Secure Development & IoT Security (Reversed) */}
       <GridSection
-        title="Secure Development & IoT Security"
-        text="Application security audits, IoT device protection, and secure IT architecture planning."
+        title="Безопасная разработка и защита IoT"
+        text="Аудиты безопасности приложений, защита устройств IoT и планирование безопасной IT-архитектуры."
         link="/LayerSix"
         image={pic6}
         reverse={true}
