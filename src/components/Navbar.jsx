@@ -70,7 +70,6 @@ const Navbar = () => {
           <ul className="navbar-nav me-auto">
             <NavButton to="/insights" text="Проекты" />
             <NavButton to="/services" text="Услуги" />
-            <NavButton to="/Faces" text="Лица" />
             <NavButton to="/news" text="Статьи" />  
           </ul>
           <ul className="navbar-nav ms-auto">
