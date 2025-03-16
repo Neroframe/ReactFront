@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import { NavLink, useLocation } from "react-router-dom";
+import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import "../styles/Navbar.css";
 
-const NavButton = ({ to, text, scrollToTop }) => (
+const NavButton = ({ to, text, onClick }) => (
   <li className="nav-item">
-    <NavLink to={to} className="nav-link" activeclassname="active" onClick={scrollToTop}>
+    <NavLink to={to} className="nav-link" activeclassname="active" onClick={onClick}>
       {text}
     </NavLink>
   </li>
@@ -26,21 +26,9 @@ const LanguageSwitcher = () => {
       <button className="btn btn-dark">🌍</button>
       {isOpen && (
         <ul className="dropdown-menu show">
-          <li>
-            <NavLink className="dropdown-item" to="#">
-              Қазақша
-            </NavLink>
-          </li>
-          <li>
-            <NavLink className="dropdown-item" to="#">
-              Русский
-            </NavLink>
-          </li>
-          <li>
-            <NavLink className="dropdown-item" to="#">
-              English
-            </NavLink>
-          </li>
+          <li><NavLink className="dropdown-item" to="#">Қазақша</NavLink></li>
+          <li><NavLink className="dropdown-item" to="#">Русский</NavLink></li>
+          <li><NavLink className="dropdown-item" to="#">English</NavLink></li>
         </ul>
       )}
     </div>
@@ -48,10 +36,21 @@ const LanguageSwitcher = () => {
 };
 
 const Navbar = () => {
-  const location = useLocation(); // Получаем текущий маршрут
+  const location = useLocation();
+  const navigate = useNavigate();
 
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" }); // Плавная прокрутка вверх
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
+  const handleServicesClick = (e) => {
+    e.preventDefault();
+    
+    if (location.pathname !== "/") {
+      navigate("/", { state: { scrollToServices: true } });
+    } else {
+      document.getElementById("services-section")?.scrollIntoView({ behavior: "smooth" });
+    }
   };
 
   return (
@@ -76,14 +75,14 @@ const Navbar = () => {
         </button>
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav me-auto">
-            <NavButton to="/insights" text="Проекты" scrollToTop={scrollToTop} />
-            <NavButton to="/services" text="Услуги" scrollToTop={scrollToTop} />
-            <NavButton to="/news" text="Статьи" scrollToTop={scrollToTop} />
+            <NavButton to="/insights" text="Проекты" onClick={scrollToTop} />
+            <NavButton to="/" text="Услуги" onClick={handleServicesClick} />
+            <NavButton to="/news" text="Статьи" onClick={scrollToTop} />
           </ul>
           <ul className="navbar-nav ms-auto">
-            <NavButton to="/about" text="О компании" scrollToTop={scrollToTop} />
-            <NavButton to="/contact" text="Контакты" scrollToTop={scrollToTop} />
-            <NavButton to="/investors" text="Партнеры" scrollToTop={scrollToTop} />
+            <NavButton to="/about" text="О компании" onClick={scrollToTop} />
+            <NavButton to="/contact" text="Контакты" onClick={scrollToTop} />
+            <NavButton to="/investors" text="Партнеры" onClick={scrollToTop} />
           </ul>
           <NavLink to="/request" className="btn btn-danger ms-3" onClick={scrollToTop}>
             Оставить заявку
