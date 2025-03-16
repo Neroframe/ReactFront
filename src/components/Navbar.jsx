@@ -52,7 +52,11 @@ const LanguageSwitcher = () => {
 const Navbar = () => {
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-white fixed-top">
-      <div className="navbar-title mx-auto fw-bold fs-4">Shielded Networks</div>
+      <div className="navbar-title mx-auto fw-bold fs-4">
+        <NavLink to="/" className="text-decoration-none text-dark">
+          Shielded Networks
+        </NavLink>
+      </div>
 
       <div className="container">
         <NavLink to="/" className="navbar-brand">
@@ -70,7 +74,7 @@ const Navbar = () => {
           <ul className="navbar-nav me-auto">
             <NavButton to="/insights" text="Проекты" />
             <NavButton to="/services" text="Услуги" />
-            <NavButton to="/news" text="Статьи" />  
+            <NavButton to="/news" text="Статьи" />
           </ul>
           <ul className="navbar-nav ms-auto">
             <NavButton to="/about" text="О компании" />
@@ -88,5 +92,6 @@ const Navbar = () => {
     </nav>
   );
 };
+
 
 export default Navbar;
