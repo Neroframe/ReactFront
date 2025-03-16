@@ -1,28 +1,21 @@
 .stats-section {
-    max-width: 1200px; /* Сделай такую же ширину, как у GridSection */
-    margin: 0 auto; /* Центрирование */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  
-  .stat-item {
-    text-align: center;
-  }
-  
-  .stat-icon {
-    font-size: 40px;
-    color: #007bff; /* Цвет иконок */
-  }
-  
-  h2 {
-    margin: 10px 0;
-    font-size: 24px;
-  }
-  
-  p {
-    font-size: 16px;
-    color: #666;
-  }
-  
+  max-width: 1200px; /* Сделай такую же ширину, как у GridSection */
+  margin: 0 auto; /* Центрирование */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.stat-item {
+  text-align: center;
+}
+
+.stat-icon {
+  font-size: 40px;
+  color: #007bff; /* Цвет иконок */
+}
+
+h2 {
+  margin: 10px 0;
+  font-size: 24px;
+}

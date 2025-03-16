@@ -14,8 +14,6 @@ const Logo = () => {
   return <img src="/src/assets/logo.jpg" alt="Logo" className="logo" />;
 };
 
-
-
 const LanguageSwitcher = () => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -92,6 +90,5 @@ const Navbar = () => {
     </nav>
   );
 };
-
 
 export default Navbar;

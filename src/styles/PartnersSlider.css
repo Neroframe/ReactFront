@@ -1,0 +1,89 @@
+.partners-slider-section {
+  text-align: center;
+  padding: 50px 0;
+  background-color: #fff;
+  position: relative;
+}
+
+.partners-heading {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #222;
+}
+
+.slider-container {
+  position: relative;
+  background: #407bff;
+  border-radius: 20px;
+  width: 80%;
+  margin: auto;
+}
+
+.testimonial-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+  max-width: 900px;
+  margin: auto;
+  padding: 30px;
+}
+
+.testimonial-content {
+  display: flex;
+  align-items: center;
+  color: #fff;
+}
+
+.testimonial-logo {
+  flex: 1;
+  text-align: center;
+}
+
+.testimonial-logo img {
+  max-width: 200px;
+  height: auto;
+}
+
+.testimonial-text {
+  flex: 2;
+  padding-left: 30px;
+}
+
+.quote {
+  font-size: 18px;
+  line-height: 1.5;
+  font-style: italic;
+}
+
+.author {
+  margin-top: 10px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* Custom Arrows */
+.slick-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+  z-index: 10;
+  background: transparent;
+  border: none;
+}
+
+.slick-prev {
+  left: -60px;
+}
+
+.slick-next {
+  right: -60px;
+}
+
+.slick-arrow:hover {
+  color: #ddd;
+}
