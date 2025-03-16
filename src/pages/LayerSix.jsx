@@ -2,6 +2,7 @@ import AuditSection from "../components/TextBox";
 import InfoCard from "../components/AuditInfo";
 import pic1 from "../assets/pic1.jpg";
 import "../styles/LayerOne.css";
+import LayerInfo from "../components/LayerInfo";
 
 function LayerOne() {
   const auditSections = [
@@ -10,13 +11,13 @@ function LayerOne() {
       title: "SDLC",
       content: (
         <p>
-          <strong>Безопасный жизненный цикл разработки ПО (SDLC)</strong>  
-          <br></br>  
-          <br></br>  
-          <br></br>  
-          <ul>Интеграция безопасности на всех этапах разработки.</ul>  
-          <ul>Использование безопасных методов кодирования.</ul>  
-          <ul>Моделирование угроз.</ul>  
+          <strong>Безопасный жизненный цикл разработки ПО (SDLC)</strong>
+          <br></br>
+          <br></br>
+          <br></br>
+          <ul>Интеграция безопасности на всех этапах разработки.</ul>
+          <ul>Использование безопасных методов кодирования.</ul>
+          <ul>Моделирование угроз.</ul>
         </p>
       ),
     },
@@ -25,14 +26,13 @@ function LayerOne() {
       title: "Аудиты кода",
       content: (
         <p>
-          <strong>Аудиты кода и оценка уязвимостей</strong>  
-          <br></br>  
-          <br></br>  
-          <br></br>  
-          <ul>Статический анализ кода (SAST).</ul>  
-          <ul>Динамическое тестирование безопасности (DAST).</ul>  
-          <ul>Автоматизированные и ручные проверки.</ul>  
-
+          <strong>Аудиты кода и оценка уязвимостей</strong>
+          <br></br>
+          <br></br>
+          <br></br>
+          <ul>Статический анализ кода (SAST).</ul>
+          <ul>Динамическое тестирование безопасности (DAST).</ul>
+          <ul>Автоматизированные и ручные проверки.</ul>
         </p>
       ),
     },
@@ -41,25 +41,33 @@ function LayerOne() {
       title: "Обуччение разработчиков безопасному кодированию",
       content: (
         <p>
-          <strong>Обучение разработчиков безопасному кодированию</strong>  
-          <br></br>  
-          <br></br>  
-          <br></br>  
-          <ul>Практические воркшопы по безопасному кодированию.</ul>  
-          <ul>Обучение по стандартам OWASP Top 10.</ul>  
-          <ul>Внедрение DevSecOps-практик.</ul>  
-
+          <strong>Обучение разработчиков безопасному кодированию</strong>
+          <br></br>
+          <br></br>
+          <br></br>
+          <ul>Практические воркшопы по безопасному кодированию.</ul>
+          <ul>Обучение по стандартам OWASP Top 10.</ul>
+          <ul>Внедрение DevSecOps-практик.</ul>
         </p>
       ),
     },
   ];
 
   return (
-    <div className="navbar-fix">
+    <div>
+      <LayerInfo
+        title="Аудит ИТ-инфраструктуры"
+        backgroundImage="https://inova.kz/wp-content/uploads/2023/05/wall_4_3-1.png"
+        breadcrumbs={[
+          { label: "Главная", link: "/" },
+          { label: "Услуги", link: "/" },
+          { label: "Аудит ИТ-инфраструктуры" },
+        ]}
+      />
       <AuditSection
         title="Безопасность разработки приложений"
         paragraphs={[
-          "Мы проверяем и улучшаем безопасность ПО, обучаем разработчиков безопасному кодированию и защищаем IoT-устройства."
+          "Мы проверяем и улучшаем безопасность ПО, обучаем разработчиков безопасному кодированию и защищаем IoT-устройства.",
         ]}
         imageURL={pic1}
         imageAlt="audit"
