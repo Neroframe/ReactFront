@@ -1,17 +1,17 @@
 import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import "../styles/Navbar.css";
 
-const NavButton = ({ to, text }) => (
+const NavButton = ({ to, text, scrollToTop }) => (
   <li className="nav-item">
-    <NavLink to={to} className="nav-link" activeclassname="active">
+    <NavLink to={to} className="nav-link" activeclassname="active" onClick={scrollToTop}>
       {text}
     </NavLink>
   </li>
 );
 
-const Logo = () => {
-  return <img src="/src/assets/logo.jpg" alt="Logo" className="logo" />;
+const Logo = ({ scrollToTop }) => {
+  return <img src="/src/assets/logo.jpg" alt="Logo" className="logo" onClick={scrollToTop} />;
 };
 
 const LanguageSwitcher = () => {
@@ -48,17 +48,23 @@ const LanguageSwitcher = () => {
 };
 
 const Navbar = () => {
+  const location = useLocation(); // Получаем текущий маршрут
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" }); // Плавная прокрутка вверх
+  };
+
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-white fixed-top">
       <div className="navbar-title mx-auto fw-bold fs-4">
-        <NavLink to="/" className="text-decoration-none text-dark">
+        <NavLink to="/" className="text-decoration-none text-dark" onClick={scrollToTop}>
           Shielded Networks
         </NavLink>
       </div>
 
       <div className="container">
-        <NavLink to="/" className="navbar-brand">
-          <Logo />
+        <NavLink to="/" className="navbar-brand" onClick={scrollToTop}>
+          <Logo scrollToTop={scrollToTop} />
         </NavLink>
         <button
           className="navbar-toggler"
@@ -70,16 +76,16 @@ const Navbar = () => {
         </button>
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav me-auto">
-            <NavButton to="/insights" text="Проекты" />
-            <NavButton to="/services" text="Услуги" />
-            <NavButton to="/news" text="Статьи" />
+            <NavButton to="/insights" text="Проекты" scrollToTop={scrollToTop} />
+            <NavButton to="/services" text="Услуги" scrollToTop={scrollToTop} />
+            <NavButton to="/news" text="Статьи" scrollToTop={scrollToTop} />
           </ul>
           <ul className="navbar-nav ms-auto">
-            <NavButton to="/about" text="О компании" />
-            <NavButton to="/contact" text="Контакты" />
-            <NavButton to="/investors" text="Партнеры" />
+            <NavButton to="/about" text="О компании" scrollToTop={scrollToTop} />
+            <NavButton to="/contact" text="Контакты" scrollToTop={scrollToTop} />
+            <NavButton to="/investors" text="Партнеры" scrollToTop={scrollToTop} />
           </ul>
-          <NavLink to="/request" className="btn btn-danger ms-3">
+          <NavLink to="/request" className="btn btn-danger ms-3" onClick={scrollToTop}>
             Оставить заявку
           </NavLink>
           <div className="ms-3">
