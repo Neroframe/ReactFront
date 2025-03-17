@@ -1,0 +1,69 @@
+.partners-grid {
+  margin-top: 100px;
+  padding-bottom: 40px;
+}
+
+.partners-grid h2 {
+  font-weight: bold;
+  color: #333;
+}
+
+.partners-grid p {
+  color: #666;
+}
+
+.partner-card {
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 260px; /* Fixed height to prevent layout shifts */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+}
+
+/* Logo area */
+.partner-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 150px;
+}
+
+/* Logo image with a smooth hover effect */
+.partner-logo img {
+  max-width: 80%;
+  max-height: 80%;
+  transition: transform 0.3s ease;
+}
+
+.partner-card:hover .partner-logo img {
+  transform: scale(1.1);
+}
+
+/* The description slides up on hover */
+.partner-description {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(255, 255, 255, 0.95);
+  color: #333;
+  padding: 12px;
+  text-align: center;
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+}
+
+/* Reveal the description smoothly */
+.partner-card:hover .partner-description {
+  transform: translateY(0);
+}
+
+/* Optional: Card hover lift effect */
+.partner-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}

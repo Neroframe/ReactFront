@@ -20,6 +20,8 @@ import LayerFour from "./pages/LayerFour";
 import LayerFive from "./pages/LayerFive";
 import LayerSix from "./pages/LayerSix";
 
+import Partners from "./pages/PartnersPage";
+
 function App() {
   return (
     <Router>
@@ -44,6 +46,8 @@ function App() {
           <Route path="/LayerFour" element={<LayerFour />} />
           <Route path="/LayerFive" element={<LayerFive />} />
           <Route path="/LayerSix" element={<LayerSix />} />
+
+          <Route path="/partners" element={<Partners />} />
         </Routes>
         <Footer />
       </div>
