@@ -16,7 +16,8 @@ const projects = [
   },
   {
     title: "Обучение сотрудников крупного предприятия",
-    description: "Создание программы по повышению осведомленности в сфере кибербезопасности.",
+    description:
+      "Создание программы по повышению осведомленности в сфере кибербезопасности.",
     image: "/path/to/project3.jpg",
     link: "/projects/security-training",
   },
@@ -31,11 +32,13 @@ const projects = [
 const testimonials = [
   {
     name: "Алексей Иванов, CEO FinTechCorp",
-    feedback: "Сотрудничество с этой компанией повысило уровень безопасности наших финансовых систем.",
+    feedback:
+      "Сотрудничество с этой компанией повысило уровень безопасности наших финансовых систем.",
   },
   {
     name: "Мария Козлова, Директор IT-департамента",
-    feedback: "Профессионалы в своем деле, помогли защитить данные и обучить сотрудников.",
+    feedback:
+      "Профессионалы в своем деле, помогли защитить данные и обучить сотрудников.",
   },
 ];
 
@@ -44,13 +47,20 @@ const Projects = () => {
     <div className="projects-page">
       <header className="projects-header">
         <h1>Наши проекты</h1>
-        <p>Мы помогаем компаниям защитить их данные, улучшить инфраструктуру и реагировать на инциденты.</p>
+        <p>
+          Мы помогаем компаниям защитить их данные, улучшить инфраструктуру и
+          реагировать на инциденты.
+        </p>
       </header>
 
       <div className="projects-grid">
         {projects.map((project, index) => (
           <a href={project.link} className="project-card" key={index}>
-            <img src={project.image} alt={project.title} className="project-image" />
+            <img
+              src={project.image}
+              alt={project.title}
+              className="project-image"
+            />
             <div className="project-content">
               <h2>{project.title}</h2>
               <p>{project.description}</p>
