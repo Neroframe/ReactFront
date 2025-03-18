@@ -38,7 +38,7 @@ const About = () => {
 
       {/* Раздел "Наша команда" */}
       <section className="about-team">
-        <h2>Наша команда</h2>
+        <h2>Лица компании</h2>
         <div className="team-grid">
           <div className="team-member">
             <img src="/src/assets/team/adilet.jpg" alt="Асылжан" />
