@@ -1,56 +1,32 @@
 .articles {
-    padding: 50px 20px;
-    text-align: center;
-    color: rgb(246, 55, 55);
-}
-
-h1 {
-    font-size: 42px;
-    text-shadow: 2px 2px 4px black;
-}
-
-.subtitle {
-    font-size: 20px;
-    margin-bottom: 30px;
-    color: rgba(10, 10, 10, 0.8);
-}
-
-.articles-container {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
+  max-width: 80%;
+  margin: auto;
+  padding: 150px 30px;
 }
 
 .article-card {
-    background: rgba(255, 255, 255, 0.1);
-    padding: 20px;
-    border-radius: 10px;
-    width: 300px;
-    text-align: center;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
 }
 
-.article-card h2 {
-    font-size: 22px;
-    margin-bottom: 10px;
+.article-card:hover {
+  transform: translateY(-5px);
 }
 
-.article-card p {
-    font-size: 16px;
+.article-title img {
+  min-height: 55px;
+  width: 50px;
+  height: auto;
 }
 
-.article-card a {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 10px;
-    background: red;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: 0.3s;
+.article-title h3 {
+  font-size: 1.2rem;
+  font-weight: bold;
 }
 
-.article-card a:hover {
-    background: darkred;
+.article-description {
+  color: #555;
+  font-size: 1rem;
 }

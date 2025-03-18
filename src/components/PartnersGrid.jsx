@@ -52,7 +52,7 @@ const PartnersGrid = () => {
     <div className="partners-grid">
       <div className="justify-content-center">
         <Col xs={12} className="text-center">
-          <h2 className="display-4 fw-bold">OНаши партнеры</h2>
+          <h2 className="display-4 fw-bold">Наши партнеры</h2>
           <p className="lead text-muted">
             Мы гордо сотрудичаем с лидерами индустрии, чтобы продвигать как можно больше инноваций.
           </p>
