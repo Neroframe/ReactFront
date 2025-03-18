@@ -9,7 +9,7 @@
   
   /* Заголовок страницы */
   .contact-header {
-    background: linear-gradient(135deg, #1e1e1e, #343a40);
+    background: linear-gradient(135deg, #6c0606, red);
     color: white;
     padding: 50px;
     border-radius: 10px;
@@ -75,7 +75,7 @@
   
   .social-links a {
     text-decoration: none;
-    background: #007bff;
+    background: red;
     color: white;
     padding: 10px 20px;
     border-radius: 5px;
@@ -83,7 +83,7 @@
   }
   
   .social-links a:hover {
-    background: #0056b3;
+    background: red;
   }
   
   /* Форма обратной связи */
@@ -119,7 +119,7 @@
   }
   
   .contact-form button {
-    background: #007bff;
+    background: red;
     color: white;
     padding: 10px;
     font-size: 18px;
@@ -129,7 +129,7 @@
   }
   
   .contact-form button:hover {
-    background: #0056b3;
+    background: red;
   }
   
   /* Адаптивность */
