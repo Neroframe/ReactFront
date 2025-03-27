@@ -1,6 +1,7 @@
 import GridSection from "../components/GridSection";
 import HeroSection from "../components/HeroSection";
 import PartnersSlider from "../components/PartnersSlider";
+import StatsSection from "../components/StatsSection";
 import pic1 from "../assets/pic1.jpg";
 import pic2 from "../assets/pic2.jpg";
 import pic3 from "../assets/pic3.jpg";
@@ -63,7 +64,7 @@ function Home() {
         image={pic6}
         reverse={true}
       />
-
+      <StatsSection/>
       <PartnersSlider />
     </div>
     
