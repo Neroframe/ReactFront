@@ -38,7 +38,7 @@ const Contact = () => {
 
       {/* Форма обратной связи */}
       <section className="contact-form">
-        <h2>💬 Оставьте нам сообщение</h2>
+        <h2> Оставьте нам сообщение</h2>
         <form>
           <input type="text" placeholder="Ваше имя" required />
           <input type="email" placeholder="Ваш Email" required />

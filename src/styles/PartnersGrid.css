@@ -5,11 +5,11 @@
 
 .partners-grid h2 {
   font-weight: bold;
-  color: #333;
+  color: #ff0000;
 }
 
 .partners-grid p {
-  color: #666;
+  color: #ae0b0b;
 }
 
 .partner-card {
@@ -19,7 +19,7 @@
   position: relative;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   height: 260px; /* Fixed height to prevent layout shifts */
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 6px rgba(249, 0, 0, 0.1);
   padding: 20px;
   text-align: center;
 }

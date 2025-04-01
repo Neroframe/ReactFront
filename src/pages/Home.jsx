@@ -1,31 +1,18 @@
-import { useEffect } from "react";
-import { useLocation } from "react-router-dom";
 import GridSection from "../components/GridSection";
 import HeroSection from "../components/HeroSection";
 import PartnersSlider from "../components/PartnersSlider";
-
 import pic1 from "../assets/pic1.jpg";
 import pic2 from "../assets/pic2.jpg";
 import pic3 from "../assets/pic3.jpg";
 import pic4 from "../assets/pic4.jpg";
 import pic5 from "../assets/pic5.jpg";
 import pic6 from "../assets/pic6.jpg";
-import StatsSection from "../components/StatsSection";
 
 function Home() {
-  const location = useLocation();
-
-  useEffect(() => {
-    if (location.state?.scrollToServices) {
-      document.getElementById("services-section")?.scrollIntoView({ behavior: "smooth" });
-    }
-  }, [location]);
-
   return (
     <div>
       <HeroSection />
 
-      {/* Блок с услугами (добавлен id для скролла) */}
       <div id="services-section">
         {/* 1st Layer - Strategic Security Consulting */}
         <GridSection
@@ -34,7 +21,6 @@ function Home() {
           link="/LayerOne"
           image={pic1}
         />
-
         {/* 2nd Layer - Security Assessment & Penetration Testing (Reversed) */}
         <GridSection
           title="Оценка безопасности и тестирование на проникновение"
@@ -79,7 +65,6 @@ function Home() {
         />
       </div>
 
-      <StatsSection />
       <PartnersSlider />
     </div>
   );
