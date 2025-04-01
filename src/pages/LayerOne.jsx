@@ -89,7 +89,6 @@ function LayerOne() {
         title="Аудит ИТ-инфраструктуры"
         backgroundImage="https://inova.kz/wp-content/uploads/2023/05/wall_4_3-1.png"
         breadcrumbs={[
-          { label: "Главная", link: "/" },
           { label: "Услуги", link: "/" },
           { label: "Аудит ИТ-инфраструктуры" },
         ]}

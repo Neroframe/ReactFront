@@ -29,7 +29,7 @@ function Home() {
       <div id="services-section">
         {/* 1st Layer - Strategic Security Consulting */}
         <GridSection
-          title="Strategic Security Consulting"
+          title="Консультации по стратегической безопасности"
           text="Экспертные советы по стратегиям кибербезопасности, внедрению политик и соблюдению требований GDPR, HIPAA и других нормативов."
           link="/LayerOne"
           image={pic1}
