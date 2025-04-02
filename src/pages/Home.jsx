@@ -1,3 +1,5 @@
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import GridSection from "../components/GridSection";
 import HeroSection from "../components/HeroSection";
 import PartnersSlider from "../components/PartnersSlider";
@@ -9,6 +11,21 @@ import pic5 from "../assets/pic5.jpg";
 import pic6 from "../assets/pic6.jpg";
 
 function Home() {
+  const location = useLocation();
+
+  useEffect(() => {
+    console.log("location.state:", location.state); // Проверка, передаётся ли state
+
+    if (location.state?.scrollToServices) {
+      setTimeout(() => {
+        const servicesSection = document.getElementById("services-section");
+        if (servicesSection) {
+          servicesSection.scrollIntoView({ behavior: "smooth" });
+        }
+      }, 100); // Даем время элементу загрузиться
+    }
+  }, [location]);
+
   return (
     <div>
       <HeroSection />

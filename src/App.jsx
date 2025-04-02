@@ -1,5 +1,5 @@
 import React from "react";
-import { HashRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 
@@ -19,7 +19,7 @@ import LayerThree from "./pages/LayerThree";
 import LayerFour from "./pages/LayerFour";
 import LayerFive from "./pages/LayerFive";
 import LayerSix from "./pages/LayerSix";
-
+import ScrollToTop from "./components/ScrollToTop";
 import Partners from "./pages/PartnersPage";
 
 function App() {

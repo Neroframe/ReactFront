@@ -10,7 +10,7 @@ function GridSection({ title, text, link, image, reverse }) {
           </a>
           <p className="box-text">{text}</p>
           <div className="box-bottom">
-            <a href={link}>Подробнее</a>
+            <a href={link}>Подробнее </a>
           </div>
         </div>
   

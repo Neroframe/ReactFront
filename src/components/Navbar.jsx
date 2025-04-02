@@ -71,8 +71,10 @@ const Navbar = () => {
     e.preventDefault();
 
     if (location.pathname !== "/") {
-      navigate("/", { state: { scrollToServices: true } });
+      // Переход на главную и установка состояния для прокрутки
+      navigate("/", { state: { scrollToServices: true }, replace: true });
     } else {
+      // Если уже на главной, сразу прокручиваем
       document
         .getElementById("services-section")
         ?.scrollIntoView({ behavior: "smooth" });

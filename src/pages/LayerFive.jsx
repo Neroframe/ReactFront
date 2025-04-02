@@ -86,7 +86,7 @@ function LayerOne() {
         paragraphs={[
           "Мы разрабатываем стратегии, позволяющие минимизировать простои после атак, сбоев и кризисных ситуаций, обеспечивая устойчивость бизнес-процессов.",
         ]}
-        imageURL={`${process.env.PUBLIC_URL}/assets/pic1.jpg`} // Добавил правильный путь
+        imageURL={pic1}
         imageAlt="audit"
       />
 
