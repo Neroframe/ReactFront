@@ -9,6 +9,7 @@ import pic3 from "../assets/pic3.jpg";
 import pic4 from "../assets/pic4.jpg";
 import pic5 from "../assets/pic5.jpg";
 import pic6 from "../assets/pic6.jpg";
+import StatsSection from "../components/StatsSection"
 
 function Home() {
   const location = useLocation();
@@ -82,6 +83,7 @@ function Home() {
         />
       </div>
 
+      <StatsSection />
       <PartnersSlider />
     </div>
   );
