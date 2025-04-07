@@ -24,10 +24,10 @@ export default function Footer() {
         {/* Правая часть футера */}
         <div className="right">
           <div className="icons">
-            <a href="https://wa.me/77771234567" target="_blank" rel="noopener noreferrer">
+            <a href="https://wa.me/77771234567" target="_blank" rel="noopener noreferrer" className="icon-link">
               WhatsApp
             </a>
-            <a href="https://instagram.com/example" target="_blank" rel="noopener noreferrer">
+            <a href="https://instagram.com/example" target="_blank" rel="noopener noreferrer" className="icon-link">
               Instagram
             </a>
           </div>
