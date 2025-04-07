@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import "../styles/GridSection.css"
+import "/src/styles/GridSection.css";
+
 
 const GridSection = ({ title, text, link, image, reverse = false }) => {
   return (
