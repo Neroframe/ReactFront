@@ -55,13 +55,15 @@ const PartnersSlider = () => {
     autoplaySpeed: 4000,
     prevArrow: <PrevArrow />,
     nextArrow: <NextArrow />,
+    arrows: true, // Явно включаем кастомные стрелки
+    appendDots: dots => <ul>{dots}</ul>, // Контроль точек навигации
   };
 
   return (
     <div className="partners-slider-section">
       <h2 className="partners-heading">What our customers say about us</h2>
       <div className="slider-container">
-        <Slider {...settings}>
+      <Slider {...settings} className="custom-slider">
           {partners.map((partner) => (
             <div key={partner.id} className="testimonial-slide">
               <div className="testimonial-content">
