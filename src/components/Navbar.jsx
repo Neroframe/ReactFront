@@ -62,50 +62,61 @@ const LanguageSwitcher = () => {
 const Navbar = () => {
   const location = useLocation();
   const navigate = useNavigate();
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
+    setIsMenuOpen(false); // Закрываем меню при клике
   };
 
   const handleServicesClick = (e) => {
     e.preventDefault();
+    setIsMenuOpen(false); // Закрываем меню при клике
 
     if (location.pathname !== "/") {
-      // Переход на главную и установка состояния для прокрутки
       navigate("/", { state: { scrollToServices: true }, replace: true });
     } else {
-      // Если уже на главной, сразу прокручиваем
       document
         .getElementById("services-section")
         ?.scrollIntoView({ behavior: "smooth" });
     }
   };
 
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-white fixed-top">
-      <div className="navbar-title mx-auto fw-bold fs-4">
-        <NavLink
-          to="/"
-          className="text-decoration-none text-dark"
-          onClick={scrollToTop}
-        >
-          Shielded Networks
-        </NavLink>
-      </div>
-
-      <div className="container">
+      <div className="container-fluid">
+        {/* Логотип */}
         <NavLink to="/" className="navbar-brand" onClick={scrollToTop}>
           <Logo scrollToTop={scrollToTop} />
         </NavLink>
+        
+         {/* Заголовок */}
+         <div className="navbar-title">
+          <NavLink 
+            to="/" 
+            className="text-decoration-none text-dark fw-bold fs-4" 
+            onClick={scrollToTop}
+          >
+            Shielded Networks
+          </NavLink>
+        </div>
+
+        {/* Бургер-меню */}
         <button
           className="navbar-toggler"
           type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
+          onClick={toggleMenu}
+          aria-expanded={isMenuOpen}
+          aria-label="Toggle navigation"
         >
           <span className="navbar-toggler-icon"></span>
         </button>
-        <div className="collapse navbar-collapse" id="navbarNav">
+        
+        <div className={`collapse navbar-collapse ${isMenuOpen ? 'show' : ''}`} id="navbarNav">
           <ul className="navbar-nav me-auto">
             <NavButton to="/insights" text="Проекты" onClick={scrollToTop} />
             <NavButton to="/" text="Услуги" onClick={handleServicesClick} />
