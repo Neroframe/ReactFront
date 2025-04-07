@@ -19,9 +19,9 @@ const GridSection = ({ title, text, link, image, reverse = false }) => {
           </svg>
         </Link>
       </div>
-      <div className="grid-image-wrapper">
+      <Link to={link} className="grid-image-wrapper">
         <img src={image} alt={title} className="grid-image" />
-      </div>
+      </Link>
     </section>
   );
 };
