@@ -1,24 +1,29 @@
-function GridSection({ title, text, link, image, reverse }) {
-    return (
-      <section className={`grid ${reverse ? "reverse" : ""}`}>
-        {/* Conditionally Render Image First if Reverse */}
-        {reverse && <img src={image} alt="Grid Image" className="image" />}
-  
-        <div className="grid-content">
-          <a href={link} className="box-link">
-            <h3 data-maxlength="144">{title}</h3>
-          </a>
-          <p className="box-text">{text}</p>
-          <div className="box-bottom">
-            <a href={link}>Подробнее </a>
-          </div>
-        </div>
-  
-        {/* Render Image Last if Not Reversed */}
-        {!reverse && <img src={image} alt="Grid Image" className="image" />}
-      </section>
-    );
-  }
-  
-  export default GridSection;
-  
+import React from 'react';
+import { Link } from 'react-router-dom';
+import '../styles/GridSection.css';
+
+const GridSection = ({ title, text, link, image, reverse = false }) => {
+  return (
+    <section className={`grid-section ${reverse ? 'reverse' : ''}`}>
+      <div className="grid-content">
+        <h2 className="grid-title">
+          <Link to={link} className="grid-link">
+            {title}
+          </Link>
+        </h2>
+        <p className="grid-text">{text}</p>
+        <Link to={link} className="grid-more-btn">
+          <span>Подробнее</span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+            <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+          </svg>
+        </Link>
+      </div>
+      <div className="grid-image-wrapper">
+        <img src={image} alt={title} className="grid-image" />
+      </div>
+    </section>
+  );
+};
+
+export default GridSection;

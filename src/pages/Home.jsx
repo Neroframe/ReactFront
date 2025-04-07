@@ -10,6 +10,8 @@ import pic4 from "../assets/pic4.jpg";
 import pic5 from "../assets/pic5.jpg";
 import pic6 from "../assets/pic6.jpg";
 import StatsSection from "../components/StatsSection"
+import '../styles/Home.css';
+
 
 function Home() {
   const location = useLocation();
@@ -26,7 +28,10 @@ function Home() {
       }, 100); // Даем время элементу загрузиться
     }
   }, [location]);
-
+// В компоненте Home оберните services-section в section:
+<section id="services-section" className="services-container">
+  {/* Ваши GridSection компоненты */}
+</section>
   return (
     <div>
       <HeroSection />
