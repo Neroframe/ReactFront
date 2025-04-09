@@ -1,25 +1,45 @@
+const path = require("path");
+
 module.exports = {
-  input: [
-    'src/**/*.{js,jsx,ts,tsx}', // files to scan
-  ],
-  output: './public/locales',
+  input: ["src/**/*.{js,jsx,ts,tsx}"],
+  output: "./public/locales",
   options: {
     debug: true,
+    sort: true,
+    removeUnusedKeys: false, // don’t delete existing translations
     func: {
-      list: ['t', 'i18next.t'],
-      extensions: ['.js', '.jsx', '.ts', '.tsx'],
+      list: ["t"],
+      extensions: [".js", ".jsx", ".ts", ".tsx"]
     },
-    lngs: ['en', 'kz', 'ru'],
-    defaultLng: 'ru',
-    ns: ['about', 'home', 'services', 'contact'],
-    defaultNs: 'about',
+    lngs: ["en", "ru", "kz"],
+    ns: [
+      "about",
+      "contact",
+      "faces",
+      "home",
+      "industries",
+      "insights",
+      "investors",
+      "layerfive",
+      "layerfour",
+      "layerone",
+      "layersix",
+      "layerthree",
+      "layertwo",
+      "news",
+      "partnerspage",
+      "requestpage",
+      "services"
+    ],
+    defaultLng: "ru",
+    defaultNs: "about",
     resource: {
-      loadPath: 'public/locales/{{lng}}/{{ns}}.json',
-      savePath: '{{lng}}/{{ns}}.json', 
+      loadPath: "public/locales/{{lng}}/{{ns}}.json",
+      savePath: "public/locales/{{lng}}/{{ns}}.json",
       jsonIndent: 2,
-      lineEnding: '\n',
+      lineEnding: "\n"
     },
-    keySeparator: '.',
-    nsSeparator: false,
-  },
-}
+    keySeparator: ".",
+    nsSeparator: false
+  }
+};
