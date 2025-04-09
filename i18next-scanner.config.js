@@ -9,10 +9,10 @@ module.exports = {
       list: ['t', 'i18next.t'],
       extensions: ['.js', '.jsx', '.ts', '.tsx'],
     },
-    lngs: ['en', 'kz', 'ru'], // 👈 ONLY these will be created
+    lngs: ['en', 'kz', 'ru'],
     defaultLng: 'ru',
+    ns: ['about', 'home', 'services', 'contact'],
     defaultNs: 'about',
-    ns: ['about'],
     resource: {
       loadPath: 'public/locales/{{lng}}/{{ns}}.json',
       savePath: '{{lng}}/{{ns}}.json', 

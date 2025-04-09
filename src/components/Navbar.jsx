@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import "../styles/Navbar.css";
+import { useTranslation } from "react-i18next";
 
 const NavButton = ({ to, text, onClick }) => (
   <li className="nav-item">
@@ -28,6 +29,12 @@ const Logo = ({ scrollToTop }) => {
 
 const LanguageSwitcher = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const { i18n } = useTranslation();
+
+  const changeLanguage = (lng) => {
+    i18n.changeLanguage(lng);
+    setIsOpen(false); // close dropdown after click
+  };
 
   return (
     <div
@@ -39,19 +46,28 @@ const LanguageSwitcher = () => {
       {isOpen && (
         <ul className="dropdown-menu show">
           <li>
-            <NavLink className="dropdown-item" to="#">
+            <button
+              className="dropdown-item"
+              onClick={() => changeLanguage("kz")}
+            >
               Қазақша
-            </NavLink>
+            </button>
           </li>
           <li>
-            <NavLink className="dropdown-item" to="#">
+            <button
+              className="dropdown-item"
+              onClick={() => changeLanguage("ru")}
+            >
               Русский
-            </NavLink>
+            </button>
           </li>
           <li>
-            <NavLink className="dropdown-item" to="#">
+            <button
+              className="dropdown-item"
+              onClick={() => changeLanguage("en")}
+            >
               English
-            </NavLink>
+            </button>
           </li>
         </ul>
       )}
@@ -93,12 +109,12 @@ const Navbar = () => {
         <NavLink to="/" className="navbar-brand" onClick={scrollToTop}>
           <Logo scrollToTop={scrollToTop} />
         </NavLink>
-        
-         {/* Заголовок */}
-         <div className="navbar-title">
-          <NavLink 
-            to="/" 
-            className="text-decoration-none text-dark fw-bold fs-4" 
+
+        {/* Заголовок */}
+        <div className="navbar-title">
+          <NavLink
+            to="/"
+            className="text-decoration-none text-dark fw-bold fs-4"
             onClick={scrollToTop}
           >
             Shielded Networks
@@ -115,8 +131,11 @@ const Navbar = () => {
         >
           <span className="navbar-toggler-icon"></span>
         </button>
-        
-        <div className={`collapse navbar-collapse ${isMenuOpen ? 'show' : ''}`} id="navbarNav">
+
+        <div
+          className={`collapse navbar-collapse ${isMenuOpen ? "show" : ""}`}
+          id="navbarNav"
+        >
           <ul className="navbar-nav me-auto">
             <NavButton to="/insights" text="Проекты" onClick={scrollToTop} />
             <NavButton to="/" text="Услуги" onClick={handleServicesClick} />

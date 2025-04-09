@@ -1,31 +1,25 @@
 {
-  "companyTitle": "",
-  "companySubtitle": "",
-  "missionTitle": "",
-  "missionText": "",
-  "missionImageAlt": "",
-  "historyImageAlt": "",
-  "historyTitle": "",
-  "historyText": "",
-  "teamTitle": "",
-  "team.member1.name": "",
-  "team.member1.desc": "",
-  "team.member2.name": "",
-  "team.member2.desc": "",
-  "team.member3.name": "",
-  "team.member3.desc": "",
+  "companyTitle": "Shielded Networks",
+  "companySubtitle": "Киберқауіпсіздік саласындағы сенімді серіктесіңіз",
+  "missionTitle": "Біздің миссия",
+  "missionText": "Біз жоғары сапалы киберқауіпсіздік шешімдерін ұсынуға тырысамыз.",
+  "missionImageAlt": "Миссия бейнесі",
+  "historyImageAlt": "Тарих бейнесі",
+  "historyTitle": "Біздің тарих",
+  "historyText": "Біз киберқауіпсіздік саласында он жылдан астам жұмыс істеп келеміз.",
+  "teamTitle": "Біздің команда",
   "team": {
     "member1": {
-      "name": "",
-      "desc": ""
+      "name": "Асылжан",
+      "desc": "Құрылтайшы және бас директор"
     },
     "member2": {
-      "name": "",
-      "desc": ""
+      "name": "Багдар",
+      "desc": "Маркетинг бөлімінің басшысы"
     },
     "member3": {
-      "name": "",
-      "desc": ""
+      "name": "Адельет",
+      "desc": "Аға әзірлеуші"
     }
   }
 }

@@ -2,7 +2,6 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-import "./i18n"; // Импортируем инициализацию i18n
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Careers from "./pages/Faces";
@@ -21,6 +20,8 @@ import LayerFive from "./pages/LayerFive";
 import LayerSix from "./pages/LayerSix";
 import ScrollToTop from "./components/ScrollToTop";
 import Partners from "./pages/PartnersPage";
+
+import "./i18n";
 
 function App() {
   return (

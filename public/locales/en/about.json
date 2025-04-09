@@ -1,31 +1,25 @@
 {
-  "companyTitle": "",
-  "companySubtitle": "",
-  "missionTitle": "",
-  "missionText": "",
-  "missionImageAlt": "",
-  "historyImageAlt": "",
-  "historyTitle": "",
-  "historyText": "",
-  "teamTitle": "",
-  "team.member1.name": "",
-  "team.member1.desc": "",
-  "team.member2.name": "",
-  "team.member2.desc": "",
-  "team.member3.name": "",
-  "team.member3.desc": "",
+  "companyTitle": "Shielded Networks",
+  "companySubtitle": "Your trusted partner in cybersecurity",
+  "missionTitle": "Our Mission",
+  "missionText": "We aim to deliver high-quality cybersecurity solutions.",
+  "missionImageAlt": "Mission image",
+  "historyImageAlt": "History image",
+  "historyTitle": "Our History",
+  "historyText": "We've been working in cybersecurity for over ten years.",
+  "teamTitle": "Our Team",
   "team": {
     "member1": {
-      "name": "",
-      "desc": ""
+      "name": "Asylzhan",
+      "desc": "Founder & CEO"
     },
     "member2": {
-      "name": "",
-      "desc": ""
+      "name": "Bagdar",
+      "desc": "Head of Marketing"
     },
     "member3": {
-      "name": "",
-      "desc": ""
+      "name": "Adilet",
+      "desc": "Lead Developer"
     }
   }
 }

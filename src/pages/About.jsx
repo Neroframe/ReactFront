@@ -3,13 +3,14 @@ import "../styles/About.css";
 import { useTranslation } from "react-i18next";
 
 const About = () => {
-  const { t } = useTranslation("about"); // подключаем namespace "about"
+  const { t } = useTranslation("about"); // uses "about.json" namespace
 
   return (
     <div className="about-container">
       <header className="about-header">
         <h1>
-          {t("companyTitle")} <span className="highlight">Shielded Networks</span>
+          {t("companyTitle")}{" "}
+          <span className="highlight">{t("companyName")}</span>
         </h1>
         <p>{t("companySubtitle")}</p>
       </header>
@@ -19,7 +20,10 @@ const About = () => {
           <h2>{t("missionTitle")}</h2>
           <p>{t("missionText")}</p>
         </div>
-        <img src="/src/assets/security-mission.jpg" alt={t("missionImageAlt")} />
+        <img
+          src="/src/assets/security-mission.jpg"
+          alt={t("missionImageAlt")}
+        />
       </section>
 
       <section className="about-history">
@@ -34,17 +38,23 @@ const About = () => {
         <h2>{t("teamTitle")}</h2>
         <div className="team-grid">
           <div className="team-member">
-            <img src="/src/assets/team/adilet.jpg" alt="Асылжан" />
+            <img
+              src="/src/assets/team/adilet.jpg"
+              alt={t("team.member1.name")}
+            />
             <h3>{t("team.member1.name")}</h3>
             <p>{t("team.member1.desc")}</p>
           </div>
           <div className="team-member">
-            <img src="/src/assets/team/bagdar.jpg" alt="..." />
+            <img
+              src="/src/assets/team/bagdar.jpg"
+              alt={t("team.member2.name")}
+            />
             <h3>{t("team.member2.name")}</h3>
             <p>{t("team.member2.desc")}</p>
           </div>
           <div className="team-member">
-            <img src="/src/assets/team/you.jpg" alt="..." />
+            <img src="/src/assets/team/you.jpg" alt={t("team.member3.name")} />
             <h3>{t("team.member3.name")}</h3>
             <p>{t("team.member3.desc")}</p>
           </div>
