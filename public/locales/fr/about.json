@@ -1,0 +1,25 @@
+{
+  "companyTitle": "",
+  "companySubtitle": "",
+  "missionTitle": "",
+  "missionText": "",
+  "missionImageAlt": "",
+  "historyImageAlt": "",
+  "historyTitle": "",
+  "historyText": "",
+  "teamTitle": "",
+  "team": {
+    "member1": {
+      "name": "",
+      "desc": ""
+    },
+    "member2": {
+      "name": "",
+      "desc": ""
+    },
+    "member3": {
+      "name": "",
+      "desc": ""
+    }
+  }
+}

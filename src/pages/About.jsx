@@ -1,59 +1,52 @@
 import React from "react";
-import "../styles/About.css"; // Подключаем стили
+import "../styles/About.css";
+import { useTranslation } from "react-i18next";
 
 const About = () => {
+  const { t } = useTranslation("about"); // подключаем namespace "about"
+
   return (
     <div className="about-container">
-      {/* Блок с заголовком */}
       <header className="about-header">
-        <h1>О компании <span className="highlight">Shielded Networks</span></h1>
-        <p>Ваш надежный партнер в области кибербезопасности</p>
+        <h1>
+          {t("companyTitle")} <span className="highlight">Shielded Networks</span>
+        </h1>
+        <p>{t("companySubtitle")}</p>
       </header>
 
-      {/* Раздел "Наша миссия" */}
       <section className="about-mission">
         <div className="about-content">
-          <h2>Наша миссия</h2>
-          <p>
-            Мы помогаем бизнесу и частным клиентам защитить их данные, 
-            минимизировать киберугрозы и быть на шаг впереди хакеров.
-          </p>
+          <h2>{t("missionTitle")}</h2>
+          <p>{t("missionText")}</p>
         </div>
-        <img src="/src/assets/security-mission.jpg" alt="Миссия компании" />
+        <img src="/src/assets/security-mission.jpg" alt={t("missionImageAlt")} />
       </section>
 
-      {/* Раздел "История компании" */}
       <section className="about-history">
-        <img src="/src/assets/history.jpg" alt="История компании" />
+        <img src="/src/assets/history.jpg" alt={t("historyImageAlt")} />
         <div className="about-content">
-          <h2>История компании</h2>
-          <p>
-            Shielded Networks была основана в 2024 году группой энтузиастов, 
-            стремящихся сделать кибербезопасность доступной и эффективной. 
-            Сегодня мы работаем с бизнесом разного масштаба, предлагая 
-            инновационные решения и экспертный подход.
-          </p>
+          <h2>{t("historyTitle")}</h2>
+          <p>{t("historyText")}</p>
         </div>
       </section>
 
-      {/* Раздел "Наша команда" */}
       <section className="about-team">
-        <h2>Лица компании</h2>
+        <h2>{t("teamTitle")}</h2>
         <div className="team-grid">
           <div className="team-member">
             <img src="/src/assets/team/adilet.jpg" alt="Асылжан" />
-            <h3>Асылжан</h3>
-            <p>Основатель идеи и разработчик концепции услуг</p>
+            <h3>{t("team.member1.name")}</h3>
+            <p>{t("team.member1.desc")}</p>
           </div>
           <div className="team-member">
             <img src="/src/assets/team/bagdar.jpg" alt="..." />
-            <h3>ИМЯ</h3>
-            <p>Ответственный за бизнес-модель и развитие компании</p>
+            <h3>{t("team.member2.name")}</h3>
+            <p>{t("team.member2.desc")}</p>
           </div>
           <div className="team-member">
             <img src="/src/assets/team/you.jpg" alt="..." />
-            <h3>ИМЯ</h3>
-            <p>Ключевой участник команды и будущий лидер в кибербезопасности</p>
+            <h3>{t("team.member3.name")}</h3>
+            <p>{t("team.member3.desc")}</p>
           </div>
         </div>
       </section>
