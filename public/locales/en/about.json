@@ -1,0 +1,31 @@
+{
+  "companyTitle": "",
+  "companySubtitle": "",
+  "missionTitle": "",
+  "missionText": "",
+  "missionImageAlt": "",
+  "historyImageAlt": "",
+  "historyTitle": "",
+  "historyText": "",
+  "teamTitle": "",
+  "team.member1.name": "",
+  "team.member1.desc": "",
+  "team.member2.name": "",
+  "team.member2.desc": "",
+  "team.member3.name": "",
+  "team.member3.desc": "",
+  "team": {
+    "member1": {
+      "name": "",
+      "desc": ""
+    },
+    "member2": {
+      "name": "",
+      "desc": ""
+    },
+    "member3": {
+      "name": "",
+      "desc": ""
+    }
+  }
+}

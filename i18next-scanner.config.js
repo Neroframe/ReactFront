@@ -1,28 +1,25 @@
-const path = require('path');
-
 module.exports = {
-  input: ['src/**/*.{js,jsx}'],
-  output: path.resolve(__dirname, 'public/locales/$LOCALE/$NAMESPACE.json'),
+  input: [
+    'src/**/*.{js,jsx,ts,tsx}', // files to scan
+  ],
+  output: './public/locales',
   options: {
     debug: true,
-    sort: true,
-    removeUnusedKeys: true,
     func: {
-      list: ['t'],
-      extensions: ['.js', '.jsx']
+      list: ['t', 'i18next.t'],
+      extensions: ['.js', '.jsx', '.ts', '.tsx'],
     },
-    trans: {
-      component: 'Trans',
-      extensions: ['.js', '.jsx']
-    },
-    lngs: ['en', 'ru', 'kz'], // ТОЛЬКО эти языки
-    ns: ['translation', 'about'],
+    lngs: ['en', 'kz', 'ru'], // 👈 ONLY these will be created
     defaultLng: 'ru',
-    defaultNs: 'translation',
+    defaultNs: 'about',
+    ns: ['about'],
     resource: {
-      loadPath: path.resolve(__dirname, 'public/locales/{{lng}}/{{ns}}.json'),
-      savePath: path.resolve(__dirname, 'public/locales/{{lng}}/{{ns}}.json'),
-      jsonIndent: 2
-    }
-  }
-};
+      loadPath: 'public/locales/{{lng}}/{{ns}}.json',
+      savePath: '{{lng}}/{{ns}}.json', 
+      jsonIndent: 2,
+      lineEnding: '\n',
+    },
+    keySeparator: '.',
+    nsSeparator: false,
+  },
+}
