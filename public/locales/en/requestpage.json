@@ -1,1 +1,12 @@
-{}
+{
+    "requestPage": {
+      "title": "Submit a Request",
+      "namePlaceholder": "Name",
+      "emailPlaceholder": "Email",
+      "phonePlaceholder": "Phone Number",
+      "problemPlaceholder": "Describe the Problem",
+      "submitButton": "Submit",
+      "submittedMessage": "Your request has been submitted!"
+    }
+  }
+  

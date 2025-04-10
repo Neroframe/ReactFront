@@ -1,1 +1,12 @@
-{}
+{
+    "requestPage": {
+      "title": "Оставить заявку",
+      "namePlaceholder": "Имя",
+      "emailPlaceholder": "Email",
+      "phonePlaceholder": "Номер телефона",
+      "problemPlaceholder": "Опишите проблему",
+      "submitButton": "Отправить",
+      "submittedMessage": "Заявка отправлена!"
+    }
+  }
+  

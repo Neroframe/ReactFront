@@ -1,0 +1,25 @@
+{
+    "partners": {
+      "title": "Our Partners",
+      "description": "We proudly collaborate with industry leaders to promote as many innovations as possible.",
+      "github": {
+        "description": "GitHub is a platform for version control and collaboration that empowers millions of developers to build software together."
+      },
+      "mozilla": {
+        "description": "Mozilla champions an open internet and develops the Firefox browser, celebrated for its speed and privacy features."
+      },
+      "google": {
+        "description": "Google provides innovative search, advertising, and productivity tools that have revolutionized how we access and use information."
+      },
+      "docker": {
+        "description": "Docker streamlines application development by packaging software into standardized containers for development, shipment, and deployment."
+      },
+      "react": {
+        "description": "React is a powerful JavaScript library for building interactive user interfaces and dynamic web applications."
+      },
+      "node.js": {
+        "description": "Node.js is a fast, scalable runtime built on Chrome's V8 engine that lets developers use JavaScript for server-side programming."
+      }
+    }
+  }
+  

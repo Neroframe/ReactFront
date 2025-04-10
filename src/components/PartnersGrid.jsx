@@ -1,6 +1,7 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import "../styles/PartnersGrid.css";
+import { useTranslation } from "react-i18next";
 
 const partners = [
   {
@@ -48,14 +49,14 @@ const partners = [
 ];
 
 const PartnersGrid = () => {
+  const { t } = useTranslation("partnersgrid");
+
   return (
     <div className="partners-grid">
       <div className="justify-content-center">
         <Col xs={12} className="text-center">
-          <h2 className="display-4 fw-bold">Наши партнеры</h2>
-          <p className="lead text-muted">
-            Мы гордо сотрудичаем с лидерами индустрии, чтобы продвигать как можно больше инноваций.
-          </p>
+          <h2 className="display-4 fw-bold">{t("partners.title")}</h2>
+          <p className="lead text-muted">{t("partners.description")}</p>
         </Col>
       </div>
 
@@ -67,7 +68,7 @@ const PartnersGrid = () => {
                 <img src={partner.logo} alt={partner.name} />
               </div>
               <div className="partner-description">
-                <p>{partner.description}</p>
+                <p>{t(`partners.${partner.name.toLowerCase()}.description`)}</p>
               </div>
             </div>
           </Col>

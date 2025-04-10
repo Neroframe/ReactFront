@@ -1,1 +1,17 @@
-{}
+{
+    "articles": {
+      "title": "Explore",
+      "highlightedText": "important topics",
+      "description": "Overview of current topics in cybersecurity",
+      "businessSecurity": "How to protect your business from cyberattacks?",
+      "businessSecurityDescription": "We explore the main methods to protect companies from hacks.",
+      "topCybersecurityMistakes": "Top 10 cybersecurity mistakes",
+      "topCybersecurityMistakesDescription": "What mistakes make companies vulnerable and how to avoid them.",
+      "socialEngineering": "What is social engineering?",
+      "socialEngineeringDescription": "How hackers deceive people into revealing data.",
+      "phishingTypes": "Phishing and its varieties",
+      "phishingTypesDescription": "We examine popular fraud schemes and ways to protect yourself.",
+      "readMore": "Read more →"
+    }
+  }
+  

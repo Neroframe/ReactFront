@@ -1,1 +1,12 @@
-{}
+{
+    "requestPage": {
+      "title": "Өтініш қалдыру",
+      "namePlaceholder": "Аты-жөні",
+      "emailPlaceholder": "Электрондық пошта",
+      "phonePlaceholder": "Телефон нөмірі",
+      "problemPlaceholder": "Мәселені сипаттаңыз",
+      "submitButton": "Жіберу",
+      "submittedMessage": "Өтініш қабылданды!"
+    }
+  }
+  

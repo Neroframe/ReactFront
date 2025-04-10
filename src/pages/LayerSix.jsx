@@ -3,31 +3,34 @@ import InfoCard from "../components/AuditInfo";
 import pic1 from "../assets/pic1.jpg";
 import "../styles/LayerOne.css";
 import LayerInfo from "../components/LayerInfo";
+import { useTranslation } from "react-i18next";
 
 function LayerOne() {
+  const { t } = useTranslation('layersix');
+
   const auditSections = [
     {
       key: "sageLifeCycle",
-      title: "SDLC",
+      title: t("sageLifeCycle.title"),
       content: (
         <p>
-          <strong>Безопасный жизненный цикл разработки ПО (SDLC)</strong>
+          <strong>{t("sageLifeCycle.title")}</strong>
           <br />
-          В современных реалиях киберугроз обеспечение безопасности на всех этапах разработки программного обеспечения становится критически важным. Пренебрежение защитными мерами в процессе создания ПО может привести к утечке конфиденциальных данных, финансовым потерям и репутационным рискам. 
+          {t("sageLifeCycle.description1")}
           <br /><br />
-          Мы применяем комплексный подход к безопасности, начиная с первых этапов проектирования и заканчивая развертыванием и эксплуатацией программного обеспечения.
+          {t("sageLifeCycle.description2")}
           <ul>
             <li>
-              <strong>Интеграция безопасности на всех этапах разработки:</strong> Используем подход Security by Design, который позволяет проектировать системы с учетом потенциальных угроз еще до написания кода.
+              <strong>{t("sageLifeCycle.step1.title")}</strong>: {t("sageLifeCycle.step1.desc")}
             </li>
             <li>
-              <strong>Использование безопасных методов кодирования:</strong> Применяем лучшие практики разработки, такие как контроль входных данных, обработка ошибок и защита от SQL-инъекций и межсайтовых атак.
+              <strong>{t("sageLifeCycle.step2.title")}</strong>: {t("sageLifeCycle.step2.desc")}
             </li>
             <li>
-              <strong>Моделирование угроз:</strong> Анализируем потенциальные векторы атак и разрабатываем стратегии их предотвращения. Это позволяет минимизировать уязвимости еще на этапе проектирования.
+              <strong>{t("sageLifeCycle.step3.title")}</strong>: {t("sageLifeCycle.step3.desc")}
             </li>
             <li>
-              <strong>Автоматизация процессов безопасности:</strong> Внедряем автоматизированные инструменты проверки кода, мониторинга уязвимостей и контроля зависимостей для своевременного выявления проблем.
+              <strong>{t("sageLifeCycle.step4.title")}</strong>: {t("sageLifeCycle.step4.desc")}
             </li>
           </ul>
         </p>
@@ -35,26 +38,26 @@ function LayerOne() {
     },
     {
       key: "software",
-      title: "Аудиты кода",
+      title: t("software.title"),
       content: (
         <p>
-          <strong>Аудиты кода и оценка уязвимостей</strong>
+          <strong>{t("software.title")}</strong>
           <br />
-          Проверка кода на наличие уязвимостей позволяет значительно снизить риски атак и повысить надежность системы. Автоматизированные инструменты анализа могут выявить лишь часть проблем, поэтому мы применяем комплексный подход, включающий ручной аудит специалистами.
+          {t("software.description1")}
           <br /><br />
-          Основные методы аудита:
+          {t("software.description2")}
           <ul>
             <li>
-              <strong>Статический анализ кода (SAST):</strong> Проверка исходного кода без его выполнения. Этот метод помогает выявить ошибки, связанные с некорректной обработкой данных, утечками памяти и нарушением логики безопасности.
+              <strong>{t("software.step1.title")}</strong>: {t("software.step1.desc")}
             </li>
             <li>
-              <strong>Динамическое тестирование безопасности (DAST):</strong> Анализ уже работающего приложения, при котором выявляются уязвимости, связанные с некорректной обработкой входных данных и взаимодействием с внешними сервисами.
+              <strong>{t("software.step2.title")}</strong>: {t("software.step2.desc")}
             </li>
             <li>
-              <strong>Фаззинг (Fuzz Testing):</strong> Методика тестирования, при которой приложение подвергается подаче случайных или некорректных данных для выявления слабых мест.
+              <strong>{t("software.step3.title")}</strong>: {t("software.step3.desc")}
             </li>
             <li>
-              <strong>Ручной анализ кода:</strong> Опытные специалисты анализируют код с учетом особенностей бизнес-логики и специфики проекта, выявляя сложные уязвимости, которые могут быть упущены автоматизированными инструментами.
+              <strong>{t("software.step4.title")}</strong>: {t("software.step4.desc")}
             </li>
           </ul>
         </p>
@@ -62,29 +65,29 @@ function LayerOne() {
     },
     {
       key: "secureCoding",
-      title: "Обучение разработчиков безопасному кодированию",
+      title: t("secureCoding.title"),
       content: (
         <p>
-          <strong>Обучение разработчиков безопасному кодированию</strong>
+          <strong>{t("secureCoding.title")}</strong>
           <br />
-          Одной из основных причин уязвимостей в ПО являются ошибки разработчиков, возникающие из-за недостаточного уровня знаний в области безопасности. Мы предлагаем комплексные обучающие программы, которые позволяют разработчикам эффективно выявлять и предотвращать уязвимости на этапе написания кода.
+          {t("secureCoding.description1")}
           <br /><br />
-          Наши образовательные инициативы включают:
+          {t("secureCoding.description2")}
           <ul>
             <li>
-              <strong>Практические воркшопы по безопасному кодированию:</strong> Разработка реальных сценариев атак и их предотвращение в условиях, приближенных к боевым.
+              <strong>{t("secureCoding.step1.title")}</strong>: {t("secureCoding.step1.desc")}
             </li>
             <li>
-              <strong>Обучение по стандартам OWASP Top 10:</strong> Разбор десяти наиболее распространенных уязвимостей веб-приложений, таких как XSS, SQL-инъекции, небезопасная аутентификация и другие.
+              <strong>{t("secureCoding.step2.title")}</strong>: {t("secureCoding.step2.desc")}
             </li>
             <li>
-              <strong>Внедрение DevSecOps-практик:</strong> Интеграция процессов безопасности в CI/CD-пайплайн, что позволяет обнаруживать и устранять уязвимости на ранних стадиях разработки.
+              <strong>{t("secureCoding.step3.title")}</strong>: {t("secureCoding.step3.desc")}
             </li>
             <li>
-              <strong>Персонализированные программы обучения:</strong> Курсы адаптируются под уровень знаний и специфику работы команды разработчиков, что позволяет быстрее и эффективнее внедрять полученные знания в практику.
+              <strong>{t("secureCoding.step4.title")}</strong>: {t("secureCoding.step4.desc")}
             </li>
             <li>
-              <strong>Тестирование и сертификация:</strong> Проведение финальных испытаний и выдача сертификатов, подтверждающих уровень владения безопасными методами кодирования.
+              <strong>{t("secureCoding.step5.title")}</strong>: {t("secureCoding.step5.desc")}
             </li>
           </ul>
         </p>
@@ -95,23 +98,19 @@ function LayerOne() {
   return (
     <div>
       <LayerInfo
-        title="Безопасная разработка и защита IoT"
+        title={t("layer_title")}
         backgroundImage="https://inova.kz/wp-content/uploads/2023/05/wall_4_3-1.png"
-        breadcrumbs={[{ label: "Безопасная разработка и защита IoT" }]}
+        breadcrumbs={[{ label: t("breadcrumbs.layer_title") }]}
       />
       <AuditSection
-        title="Безопасность разработки приложений"
-        paragraphs={[
-          "Мы внедряем передовые методы защиты ПО, проводим аудит кода, обучаем разработчиков принципам безопасного кодирования и разрабатываем стратегии защиты IoT-устройств от современных киберугроз.",
-        ]}
+        title={t("secureDev.title")}
+        paragraphs={[t("secureDev.text")]}
         imageURL={pic1}
         imageAlt="audit"
       />
-
-      {/* Передача секций в InfoCard (AuditInfo) */}
       <InfoCard sections={auditSections} />
     </div>
   );
 }
 
-export default LayerOne;
+export default LayerOne

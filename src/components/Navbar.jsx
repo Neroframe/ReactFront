@@ -3,18 +3,21 @@ import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import "../styles/Navbar.css";
 import { useTranslation } from "react-i18next";
 
-const NavButton = ({ to, text, onClick }) => (
-  <li className="nav-item">
-    <NavLink
-      to={to}
-      className="nav-link"
-      activeclassname="active"
-      onClick={onClick}
-    >
-      {text}
-    </NavLink>
-  </li>
-);
+const NavButton = ({ to, translationKey, onClick }) => {
+  const { t } = useTranslation("navbar");
+  return (
+    <li className="nav-item">
+      <NavLink
+        to={to}
+        className="nav-link"
+        activeclassname="active"
+        onClick={onClick}
+      >
+        {t(translationKey)}
+      </NavLink>
+    </li>
+  );
+};
 
 const Logo = ({ scrollToTop }) => {
   return (
@@ -33,7 +36,7 @@ const LanguageSwitcher = () => {
 
   const changeLanguage = (lng) => {
     i18n.changeLanguage(lng);
-    setIsOpen(false); // close dropdown after click
+    setIsOpen(false);
   };
 
   return (
@@ -46,26 +49,17 @@ const LanguageSwitcher = () => {
       {isOpen && (
         <ul className="dropdown-menu show">
           <li>
-            <button
-              className="dropdown-item"
-              onClick={() => changeLanguage("kz")}
-            >
+            <button className="dropdown-item" onClick={() => changeLanguage("kz")}>
               Қазақша
             </button>
           </li>
           <li>
-            <button
-              className="dropdown-item"
-              onClick={() => changeLanguage("ru")}
-            >
+            <button className="dropdown-item" onClick={() => changeLanguage("ru")}>
               Русский
             </button>
           </li>
           <li>
-            <button
-              className="dropdown-item"
-              onClick={() => changeLanguage("en")}
-            >
+            <button className="dropdown-item" onClick={() => changeLanguage("en")}>
               English
             </button>
           </li>
@@ -78,23 +72,22 @@ const LanguageSwitcher = () => {
 const Navbar = () => {
   const location = useLocation();
   const navigate = useNavigate();
+  const { t } = useTranslation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
-    setIsMenuOpen(false); // Закрываем меню при клике
+    setIsMenuOpen(false);
   };
 
   const handleServicesClick = (e) => {
     e.preventDefault();
-    setIsMenuOpen(false); // Закрываем меню при клике
+    setIsMenuOpen(false);
 
     if (location.pathname !== "/") {
       navigate("/", { state: { scrollToServices: true }, replace: true });
     } else {
-      document
-        .getElementById("services-section")
-        ?.scrollIntoView({ behavior: "smooth" });
+      document.getElementById("services-section")?.scrollIntoView({ behavior: "smooth" });
     }
   };
 
@@ -105,12 +98,10 @@ const Navbar = () => {
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-white fixed-top">
       <div className="container-fluid">
-        {/* Логотип */}
         <NavLink to="/" className="navbar-brand" onClick={scrollToTop}>
           <Logo scrollToTop={scrollToTop} />
         </NavLink>
 
-        {/* Заголовок */}
         <div className="navbar-title">
           <NavLink
             to="/"
@@ -121,7 +112,6 @@ const Navbar = () => {
           </NavLink>
         </div>
 
-        {/* Бургер-меню */}
         <button
           className="navbar-toggler"
           type="button"
@@ -132,26 +122,19 @@ const Navbar = () => {
           <span className="navbar-toggler-icon"></span>
         </button>
 
-        <div
-          className={`collapse navbar-collapse ${isMenuOpen ? "show" : ""}`}
-          id="navbarNav"
-        >
+        <div className={`collapse navbar-collapse ${isMenuOpen ? "show" : ""}`} id="navbarNav">
           <ul className="navbar-nav me-auto">
-            <NavButton to="/insights" text="Проекты" onClick={scrollToTop} />
-            <NavButton to="/" text="Услуги" onClick={handleServicesClick} />
-            <NavButton to="/news" text="Статьи" onClick={scrollToTop} />
+            <NavButton to="/insights" translationKey="nav.projects" onClick={scrollToTop} />
+            <NavButton to="/" translationKey="nav.services" onClick={handleServicesClick} />
+            <NavButton to="/news" translationKey="nav.articles" onClick={scrollToTop} />
           </ul>
           <ul className="navbar-nav ms-auto">
-            <NavButton to="/about" text="О компании" onClick={scrollToTop} />
-            <NavButton to="/contact" text="Контакты" onClick={scrollToTop} />
-            <NavButton to="/partners" text="Партнеры" onClick={scrollToTop} />
+            <NavButton to="/about" translationKey="nav.about" onClick={scrollToTop} />
+            <NavButton to="/contact" translationKey="nav.contact" onClick={scrollToTop} />
+            <NavButton to="/partners" translationKey="nav.partners" onClick={scrollToTop} />
           </ul>
-          <NavLink
-            to="/request"
-            className="btn btn-danger ms-3"
-            onClick={scrollToTop}
-          >
-            Оставить заявку
+          <NavLink to="/request" className="btn btn-danger ms-3" onClick={scrollToTop}>
+            {t("nav.request")}
           </NavLink>
           <div className="ms-3">
             <LanguageSwitcher />

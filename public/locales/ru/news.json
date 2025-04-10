@@ -1,1 +1,17 @@
-{}
+{
+    "articles": {
+      "title": "Изучите",
+      "highlightedText": "важные темы",
+      "description": "Обзор актуальных тем в мире кибербезопасности",
+      "businessSecurity": "Как защитить бизнес от кибератак?",
+      "businessSecurityDescription": "Рассматриваем основные методы защиты компаний от взломов.",
+      "topCybersecurityMistakes": "Топ-10 ошибок в кибербезопасности",
+      "topCybersecurityMistakesDescription": "Какие ошибки делают компании уязвимыми и как их избежать.",
+      "socialEngineering": "Что такое социальная инженерия?",
+      "socialEngineeringDescription": "Как хакеры обманывают людей, заставляя раскрывать данные.",
+      "phishingTypes": "Фишинг и его разновидности",
+      "phishingTypesDescription": "Разбираем популярные схемы мошенников и способы защиты.",
+      "readMore": "Читать далее →"
+    }
+  }
+  

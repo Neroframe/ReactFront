@@ -1,1 +1,41 @@
-{}
+{
+    "risks": {
+      "title": "Risk Assessment",
+      "description": "Effective risk management allows you to identify potential threats in advance and minimize their impact on business. We conduct a comprehensive assessment of company vulnerabilities and develop protection plans for potential incidents.",
+      "threat_analysis": "Threat Analysis",
+      "threat_analysis_description": "Risk assessment, including cyberattacks, data leaks, natural disasters, and technological failures.",
+      "impact_assessment": "Impact Assessment on Business",
+      "impact_assessment_description": "Modeling the consequences of different threat scenarios and calculating potential losses.",
+      "risk_mitigation": "Risk Mitigation Strategy Development",
+      "risk_mitigation_description": "Implementing preventive measures, response plans, and backup mechanisms."
+    },
+    "developmentStrategies": {
+      "title": "Business Continuity Strategy Development",
+      "description": "Maintaining company operations in crisis situations requires pre-prepared strategies. We develop comprehensive solutions to minimize downtime and ensure the operation of key services.",
+      "critical_services": "Ensuring Critical Service Operation",
+      "critical_services_description": "Development of backup solutions and load distribution for business process resilience.",
+      "remote_work": "Remote Work Capability",
+      "remote_work_description": "Setting up secure communication channels and VPN access in case of emergencies.",
+      "backups": "Data Backup Creation",
+      "backups_description": "Automating the backup process and storing copies in reliable cloud and local storage."
+    },
+    "recovery": {
+      "title": "Recovery After Failures",
+      "description": "A comprehensive recovery plan allows you to quickly return the business to normal operations and minimize losses. We develop detailed recovery strategies, taking into account all possible scenarios.",
+      "regular_backups": "Regular Backup Setup",
+      "regular_backups_description": "Implementing backup policies considering data criticality and automation processes.",
+      "recovery_time": "Recovery Time Planning",
+      "recovery_time_description": "Defining Recovery Time Objective (RTO) and Recovery Point Objective (RPO) for quick business resumption.",
+      "cloud_recovery": "Cloud Solutions for Fast Data Recovery",
+      "cloud_recovery_description": "Using hybrid cloud technologies for instant infrastructure deployment after failures."
+    },
+    "layer_title": "Business Continuity and Risk Management",
+    "breadcrumbs": {
+      "layer_title": "Business Continuity and Risk Management"
+    },
+    "bcdr_planning": {
+      "title": "Business Continuity and Disaster Recovery (BCDR) Planning",
+      "text": "We develop strategies that minimize downtime after attacks, failures, and crises, ensuring business process resilience."
+    }
+  }
+  

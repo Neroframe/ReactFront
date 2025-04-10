@@ -27,7 +27,11 @@ i18n
       "news",
       "partnerspage",
       "requestpage",
-      "services"
+      "services",
+      "navbar",
+      "footer",
+      "partnersgrid",
+      "statssection"
     ],
     defaultNS: "home", // or any default you prefer
     interpolation: {

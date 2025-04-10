@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import "../styles/RequestPage.css";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-
+import { useTranslation } from "react-i18next";
 
 const RequestPage = () => {
+  const { t } = useTranslation("requestpage");
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -18,47 +18,51 @@ const RequestPage = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("Submitted:", formData);
-    alert("Заявка отправлена!");
+    alert(t("requestPage.submittedMessage"));
   };
 
   return (
     <div className="request-container">
-      <div className="request-box">
-        <h2>Оставить заявку</h2>
-        <form onSubmit={handleSubmit}>
-          <input
-            type="text"
-            name="name"
-            placeholder="Имя"
-            value={formData.name}
-            onChange={handleChange}
-            required
-          />
-          <input
-            type="email"
-            name="email"
-            placeholder="Email"
-            value={formData.email}
-            onChange={handleChange}
-            required
-          />
-          <input
-            type="tel"
-            name="phone"
-            placeholder="Номер телефона"
-            value={formData.phone}
-            onChange={handleChange}
-            required
-          />
-          <textarea
-            name="problem"
-            placeholder="Опишите проблему"
-            value={formData.problem}
-            onChange={handleChange}
-            required
-          />
-          <button type="submit" className="btn-submit">Отправить</button>
-        </form>
+      <div className="container">
+        <div className="request-box">
+          <h2>{t("requestPage.title")}</h2>
+          <form onSubmit={handleSubmit}>
+            <input
+              type="text"
+              name="name"
+              placeholder={t("requestPage.namePlaceholder")}
+              value={formData.name}
+              onChange={handleChange}
+              required
+            />
+            <input
+              type="email"
+              name="email"
+              placeholder={t("requestPage.emailPlaceholder")}
+              value={formData.email}
+              onChange={handleChange}
+              required
+            />
+            <input
+              type="tel"
+              name="phone"
+              placeholder={t("requestPage.phonePlaceholder")}
+              value={formData.phone}
+              onChange={handleChange}
+              required
+            />
+            <textarea
+              name="problem"
+              placeholder={t("requestPage.problemPlaceholder")}
+              value={formData.problem}
+              onChange={handleChange}
+              required
+            />
+            <button type="submit" className="btn-submit">
+              {t("requestPage.submitButton")}
+            </button>
+          </form>
+        </div>
       </div>
     </div>
   );

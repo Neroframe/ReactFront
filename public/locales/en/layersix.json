@@ -1,1 +1,78 @@
-{}
+{
+    "layer_title": "Secure Development and IoT Protection",
+    "breadcrumbs": {
+      "layer_title": "Secure Development and IoT Protection"
+    },
+    "secureDev": {
+      "title": "Application Security",
+      "text": "We implement advanced software protection methods, perform code audits, train developers in secure coding practices, and develop strategies to protect IoT devices from modern cyber threats."
+    },
+    "sageLifeCycle": {
+      "title": "SDLC",
+      "description1": "Secure Software Development Life Cycle (SDLC)",
+      "description2": "In today’s cyber threat landscape, ensuring security at every stage of software development is critical. Neglecting protective measures can lead to data breaches, financial losses, and reputational damage.",
+      "step1": {
+        "title": "Integrating Security at All Stages",
+        "desc": "We use a Security by Design approach that allows systems to be designed with potential threats in mind before any code is written."
+      },
+      "step2": {
+        "title": "Using Secure Coding Practices",
+        "desc": "We apply best practices like input validation, error handling, and protection against SQL injection and cross-site scripting."
+      },
+      "step3": {
+        "title": "Threat Modeling",
+        "desc": "We analyze potential attack vectors and develop mitigation strategies to minimize vulnerabilities during the design phase."
+      },
+      "step4": {
+        "title": "Security Automation",
+        "desc": "We integrate automated tools for code scanning, vulnerability monitoring, and dependency management to identify issues early."
+      }
+    },
+    "software": {
+      "title": "Code Audits",
+      "description1": "Code Audits and Vulnerability Assessment",
+      "description2": "Scanning code for vulnerabilities significantly reduces the risk of attacks and increases system reliability. Since automated tools detect only part of the issues, we use a comprehensive approach including manual audits.",
+      "step1": {
+        "title": "Static Code Analysis (SAST)",
+        "desc": "Analyzes source code without executing it. Helps identify data handling errors, memory leaks, and security logic flaws."
+      },
+      "step2": {
+        "title": "Dynamic Application Security Testing (DAST)",
+        "desc": "Analyzes running applications to find vulnerabilities related to input handling and interaction with external services."
+      },
+      "step3": {
+        "title": "Fuzz Testing",
+        "desc": "Tests applications by feeding them random or malformed data to uncover weaknesses."
+      },
+      "step4": {
+        "title": "Manual Code Review",
+        "desc": "Experienced specialists examine the code considering business logic and project specifics to identify complex vulnerabilities."
+      }
+    },
+    "secureCoding": {
+      "title": "Secure Coding Training for Developers",
+      "description1": "Secure Coding Training for Developers",
+      "description2": "One of the main causes of software vulnerabilities is developer error due to insufficient security knowledge. We offer training programs that help identify and prevent vulnerabilities at the coding stage.",
+      "step1": {
+        "title": "Hands-on Secure Coding Workshops",
+        "desc": "Real-world attack scenarios and defense mechanisms are practiced in simulated environments."
+      },
+      "step2": {
+        "title": "Training Based on OWASP Top 10",
+        "desc": "Covers the ten most common web vulnerabilities such as XSS, SQL injections, insecure authentication, and more."
+      },
+      "step3": {
+        "title": "Implementing DevSecOps Practices",
+        "desc": "Integrates security into the CI/CD pipeline to detect and fix vulnerabilities early in the development process."
+      },
+      "step4": {
+        "title": "Personalized Training Programs",
+        "desc": "Courses are adapted to the knowledge level and specific needs of the development team for better adoption."
+      },
+      "step5": {
+        "title": "Testing and Certification",
+        "desc": "Final testing and certification confirms proficiency in secure coding practices."
+      }
+    }
+  }
+  
