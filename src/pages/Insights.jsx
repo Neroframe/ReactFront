@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 import "../styles/Projects.css";
 
 const Projects = () => {
-  const { t } = useTranslation('projects');
+  const { t } = useTranslation('insights');
 
   const projects = [
     {
