@@ -6,26 +6,26 @@ import "../styles/LayerOne.css";
 import LayerInfo from "../components/LayerInfo";
 
 function LayerOne() {
-  const { t } = useTranslation();
+  const { t } = useTranslation('layerone'); // Указываем конкретный namespace
 
   const auditSections = [
     {
       key: "risks",
-      title: t("layer5.risks.title"),
+      title: t("layer1.risks.title"),
       content: (
         <p>
-          <strong>{t("layer5.risks.title")}</strong>
+          <strong>{t("layer1.risks.title")}</strong>
           <br />
-          {t("layer5.risks.intro")} 
+          {t("layer1.risks.intro")}
           <ul>
             <li>
-              <strong>{t("layer5.risks.point1.title")}</strong> {t("layer5.risks.point1.text")}
+              <strong>{t("layer1.risks.point1.title")}</strong> {t("layer1.risks.point1.text")}
             </li>
             <li>
-              <strong>{t("layer5.risks.point2.title")}</strong> {t("layer5.risks.point2.text")}
+              <strong>{t("layer1.risks.point2.title")}</strong> {t("layer1.risks.point2.text")}
             </li>
             <li>
-              <strong>{t("layer5.risks.point3.title")}</strong> {t("layer5.risks.point3.text")}
+              <strong>{t("layer1.risks.point3.title")}</strong> {t("layer1.risks.point3.text")}
             </li>
           </ul>
         </p>
@@ -33,21 +33,21 @@ function LayerOne() {
     },
     {
       key: "developmentStrategies",
-      title: t("layer5.developmentStrategies.title"),
+      title: t("layer1.developmentStrategies.title"),
       content: (
         <p>
-          <strong>{t("layer5.developmentStrategies.title")}</strong>
+          <strong>{t("layer1.developmentStrategies.title")}</strong>
           <br />
-          {t("layer5.developmentStrategies.intro")}
+          {t("layer1.developmentStrategies.intro")}
           <ul>
             <li>
-              <strong>{t("layer5.developmentStrategies.point1.title")}</strong> {t("layer5.developmentStrategies.point1.text")}
+              <strong>{t("layer1.developmentStrategies.point1.title")}</strong> {t("layer1.developmentStrategies.point1.text")}
             </li>
             <li>
-              <strong>{t("layer5.developmentStrategies.point2.title")}</strong> {t("layer5.developmentStrategies.point2.text")}
+              <strong>{t("layer1.developmentStrategies.point2.title")}</strong> {t("layer1.developmentStrategies.point2.text")}
             </li>
             <li>
-              <strong>{t("layer5.developmentStrategies.point3.title")}</strong> {t("layer5.developmentStrategies.point3.text")}
+              <strong>{t("layer1.developmentStrategies.point3.title")}</strong> {t("layer1.developmentStrategies.point3.text")}
             </li>
           </ul>
         </p>
@@ -55,21 +55,21 @@ function LayerOne() {
     },
     {
       key: "recovery",
-      title: t("layer5.recovery.title"),
+      title: t("layer1.recovery.title"),
       content: (
         <p>
-          <strong>{t("layer5.recovery.title")}</strong>
+          <strong>{t("layer1.recovery.title")}</strong>
           <br />
-          {t("layer5.recovery.intro")}
+          {t("layer1.recovery.intro")}
           <ul>
             <li>
-              <strong>{t("layer5.recovery.point1.title")}</strong> {t("layer5.recovery.point1.text")}
+              <strong>{t("layer1.recovery.point1.title")}</strong> {t("layer1.recovery.point1.text")}
             </li>
             <li>
-              <strong>{t("layer5.recovery.point2.title")}</strong> {t("layer5.recovery.point2.text")}
+              <strong>{t("layer1.recovery.point2.title")}</strong> {t("layer1.recovery.point2.text")}
             </li>
             <li>
-              <strong>{t("layer5.recovery.point3.title")}</strong> {t("layer5.recovery.point3.text")}
+              <strong>{t("layer1.recovery.point3.title")}</strong> {t("layer1.recovery.point3.text")}
             </li>
           </ul>
         </p>
@@ -80,13 +80,13 @@ function LayerOne() {
   return (
     <div>
       <LayerInfo
-        title={t("layer5.title")}
+        title={t("layer1.title")}
         backgroundImage="https://inova.kz/wp-content/uploads/2023/05/wall_4_3-1.png"
-        breadcrumbs={[{ label: t("layer5.title") }]}
+        breadcrumbs={[{ label: t("layer1.title") }]}
       />
       <AuditSection
-        title={t("layer5.auditSectionTitle")}
-        paragraphs={[t("layer5.auditSectionText")]}
+        title={t("layer1.auditSectionTitle")}
+        paragraphs={[t("layer1.auditSectionText")]}
         imageURL={pic1}
         imageAlt="audit"
       />

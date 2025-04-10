@@ -1,1 +1,55 @@
-{}
+{
+    "layer1": {
+      "title": "Business Continuity and Disaster Recovery",
+      "auditSectionTitle": "Risk Audit and Assessment",
+      "auditSectionText": "We conduct analysis and assessment of potential threats...",
+      "risks": {
+        "title": "Risk Assessment",
+        "intro": "Risks can occur at any time:",
+        "point1": {
+          "title": "Physical Threats",
+          "text": "Fires, floods, etc."
+        },
+        "point2": {
+          "title": "Cyber Threats",
+          "text": "Malware, phishing, etc."
+        },
+        "point3": {
+          "title": "Human Errors",
+          "text": "Accidental data deletion, etc."
+        }
+      },
+      "developmentStrategies": {
+        "title": "Development Strategies",
+        "intro": "The following approaches are used for effective protection:",
+        "point1": {
+          "title": "Data Backup",
+          "text": "Regular data copying"
+        },
+        "point2": {
+          "title": "Employee Training",
+          "text": "Awareness raising"
+        },
+        "point3": {
+          "title": "Action Plan",
+          "text": "Response procedures"
+        }
+      },
+      "recovery": {
+        "title": "Disaster Recovery",
+        "intro": "In case of an incident, quick response is crucial:",
+        "point1": {
+          "title": "Backup Systems",
+          "text": "Alternative infrastructure"
+        },
+        "point2": {
+          "title": "Monitoring",
+          "text": "Failure detection"
+        },
+        "point3": {
+          "title": "Incident Analysis",
+          "text": "Root cause identification and elimination"
+        }
+      }
+    }
+  }
