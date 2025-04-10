@@ -1,1 +1,75 @@
-{}
+{
+    "hero": {
+      "title": "Our Insights",
+      "subtitle": "Discover our expertise in cybersecurity through case studies and research"
+    },
+    "sections": {
+      "cases": {
+        "title": "Case Studies",
+        "subtitle": "Real-world implementations of security solutions"
+      },
+      "advantages": {
+        "title": "Our Approach",
+        "subtitle": "What makes our methodology effective"
+      },
+      "testimonials": {
+        "title": "Client Feedback",
+        "subtitle": "Success stories from our partners"
+      }
+    },
+    "projects": {
+      "list": {
+        "siem": {
+          "title": "SIEM Implementation",
+          "description": "Enterprise-grade security monitoring deployment"
+        },
+        "pentest": {
+          "title": "Penetration Testing",
+          "description": "Comprehensive security assessment for financial sector"
+        },
+        "training": {
+          "title": "Security Training",
+          "description": "Custom awareness program development"
+        },
+        "forensics": {
+          "title": "Forensic Analysis",
+          "description": "Post-breach investigation and remediation"
+        }
+      }
+    },
+    "categories": {
+      "siem": "Security Monitoring",
+      "pentest": "Red Teaming",
+      "training": "Education",
+      "forensics": "Incident Response"
+    },
+    "advantages": {
+      "confidentiality": {
+        "title": "Data Protection",
+        "description": "End-to-end encryption and strict NDAs"
+      },
+      "experience": {
+        "title": "Industry Knowledge",
+        "description": "10+ years in critical infrastructure protection"
+      },
+      "flexibility": {
+        "title": "Adaptive Solutions",
+        "description": "Tailored to your specific threat landscape"
+      }
+    },
+    "testimonials": {
+      "list": [
+        {
+          "name": "John Smith, CTO at SecureBank",
+          "feedback": "Their insights helped us prevent a major data breach"
+        },
+        {
+          "name": "Emily Johnson, Security Director",
+          "feedback": "Actionable recommendations that improved our security posture"
+        }
+      ]
+    },
+    "common": {
+      "more": "Read case study"
+    }
+  }

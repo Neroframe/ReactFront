@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import AuditSection from "../components/TextBox";
 import InfoCard from "../components/AuditInfo";
 import pic1 from "../assets/pic1.jpg";
@@ -5,24 +6,26 @@ import "../styles/LayerOne.css";
 import LayerInfo from "../components/LayerInfo";
 
 function LayerOne() {
+  const { t } = useTranslation();
+
   const auditSections = [
     {
       key: "risks",
-      title: "Оценка рисков",
+      title: t("layer5.risks.title"),
       content: (
         <p>
-          <strong>Оценка рисков</strong>
+          <strong>{t("layer5.risks.title")}</strong>
           <br />
-          Эффективное управление рисками позволяет заранее выявить возможные угрозы и минимизировать их влияние на бизнес. Мы проводим комплексную оценку уязвимостей компании и разрабатываем планы защиты от возможных инцидентов.
+          {t("layer5.risks.intro")} 
           <ul>
             <li>
-              <strong>Анализ потенциальных угроз:</strong> Оценка рисков, включая кибератаки, утечки данных, природные катастрофы и техногенные сбои.
+              <strong>{t("layer5.risks.point1.title")}</strong> {t("layer5.risks.point1.text")}
             </li>
             <li>
-              <strong>Оценка влияния инцидентов на бизнес:</strong> Моделирование последствий различных сценариев угроз и расчет потенциальных убытков.
+              <strong>{t("layer5.risks.point2.title")}</strong> {t("layer5.risks.point2.text")}
             </li>
             <li>
-              <strong>Разработка стратегии минимизации рисков:</strong> Внедрение превентивных мер, планов реагирования и резервных механизмов.
+              <strong>{t("layer5.risks.point3.title")}</strong> {t("layer5.risks.point3.text")}
             </li>
           </ul>
         </p>
@@ -30,21 +33,21 @@ function LayerOne() {
     },
     {
       key: "developmentStrategies",
-      title: "Разработка стратегий непрерывности бизнеса",
+      title: t("layer5.developmentStrategies.title"),
       content: (
         <p>
-          <strong>Разработка стратегии непрерывности бизнеса</strong>
+          <strong>{t("layer5.developmentStrategies.title")}</strong>
           <br />
-          Поддержание работоспособности компании в условиях кризисных ситуаций требует заранее подготовленных стратегий. Мы разрабатываем комплексные решения для минимизации простоев и обеспечения работы ключевых сервисов.
+          {t("layer5.developmentStrategies.intro")}
           <ul>
             <li>
-              <strong>Обеспечение работы критически важных сервисов:</strong> Разработка резервных решений и распределение нагрузок для устойчивости бизнес-процессов.
+              <strong>{t("layer5.developmentStrategies.point1.title")}</strong> {t("layer5.developmentStrategies.point1.text")}
             </li>
             <li>
-              <strong>Возможность удалённой работы сотрудников:</strong> Настройка безопасных каналов связи и VPN-доступа в случае чрезвычайных ситуаций.
+              <strong>{t("layer5.developmentStrategies.point2.title")}</strong> {t("layer5.developmentStrategies.point2.text")}
             </li>
             <li>
-              <strong>Создание резервных копий данных:</strong> Автоматизация процесса бэкапа и хранение копий в надежных облачных и локальных хранилищах.
+              <strong>{t("layer5.developmentStrategies.point3.title")}</strong> {t("layer5.developmentStrategies.point3.text")}
             </li>
           </ul>
         </p>
@@ -52,21 +55,21 @@ function LayerOne() {
     },
     {
       key: "recovery",
-      title: "Восстановление после сбоев",
+      title: t("layer5.recovery.title"),
       content: (
         <p>
-          <strong>Восстановление после сбоев</strong>
+          <strong>{t("layer5.recovery.title")}</strong>
           <br />
-          Полноценный план восстановления после сбоя позволяет быстро вернуть бизнес к нормальной работе и минимизировать потери. Мы разрабатываем детальные стратегии восстановления, учитывающие все возможные сценарии.
+          {t("layer5.recovery.intro")}
           <ul>
             <li>
-              <strong>Настройка регулярного резервного копирования:</strong> Внедрение политики бэкапов с учетом критичности данных и автоматизации процессов.
+              <strong>{t("layer5.recovery.point1.title")}</strong> {t("layer5.recovery.point1.text")}
             </li>
             <li>
-              <strong>Планирование допустимого времени восстановления:</strong> Определение Recovery Time Objective (RTO) и Recovery Point Objective (RPO) для быстрого возобновления работы.
+              <strong>{t("layer5.recovery.point2.title")}</strong> {t("layer5.recovery.point2.text")}
             </li>
             <li>
-              <strong>Облачные решения для быстрого восстановления данных:</strong> Использование гибридных облачных технологий для моментального развертывания инфраструктуры после сбоев.
+              <strong>{t("layer5.recovery.point3.title")}</strong> {t("layer5.recovery.point3.text")}
             </li>
           </ul>
         </p>
@@ -77,20 +80,16 @@ function LayerOne() {
   return (
     <div>
       <LayerInfo
-        title="Непрерывность бизнеса и управление рисками"
+        title={t("layer5.title")}
         backgroundImage="https://inova.kz/wp-content/uploads/2023/05/wall_4_3-1.png"
-        breadcrumbs={[{ label: "Непрерывность бизнеса и управление рисками" }]}
+        breadcrumbs={[{ label: t("layer5.title") }]}
       />
       <AuditSection
-        title="Планирование обеспечения непрерывности бизнеса (BCDR)"
-        paragraphs={[
-          "Мы разрабатываем стратегии, позволяющие минимизировать простои после атак, сбоев и кризисных ситуаций, обеспечивая устойчивость бизнес-процессов.",
-        ]}
+        title={t("layer5.auditSectionTitle")}
+        paragraphs={[t("layer5.auditSectionText")]}
         imageURL={pic1}
         imageAlt="audit"
       />
-
-      {/* Передача секций в InfoCard (AuditInfo) */}
       <InfoCard sections={auditSections} />
     </div>
   );
