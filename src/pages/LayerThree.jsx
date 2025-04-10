@@ -3,101 +3,97 @@ import InfoCard from "../components/AuditInfo";
 import pic1 from "../assets/pic1.jpg";
 import "../styles/LayerOne.css";
 import LayerInfo from "../components/LayerInfo";
+import { useTranslation } from "react-i18next"; // Импорт функции перевода
+
 
 function LayerOne() {
+  const { t } = useTranslation('layerthree'); // Указываем конкретный namespace
+  
   const auditSections = [
     {
       key: "certification",
-      title: "Сертификация",
+      title: t("certification.title"),
       content: (
         <p>
-          <strong>Сертификация в области кибербезопасности</strong>
+          <strong>{t("certification.description")}</strong>
           <br />
-          Современные стандарты кибербезопасности требуют от специалистов не только знаний, но и официального подтверждения квалификации. Сертификация — это не просто документ, а реальное доказательство компетентности в сфере защиты данных и систем.
-          <br /><br />
-          Наши обучающие программы направлены на подготовку специалистов к сдаче сертификационных экзаменов, соответствующих мировым стандартам безопасности, включая:
+          {t("certification.text1")}
           <ul>
             <li>
-              <strong>CISSP (Certified Information Systems Security Professional):</strong> Сертификация для профессионалов, занимающихся разработкой и управлением информационной безопасностью.
+              <strong>{t("certification.CISSP")}</strong>: {t("certification.CISSP_description")}
             </li>
             <li>
-              <strong>CEH (Certified Ethical Hacker):</strong> Подготовка специалистов к тестированию систем на уязвимости с целью их устранения.
+              <strong>{t("certification.CEH")}</strong>: {t("certification.CEH_description")}
             </li>
             <li>
-              <strong>CompTIA Security+:</strong> Базовый сертификат, охватывающий ключевые аспекты кибербезопасности.
+              <strong>{t("certification.CompTIA_Security")}</strong>: {t("certification.CompTIA_Security_description")}
             </li>
             <li>
-              <strong>CISM (Certified Information Security Manager):</strong> Сертификация для специалистов, управляющих процессами обеспечения безопасности в организациях.
+              <strong>{t("certification.CISM")}</strong>: {t("certification.CISM_description")}
             </li>
           </ul>
-          Особенности нашего подхода:
+          {t("certification.features_title")}
           <ul>
-            <li>
-              <strong>Интерактивные сессии по реальным угрозам:</strong> Обучение проводится с использованием практических примеров, имитирующих современные кибератаки.
-            </li>
-            <li>
-              <strong>Адаптация курсов к вашей отрасли:</strong> Программы учитывают специфику работы вашей компании, чтобы обучение было максимально полезным.
-            </li>
-            <li>
-              <strong>Обновление программ с учётом новых угроз:</strong> Наши курсы постоянно дорабатываются в соответствии с последними тенденциями в области кибербезопасности.
-            </li>
+            <li>{t("certification.interactive_sessions")}</li>
+            <li>{t("certification.adapted_courses")}</li>
+            <li>{t("certification.course_updates")}</li>
           </ul>
         </p>
       ),
     },
     {
       key: "phishing",
-      title: "Фишинговые симуляции",
+      title: t("phishing.title"),
       content: (
         <p>
-          <strong>Фишинговые симуляции</strong>
+          <strong>{t("phishing.title")}</strong>
           <br />
-          Фишинг остаётся одной из самых распространённых угроз: около 90% атак на компании начинаются именно с поддельных писем или сообщений. Простого информирования сотрудников недостаточно — необходимо регулярно проверять их бдительность в реальных условиях.
+          {t("phishing.description")}
           <br /><br />
-          Мы предлагаем проведение фишинговых симуляций, имитирующих реальные атаки, с целью:
+          {t("phishing.services_title")}
           <ul>
             <li>
-              <strong>Создания реалистичных фишинговых писем:</strong> Разрабатываем фишинговые атаки, соответствующие современным методам социальной инженерии.
+              <strong>{t("phishing.realistic_emails")}</strong>: {t("phishing.realistic_emails_description")}
             </li>
             <li>
-              <strong>Анализа реакции сотрудников:</strong> Оцениваем, какие работники оказались уязвимыми, кто кликнул по подозрительным ссылкам или предоставил конфиденциальные данные.
+              <strong>{t("phishing.employee_reactions")}</strong>: {t("phishing.employee_reactions_description")}
             </li>
             <li>
-              <strong>Выявления слабых мест:</strong> Определяем отделы и сотрудников, нуждающихся в дополнительном обучении.
+              <strong>{t("phishing.weakness_identification")}</strong>: {t("phishing.weakness_identification_description")}
             </li>
             <li>
-              <strong>Персонализированной обратной связи:</strong> После тестирования предоставляем индивидуальные рекомендации и обучающие материалы.
+              <strong>{t("phishing.personalized_feedback")}</strong>: {t("phishing.personalized_feedback_description")}
             </li>
           </ul>
-          Данная практика значительно снижает вероятность успешных атак, повышает осведомленность персонала и помогает избежать финансовых потерь.
+          {t("phishing.outcome")}
         </p>
       ),
     },
     {
       key: "mobile",
-      title: "Защита мобильных устройств",
+      title: t("mobile.title"),
       content: (
         <p>
-          <strong>Защита мобильных устройств</strong>
+          <strong>{t("mobile.title")}</strong>
           <br />
-          В современных условиях мобильные устройства являются не только инструментами коммуникации, но и потенциальными точками входа для атакующих. Незащищённые смартфоны и планшеты могут стать причиной утечки конфиденциальной информации, компрометации учетных данных и проникновения вредоносного ПО в корпоративную сеть.
+          {t("mobile.description")}
           <br /><br />
-          Мы предлагаем комплексные меры по защите мобильных устройств, включающие:
+          {t("mobile.services_title")}
           <ul>
             <li>
-              <strong>Обучение сотрудников основам мобильной безопасности:</strong> Практические занятия по защите личных и корпоративных устройств от атак.
+              <strong>{t("mobile.training")}</strong>: {t("mobile.training_description")}
             </li>
             <li>
-              <strong>Настройку политик безопасности:</strong> Разработка и внедрение рекомендаций по использованию мобильных устройств в корпоративной среде.
+              <strong>{t("mobile.policies")}</strong>: {t("mobile.policies_description")}
             </li>
             <li>
-              <strong>Контроль доступа к корпоративным ресурсам:</strong> Внедрение решений для многофакторной аутентификации (MFA) и управления устройствами (MDM).
+              <strong>{t("mobile.access_control")}</strong>: {t("mobile.access_control_description")}
             </li>
             <li>
-              <strong>Проверку приложений на безопасность:</strong> Оценка используемых мобильных приложений на предмет уязвимостей и потенциальных угроз.
+              <strong>{t("mobile.app_security")}</strong>: {t("mobile.app_security_description")}
             </li>
           </ul>
-          Мы помогаем не только защитить мобильные устройства, но и минимизировать риски, связанные с утечками данных и вредоносными программами.
+          {t("mobile.risks_reduction")}
         </p>
       ),
     },
@@ -106,17 +102,15 @@ function LayerOne() {
   return (
     <div>
       <LayerInfo
-        title="Обучение безопасности и защита мобильных устройств"
+        title={t("training_and_security")}
         backgroundImage="https://inova.kz/wp-content/uploads/2023/05/wall_4_3-1.png"
-        breadcrumbs={[
-          { label: "Обучение безопасности и защита мобильных устройств" },
-        ]}
+        breadcrumbs={[{ label: t("breadcrumbs.training_and_security") }]}
       />
       <AuditSection
-        title="Проведение тренингов и семинаров"
+        title={t("audit_section.title")}
         paragraphs={[
-          "Мы организуем курсы и семинары по кибербезопасности, помогаем в получении ",
-          "профессиональных сертификатов, проводим фишинговые симуляции и разрабатываем меры защиты мобильных устройств.",
+          t("audit_section.text1"),
+          t("audit_section.text2"),
         ]}
         imageURL={pic1}
         imageAlt="audit"
