@@ -1,1 +1,38 @@
-{}
+{
+    "identification_vulnerabilities": "Vulnerability Identification",
+    "vulnerability_analysis_description": "Modern threats are constantly evolving, making regular system vulnerability analysis essential. We offer comprehensive checks of your IT infrastructure for weaknesses that could be exploited by malicious actors.",
+    "regular_scan": "Regular Scanning",
+    "automated_and_manual_analysis": "Automated and manual system analysis to identify critical vulnerabilities.",
+    "current_protection_assessment": "Current Protection Assessment",
+    "analysis_of_malware_protection": "Analysis of protection mechanisms against malware, ransomware, and phishing.",
+    "risk_prioritization": "Risk Prioritization",
+    "classification_of_vulnerabilities": "Classification of found vulnerabilities by likelihood of exploitation and potential damage.",
+    "recommendations_for_resolution": "Resolution Recommendations",
+    "detailed_instructions": "Detailed instructions for vulnerability remediation and protection enhancement.",
+    
+    "pen_testing": "Penetration Testing",
+    "pen_testing_description": "Pen testing simulates real attacks on your system to identify weaknesses that could be exploited. We conduct testing considering your business processes and potential threats.",
+    "attack_simulation": "Attack Simulation",
+    "methods_used_by_hackers": "We use methods employed by hackers to penetrate systems.",
+    "detailed_reports": "Detailed Reports",
+    "detailed_description_of_attacks": "We provide comprehensive descriptions of possible attack vectors, vulnerabilities, and remediation recommendations.",
+    "internal_and_external_testing": "Internal and External Testing",
+    "testing_internal_networks": "We evaluate the security of internal networks, web applications, APIs, and other infrastructure components.",
+    "security_improvement": "Security Improvement",
+    "developing_security_strategy": "We develop strategies to address identified weaknesses and enhance cybersecurity.",
+    
+    "compliance_testing": "Compliance Testing",
+    "compliance_testing_description": "Compliance with international and local security standards is critical for protecting your company's data and preventing financial and reputational risks. We help organizations pass compliance audits and avoid penalties.",
+    "iso_gdpr_hipaa_compliance": "ISO 27001, GDPR, HIPAA Compliance",
+    "analysis_of_processes": "Process analysis and implementation of measures complying with global standards.",
+    "security_policy_assessment": "Security Policy Assessment",
+    "checking_policy_compliance": "We verify how current procedures comply with regulatory requirements.",
+    "certification_preparation": "Certification Preparation",
+    "help_with_certification_documents": "We assist in preparing documentation, policies, and technical measures for successful audit completion.",
+    "employee_training": "Employee Training",
+    "conduct_training_on_compliance": "We conduct training on compliance requirements and information security.",
+    
+    "security_and_pen_testing": "Security Assessment and Penetration Testing",
+    "comprehensive_audits_and_testing": "Comprehensive audits, penetration testing, and vulnerability management to strengthen your security system.",
+    "identifying_vulnerabilities_and_solutions": "We identify weaknesses, conduct attack simulations, and help companies comply with international cybersecurity standards."
+  }

@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next"; // Импорт функции перевода
 import AuditSection from "../components/TextBox";
 import InfoCard from "../components/AuditInfo";
 import pic1 from "../assets/pic1.jpg";
@@ -5,38 +6,32 @@ import "../styles/LayerOne.css";
 import LayerInfo from "../components/LayerInfo";
 
 function LayerOne() {
+  const { t } = useTranslation('layertwo'); // Указываем конкретный namespace
+  
   const auditSections = [
     {
       key: "identification",
-      title: "Идентификация уязвимостей",
+      title: t("identification_vulnerabilities"), // Используем ключ для перевода
       content: (
         <p>
-          <strong>Идентификация уязвимостей</strong>
+          <strong>{t("identification_vulnerabilities")}</strong>
           <br></br>
           <br></br>
-          Современные угрозы постоянно развиваются, поэтому важно регулярно
-          проводить анализ систем на предмет уязвимостей. Мы предлагаем
-          комплексную проверку вашей ИТ-инфраструктуры на наличие слабых мест,
-          которые могут быть использованы злоумышленниками.
+          {t("vulnerability_analysis_description")}
           <br></br>
           <br></br>
           <ul>
             <li>
-              <strong>Регулярное сканирование:</strong> Автоматизированный и
-              ручной анализ систем для выявления критических уязвимостей.
+              <strong>{t("regular_scan")}</strong>: {t("automated_and_manual_analysis")}
             </li>
             <li>
-              <strong>Оценка текущего уровня защиты:</strong> Анализ механизмов
-              защиты от вредоносного ПО, программ-вымогателей и фишинга.
+              <strong>{t("current_protection_assessment")}</strong>: {t("analysis_of_malware_protection")}
             </li>
             <li>
-              <strong>Приоритизация рисков:</strong> Классификация найденных
-              уязвимостей по вероятности их эксплуатации и потенциальному
-              ущербу.
+              <strong>{t("risk_prioritization")}</strong>: {t("classification_of_vulnerabilities")}
             </li>
             <li>
-              <strong>Рекомендации по устранению:</strong> Подробные инструкции
-              для исправления уязвимостей и усиления защиты.
+              <strong>{t("recommendations_for_resolution")}</strong>: {t("detailed_instructions")}
             </li>
           </ul>
         </p>
@@ -44,34 +39,27 @@ function LayerOne() {
     },
     {
       key: "pen testing",
-      title: "Pen testing",
+      title: t("pen_testing"),
       content: (
         <p>
-          <strong>Тестирование на проникновение (Pen Testing)</strong>
+          <strong>{t("pen_testing_description")}</strong>
           <br></br>
           <br></br>
-          Pen testing — это моделирование реальных атак на вашу систему с
-          целью выявления слабых мест, которые могут использовать
-          злоумышленники. Мы проводим тестирование с учетом ваших бизнес-процессов и потенциальных угроз.
+          {t("pen_testing_explanation")}
           <br></br>
           <br></br>
           <ul>
             <li>
-              <strong>Симуляция атак:</strong> Используем методы, которые
-              применяют хакеры для проникновения в системы.
+              <strong>{t("attack_simulation")}</strong>: {t("methods_used_by_hackers")}
             </li>
             <li>
-              <strong>Подробные отчёты:</strong> Представляем детальное описание
-              возможных векторов атак, уязвимостей и рекомендаций по их устранению.
+              <strong>{t("detailed_reports")}</strong>: {t("detailed_description_of_attacks")}
             </li>
             <li>
-              <strong>Тестирование внутренних и внешних систем:</strong>{" "}
-              Оцениваем, насколько защищены внутренние сети, веб-приложения,
-              API и другие элементы инфраструктуры.
+              <strong>{t("internal_and_external_testing")}</strong>: {t("testing_internal_networks")}
             </li>
             <li>
-              <strong>Улучшение защиты:</strong> Разрабатываем стратегию по
-              устранению выявленных недостатков и усилению кибербезопасности.
+              <strong>{t("security_improvement")}</strong>: {t("developing_security_strategy")}
             </li>
           </ul>
         </p>
@@ -79,35 +67,27 @@ function LayerOne() {
     },
     {
       key: "test",
-      title: "Проверка соответствия требованиям",
+      title: t("compliance_testing"),
       content: (
         <p>
-          <strong>Проверка соответствия требованиям</strong>
+          <strong>{t("compliance_testing_description")}</strong>
           <br></br>
           <br></br>
-          Соблюдение международных и локальных стандартов безопасности
-          критически важно для защиты данных вашей компании и предотвращения
-          финансовых и репутационных рисков. Мы помогаем организациям пройти
-          аудит на соответствие требованиям и избежать штрафов.
+          {t("importance_of_compliance")}
           <br></br>
           <br></br>
           <ul>
             <li>
-              <strong>Соблюдение ISO 27001, GDPR, HIPAA:</strong> Анализ
-              процессов и внедрение мер, соответствующих мировым стандартам.
+              <strong>{t("iso_gdpr_hipaa_compliance")}</strong>: {t("analysis_of_processes")}
             </li>
             <li>
-              <strong>Оценка политики безопасности:</strong> Проверяем, насколько
-              текущие процедуры соответствуют требованиям регуляторов.
+              <strong>{t("security_policy_assessment")}</strong>: {t("checking_policy_compliance")}
             </li>
             <li>
-              <strong>Подготовка к сертификации:</strong> Помогаем
-              подготовить документацию, политики и технические меры для успешного
-              прохождения аудита.
+              <strong>{t("certification_preparation")}</strong>: {t("help_with_certification_documents")}
             </li>
             <li>
-              <strong>Обучение сотрудников:</strong> Проводим тренинги по
-              вопросам соответствия требованиям и информационной безопасности.
+              <strong>{t("employee_training")}</strong>: {t("conduct_training_on_compliance")}
             </li>
           </ul>
         </p>
@@ -118,17 +98,15 @@ function LayerOne() {
   return (
     <div>
       <LayerInfo
-        title="Оценка безопасности и тестирование на проникновение"
+        title={t("security_and_pen_testing")} // Перевод заголовка
         backgroundImage="https://inova.kz/wp-content/uploads/2023/05/wall_4_3-1.png"
-        breadcrumbs={[
-          { label: "Оценка безопасности и тестирование на проникновение" },
-        ]}
+        breadcrumbs={[{ label: t("security_and_pen_testing") }]} // Перевод хлебных крошек
       />
       <AuditSection
-        title="Оценка безопасности и тестирование на проникновение"
+        title={t("security_and_pen_testing")} // Перевод заголовка
         paragraphs={[
-          "Комплексные аудиты, тестирование на проникновение и управление уязвимостями для усиления вашей системы безопасности.",
-          "Мы выявляем слабые места, проводим симуляции атак и помогаем компаниям соответствовать международным стандартам кибербезопасности.",
+          t("comprehensive_audits_and_testing"),
+          t("identifying_vulnerabilities_and_solutions"),
         ]}
         imageURL={pic1}
         imageAlt="audit"
