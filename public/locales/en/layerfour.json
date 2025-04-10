@@ -1,1 +1,41 @@
-{}
+{
+    "monitoring": {
+      "title": "Device Monitoring and Protection",
+      "description": "In today's environment, organizations must continuously monitor all endpoints to prevent threats and respond to security incidents promptly. We offer solutions that provide full network visibility and help minimize risks.",
+      "device_tracking": "Device Tracking in the Network",
+      "device_tracking_description": "Detection and inventory of all connected devices, monitoring their activity and security status.",
+      "security_management": "Centralized Security Management",
+      "security_management_description": "Implementing a unified security management system for all organization devices to minimize vulnerabilities.",
+      "real_time_attack_prevention": "Real-Time Attack Prevention",
+      "real_time_attack_prevention_description": "Automated user behavior analysis and suspicious activity detection mechanisms to prevent cyberattacks at early stages."
+    },
+    "usage": {
+      "title": "Access and Identity Management",
+      "description": "Effective access management policies play a key role in preventing unauthorized access and data leaks. Modern solutions help securely protect critical company information.",
+      "role_based_access": "Role-Based Access Control",
+      "role_based_access_description": "Defining access levels for different employee categories based on their job responsibilities.",
+      "two_factor_authentication": "Two-Factor Authentication (2FA)",
+      "two_factor_authentication_description": "An additional layer of account protection for employees, reducing the risk of password compromise.",
+      "data_encryption": "Data Encryption",
+      "data_encryption_description": "Protecting sensitive information using modern encryption algorithms, reducing the risk of leaks and unauthorized access."
+    },
+    "incidents": {
+      "title": "Incident Detection and Response",
+      "description": "Fast response to incidents is a key aspect of effective cybersecurity. We offer solutions that help detect threats at early stages and mitigate them with minimal business impact.",
+      "ips_ids_systems": "IDS/IPS Systems for Attack Detection",
+      "ips_ids_systems_description": "Network traffic and user activity analysis to detect suspicious behavior and prevent attacks.",
+      "automated_response_tools": "Automated Response Tools",
+      "automated_response_tools_description": "Using SIEM systems and AI-based solutions for fast threat detection and neutralization.",
+      "real_time_alerts": "Real-Time Alerts",
+      "real_time_alerts_description": "Configured security incident notifications that allow rapid response to threats and minimize damage."
+    },
+    "layer_title": "Endpoint Protection and Access Management",
+    "breadcrumbs": {
+      "layer_title": "Endpoint Protection and Access Management"
+    },
+    "endpoint_security": {
+      "title": "Endpoint Security",
+      "text1": "We manage and protect all organization endpoints (PCs, mobile devices, servers), reducing risks of attacks and data leaks."
+    }
+  }
+  

@@ -3,37 +3,29 @@ import InfoCard from "../components/AuditInfo";
 import pic1 from "../assets/pic1.jpg";
 import "../styles/LayerOne.css";
 import LayerInfo from "../components/LayerInfo";
+import { useTranslation } from "react-i18next";
 
 function LayerOne() {
+  const { t } = useTranslation('layerfour'); // Указываем namespace
+
   const auditSections = [
     {
       key: "monitoring",
-      title: "Мониторинг и защита устройств",
+      title: t("monitoring.title"),
       content: (
         <p>
-          <strong>Мониторинг и защита устройств</strong>
+          <strong>{t("monitoring.title")}</strong>
           <br />
-          В современных условиях организации должны обеспечивать постоянный
-          контроль за всеми конечными устройствами, предотвращая угрозы и
-          оперативно реагируя на инциденты безопасности. Мы предлагаем решения,
-          которые обеспечивают полный обзор сети и помогают минимизировать
-          риски.
+          {t("monitoring.description")}
           <ul>
             <li>
-              <strong>Отслеживание всех устройств в сети:</strong> Обнаружение
-              и инвентаризация всех подключенных устройств, мониторинг их
-              активности и состояния безопасности.
+              <strong>{t("monitoring.device_tracking")}</strong>: {t("monitoring.device_tracking_description")}
             </li>
             <li>
-              <strong>Централизованное управление безопасностью:</strong>{" "}
-              Внедрение единой системы управления безопасностью для всех
-              устройств организации, позволяющей минимизировать уязвимости.
+              <strong>{t("monitoring.security_management")}</strong>: {t("monitoring.security_management_description")}
             </li>
             <li>
-              <strong>Предотвращение атак в режиме реального времени:</strong>{" "}
-              Автоматизированные механизмы анализа поведения пользователей и
-              обнаружения подозрительных действий, предотвращающие кибератаки
-              на ранних стадиях.
+              <strong>{t("monitoring.real_time_attack_prevention")}</strong>: {t("monitoring.real_time_attack_prevention_description")}
             </li>
           </ul>
         </p>
@@ -41,30 +33,21 @@ function LayerOne() {
     },
     {
       key: "usage",
-      title: "Управление доступом и идентификацией",
+      title: t("usage.title"),
       content: (
         <p>
-          <strong>Управление доступом и идентификацией</strong>
+          <strong>{t("usage.title")}</strong>
           <br />
-          Грамотная политика управления доступом играет ключевую роль в
-          предотвращении несанкционированного доступа и утечек данных.
-          Использование современных решений позволяет надежно защитить
-          критически важную информацию компании.
+          {t("usage.description")}
           <ul>
             <li>
-              <strong>Ограничение доступа по ролям:</strong> Определение уровней
-              доступа для различных категорий сотрудников на основе их рабочих
-              обязанностей.
+              <strong>{t("usage.role_based_access")}</strong>: {t("usage.role_based_access_description")}
             </li>
             <li>
-              <strong>Двухфакторная аутентификация (2FA):</strong> Дополнительный
-              уровень защиты учетных записей сотрудников, который снижает риск
-              компрометации паролей.
+              <strong>{t("usage.two_factor_authentication")}</strong>: {t("usage.two_factor_authentication_description")}
             </li>
             <li>
-              <strong>Шифрование данных:</strong> Защита конфиденциальной
-              информации с помощью современных алгоритмов шифрования, снижая
-              вероятность утечек и несанкционированного доступа.
+              <strong>{t("usage.data_encryption")}</strong>: {t("usage.data_encryption_description")}
             </li>
           </ul>
         </p>
@@ -72,30 +55,21 @@ function LayerOne() {
     },
     {
       key: "incidents",
-      title: "Выявление и реагирование на инциденты",
+      title: t("incidents.title"),
       content: (
         <p>
-          <strong>Выявление и реагирование на инциденты</strong>
+          <strong>{t("incidents.title")}</strong>
           <br />
-          Быстрое реагирование на инциденты — это ключевой аспект эффективной
-          кибербезопасности. Мы предлагаем решения, которые позволяют
-          обнаруживать угрозы на ранних стадиях и устранять их с минимальными
-          потерями для бизнеса.
+          {t("incidents.description")}
           <ul>
             <li>
-              <strong>Системы IDS/IPS для обнаружения атак:</strong> Анализ
-              сетевого трафика и активности пользователей для выявления
-              подозрительных действий и предотвращения атак.
+              <strong>{t("incidents.ips_ids_systems")}</strong>: {t("incidents.ips_ids_systems_description")}
             </li>
             <li>
-              <strong>Автоматизированные инструменты реагирования:</strong>{" "}
-              Использование SIEM-систем и решений на основе искусственного
-              интеллекта для быстрого выявления и нейтрализации угроз.
+              <strong>{t("incidents.automated_response_tools")}</strong>: {t("incidents.automated_response_tools_description")}
             </li>
             <li>
-              <strong>Оповещения в реальном времени:</strong> Настроенные
-              уведомления о возможных инцидентах безопасности, позволяющие
-              оперативно реагировать на угрозы и минимизировать ущерб.
+              <strong>{t("incidents.real_time_alerts")}</strong>: {t("incidents.real_time_alerts_description")}
             </li>
           </ul>
         </p>
@@ -106,22 +80,16 @@ function LayerOne() {
   return (
     <div>
       <LayerInfo
-        title="Защита конечных устройств и управление доступом"
+        title={t("layer_title")}
         backgroundImage="https://inova.kz/wp-content/uploads/2023/05/wall_4_3-1.png"
-        breadcrumbs={[
-          { label: "Защита конечных устройств и управление доступом" },
-        ]}
+        breadcrumbs={[{ label: t("breadcrumbs.layer_title") }]}
       />
       <AuditSection
-        title="Защита конечных устройств (Endpoint Security)"
-        paragraphs={[
-          "Мы управляем и защищаем все конечные устройства организации (ПК, мобильные устройства, серверы), снижая риски атак и утечек данных.",
-        ]}
+        title={t("endpoint_security.title")}
+        paragraphs={[t("endpoint_security.text1")]}
         imageURL={pic1}
         imageAlt="audit"
       />
-
-      {/* Передача секций в InfoCard (AuditInfo) */}
       <InfoCard sections={auditSections} />
     </div>
   );
