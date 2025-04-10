@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
+import { useTranslation } from "react-i18next"; // импорт i18n
 import GridSection from "../components/GridSection";
 import HeroSection from "../components/HeroSection";
 import PartnersSlider from "../components/PartnersSlider";
@@ -9,29 +10,24 @@ import pic3 from "../assets/pic3.jpg";
 import pic4 from "../assets/pic4.jpg";
 import pic5 from "../assets/pic5.jpg";
 import pic6 from "../assets/pic6.jpg";
-import StatsSection from "../components/StatsSection"
+import StatsSection from "../components/StatsSection";
 import '../styles/Home.css';
-
 
 function Home() {
   const location = useLocation();
+  const { t } = useTranslation(); // хук перевода
 
   useEffect(() => {
-    console.log("location.state:", location.state); // Проверка, передаётся ли state
-
     if (location.state?.scrollToServices) {
       setTimeout(() => {
         const servicesSection = document.getElementById("services-section");
         if (servicesSection) {
           servicesSection.scrollIntoView({ behavior: "smooth" });
         }
-      }, 100); // Даем время элементу загрузиться
+      }, 100);
     }
   }, [location]);
-// В компоненте Home оберните services-section в section:
-<section id="services-section" className="services-container">
-  {/* Ваши GridSection компоненты */}
-</section>
+
   return (
     <div>
       <HeroSection />
@@ -39,49 +35,45 @@ function Home() {
       <div id="services-section">
         {/* 1st Layer - Strategic Security Consulting */}
         <GridSection
-          title="Консультации по стратегической безопасности"
-          text="Экспертные советы по стратегиям кибербезопасности, внедрению политик и соблюдению требований GDPR, HIPAA и других нормативов."
+          title={t("home.layer1.title")}
+          text={t("home.layer1.text")}
           link="/LayerOne"
           image={pic1}
         />
         {/* 2nd Layer - Security Assessment & Penetration Testing (Reversed) */}
         <GridSection
-          title="Оценка безопасности и тестирование на проникновение"
-          text="Комплексные аудиты, тестирование на проникновение и управление уязвимостями для усиления вашей системы безопасности."
+          title={t("home.layer2.title")}
+          text={t("home.layer2.text")}
           link="/LayerTwo"
           image={pic2}
           reverse={true}
         />
-
         {/* 3rd Layer - Security Awareness & Mobile Protection */}
         <GridSection
-          title="Обучение безопасности и защита мобильных устройств"
-          text="Обучение сотрудников, меры по обеспечению мобильной безопасности и тестирование устойчивости к фишинговым атакам для повышения осведомленности в сфере кибербезопасности."
+          title={t("home.layer3.title")}
+          text={t("home.layer3.text")}
           link="/LayerThree"
           image={pic3}
         />
-
         {/* 4th Layer - Endpoint & Access Security (Reversed) */}
         <GridSection
-          title="Защита конечных устройств и управление доступом"
-          text="Защита конечных устройств, управление доступом и система обнаружения вторжений в режиме реального времени для защиты критически важных систем."
+          title={t("home.layer4.title")}
+          text={t("home.layer4.text")}
           link="/LayerFour"
           image={pic4}
           reverse={true}
         />
-
         {/* 5th Layer - Business Continuity & Risk Management */}
         <GridSection
-          title="Непрерывность бизнеса и управление рисками"
-          text="Восстановление после сбоев, управление рисками и судебная экспертиза для обеспечения долгосрочной устойчивости бизнеса."
+          title={t("home.layer5.title")}
+          text={t("home.layer5.text")}
           link="/LayerFive"
           image={pic5}
         />
-
         {/* 6th Layer - Secure Development & IoT Security (Reversed) */}
         <GridSection
-          title="Безопасная разработка и защита IoT"
-          text="Аудиты безопасности приложений, защита устройств IoT и планирование безопасной IT-архитектуры."
+          title={t("home.layer6.title")}
+          text={t("home.layer6.text")}
           link="/LayerSix"
           image={pic6}
           reverse={true}

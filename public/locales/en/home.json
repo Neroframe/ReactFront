@@ -1,1 +1,29 @@
-{}
+{
+    "home": {
+      "layer1": {
+        "title": "Strategic Security Consulting",
+        "text": "Expert advice on cybersecurity strategies, policy implementation, and compliance with GDPR, HIPAA, and other regulations."
+      },
+      "layer2": {
+        "title": "Security Assessment and Penetration Testing",
+        "text": "Comprehensive audits, penetration testing, and vulnerability management to strengthen your security posture."
+      },
+      "layer3": {
+        "title": "Security Awareness and Mobile Device Protection",
+        "text": "Employee training, mobile security measures, and phishing resilience testing to raise cybersecurity awareness."
+      },
+      "layer4": {
+        "title": "Endpoint Protection and Access Management",
+        "text": "Endpoint protection, access control, and real-time intrusion detection to safeguard critical systems."
+      },
+      "layer5": {
+        "title": "Business Continuity and Risk Management",
+        "text": "Disaster recovery, risk management, and forensic analysis to ensure long-term business resilience."
+      },
+      "layer6": {
+        "title": "Secure Development and IoT Protection",
+        "text": "Application security audits, IoT device protection, and secure IT architecture planning."
+      }
+    }
+  }
+  

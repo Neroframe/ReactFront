@@ -1,1 +1,34 @@
-{}
+{
+    "title": "Свяжитесь с нами",
+    "subtitle": "Мы всегда готовы помочь вам в вопросах кибербезопасности",
+    
+    "phone": {
+      "title": "Телефон",
+      "number": "+7 (700) 123-45-67"
+    },
+    
+    "email": {
+      "title": "Email",
+      "address": "info@shieldednetworks.com"
+    },
+    
+    "address": {
+      "title": "Адрес",
+      "value": "г. Астана, Казахстан, ул. Безопасная 42"
+    },
+    
+    "social": {
+      "title": "Социальные сети",
+      "telegram": "Telegram",
+      "linkedin": "LinkedIn",
+      "github": "GitHub"
+    },
+    
+    "form": {
+      "title": "Оставьте нам сообщение",
+      "namePlaceholder": "Ваше имя",
+      "emailPlaceholder": "Ваш Email",
+      "messagePlaceholder": "Ваше сообщение",
+      "submitButton": "Отправить"
+    }
+  }

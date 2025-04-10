@@ -1,1 +1,34 @@
-{}
+{
+    "title": "Contact Us",
+    "subtitle": "We're always ready to help with cybersecurity matters",
+    
+    "phone": {
+      "title": "Phone",
+      "number": "+7 (700) 123-45-67"
+    },
+    
+    "email": {
+      "title": "Email",
+      "address": "info@shieldednetworks.com"
+    },
+    
+    "address": {
+      "title": "Address",
+      "value": "42 Safe Street, Astana, Kazakhstan"
+    },
+    
+    "social": {
+      "title": "Social Networks",
+      "telegram": "Telegram",
+      "linkedin": "LinkedIn",
+      "github": "GitHub"
+    },
+    
+    "form": {
+      "title": "Send us a message",
+      "namePlaceholder": "Your name",
+      "emailPlaceholder": "Your Email",
+      "messagePlaceholder": "Your message",
+      "submitButton": "Send"
+    }
+  }

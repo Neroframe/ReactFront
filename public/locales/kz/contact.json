@@ -1,1 +1,34 @@
-{}
+{
+    "title": "Бізбен хабарласыңыз",
+    "subtitle": "Киберқауіпсіздік мәселелерінде әрқашан көмектесуге дайынбыз",
+    
+    "phone": {
+      "title": "Телефон",
+      "number": "+7 (700) 123-45-67"
+    },
+    
+    "email": {
+      "title": "Электрондық пошта",
+      "address": "info@shieldednetworks.com"
+    },
+    
+    "address": {
+      "title": "Мекен-жай",
+      "value": "Қазақстан, Астана, Қауіпсіз көшесі 42"
+    },
+    
+    "social": {
+      "title": "Әлеуметтік желілер",
+      "telegram": "Telegram",
+      "linkedin": "LinkedIn",
+      "github": "GitHub"
+    },
+    
+    "form": {
+      "title": "Бізге хабар қалдырыңыз",
+      "namePlaceholder": "Аты-жөніңіз",
+      "emailPlaceholder": "Электрондық поштаңыз",
+      "messagePlaceholder": "Хатыңыз",
+      "submitButton": "Жіберу"
+    }
+  }
