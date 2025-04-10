@@ -30,7 +30,6 @@ function App() {
     <Router>
       <div className="app-container">
         <Navbar />
-        <I18nextProvider i18n={i18n}>
           <Routes>
             {/* Main Pages */}
             <Route path="/" element={<Home />} />
@@ -56,7 +55,6 @@ function App() {
           <Footer />
         </div>
       </Router>
-    </I18nextProvider>
   );
 }
 
