@@ -153,12 +153,12 @@ const Navbar = () => {
                     onMouseEnter={handleDropdownEnter}
                     onMouseLeave={handleDropdownLeave}
                 >
-                  <li><NavLink to="/layer-one" className="dropdown-item">{t("nav.layer1")}</NavLink></li>
-                  <li><NavLink to="/layer-two" className="dropdown-item">{t("nav.layer2")}</NavLink></li>
-                  <li><NavLink to="/layer-three" className="dropdown-item">{t("nav.layer3")}</NavLink></li>
-                  <li><NavLink to="/layer-four" className="dropdown-item">{t("nav.layer4")}</NavLink></li>
-                  <li><NavLink to="/layer-five" className="dropdown-item">{t("nav.layer5")}</NavLink></li>
-                  <li><NavLink to="/layer-six" className="dropdown-item">{t("nav.layer6")}</NavLink></li>
+                  <li><NavLink to="/LayerOne" className="dropdown-item">{t("nav.layer1")}</NavLink></li>
+                  <li><NavLink to="/LayerTwo" className="dropdown-item">{t("nav.layer2")}</NavLink></li>
+                  <li><NavLink to="/LayerThree" className="dropdown-item">{t("nav.layer3")}</NavLink></li>
+                  <li><NavLink to="/LayerFour" className="dropdown-item">{t("nav.layer4")}</NavLink></li>
+                  <li><NavLink to="/LayerFive" className="dropdown-item">{t("nav.layer5")}</NavLink></li>
+                  <li><NavLink to="/LayerSix" className="dropdown-item">{t("nav.layer6")}</NavLink></li>
                 </ul>
               )}
             </li>

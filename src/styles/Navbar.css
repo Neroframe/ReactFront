@@ -79,6 +79,19 @@
   animation: underline 0.3s ease;
 }
 
+.dropdown-menu a:hover {
+  background-color: #ffe5e5; /* светло-красный фон */
+  color: #E94560; /* ярко-красный текст */
+  font-weight: bold;
+}
+
+.dropdown-menu a.active {
+  background-color: #ffcccc;
+  color: #c70000;
+  font-weight: bold;
+}
+
+
 @keyframes underline {
   from { width: 0; opacity: 0; }
   to { width: 100%; opacity: 1; }
