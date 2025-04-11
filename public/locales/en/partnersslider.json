@@ -1,0 +1,19 @@
+{
+    "title": "What our customers say about us",
+    "partner1": {
+      "quote": "In addition to the great advantage of being an open source platform, Wazuh is also easy to deploy, and its multiple capabilities have allowed us to achieve our goal with security at Woop.",
+      "author": "Haithem Souala",
+      "position": "Site Reliability Engineer"
+    },
+    "partner2": {
+      "quote": "This platform provided us with the scalability and security we needed. The flexibility and ease of integration have been invaluable to our company.",
+      "author": "Jane Doe",
+      "position": "CTO, Tech Corp"
+    },
+    "partner3": {
+      "quote": "Working with this team has been a fantastic experience. Their expertise and dedication to security make them a trusted partner for our business.",
+      "author": "John Smith",
+      "position": "Cybersecurity Lead"
+    }
+  }
+  

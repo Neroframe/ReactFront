@@ -3,6 +3,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "../styles/PartnersSlider.css";
+import { useTranslation } from "react-i18next";
 
 // Custom arrow components
 const PrevArrow = ({ onClick }) => (
@@ -21,30 +22,29 @@ const partners = [
   {
     id: 1,
     logo: "https://wazuh.com/uploads/2024/01/woop-white.png",
-    quote:
-      "In addition to the great advantage of being an open source platform, Wazuh is also easy to deploy, and its multiple capabilities have allowed us to achieve our goal with security at Woop.",
-    author: "Haithem Souala",
-    position: "Site Reliability Engineer",
+    quoteKey: "partner1.quote",
+    authorKey: "partner1.author",
+    positionKey: "partner1.position",
   },
   {
     id: 2,
     logo: "https://wazuh.com/uploads/2024/09/guayoyo-white-narrow.png",
-    quote:
-      "This platform provided us with the scalability and security we needed. The flexibility and ease of integration have been invaluable to our company.",
-    author: "Jane Doe",
-    position: "CTO, Tech Corp",
+    quoteKey: "partner2.quote",
+    authorKey: "partner2.author",
+    positionKey: "partner2.position",
   },
   {
     id: 3,
     logo: "https://wazuh.com/uploads/2024/09/enevo-white.png",
-    quote:
-      "Working with this team has been a fantastic experience. Their expertise and dedication to security make them a trusted partner for our business.",
-    author: "John Smith",
-    position: "Cybersecurity Lead",
+    quoteKey: "partner3.quote",
+    authorKey: "partner3.author",
+    positionKey: "partner3.position",
   },
 ];
 
 const PartnersSlider = () => {
+  const { t } = useTranslation("partnersslider");
+
   const settings = {
     dots: false,
     infinite: true,
@@ -55,15 +55,15 @@ const PartnersSlider = () => {
     autoplaySpeed: 4000,
     prevArrow: <PrevArrow />,
     nextArrow: <NextArrow />,
-    arrows: true, // Явно включаем кастомные стрелки
-    appendDots: dots => <ul>{dots}</ul>, // Контроль точек навигации
+    arrows: true,
+    appendDots: dots => <ul>{dots}</ul>,
   };
 
   return (
     <div className="partners-slider-section">
-      <h2 className="partners-heading">What our customers say about us</h2>
+      <h2 className="partners-heading">{t("title")}</h2>
       <div className="slider-container">
-      <Slider {...settings} className="custom-slider">
+        <Slider {...settings} className="custom-slider">
           {partners.map((partner) => (
             <div key={partner.id} className="testimonial-slide">
               <div className="testimonial-content">
@@ -71,9 +71,9 @@ const PartnersSlider = () => {
                   <img src={partner.logo} alt="Partner Logo" />
                 </div>
                 <div className="testimonial-text">
-                  <p className="quote">“{partner.quote}”</p>
+                  <p className="quote">“{t(partner.quoteKey)}”</p>
                   <p className="author">
-                    <strong>{partner.author}</strong>, {partner.position}
+                    <strong>{t(partner.authorKey)}</strong>, {t(partner.positionKey)}
                   </p>
                 </div>
               </div>
