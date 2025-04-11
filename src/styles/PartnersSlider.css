@@ -26,6 +26,44 @@
   position: relative;
 }
 
+/* Custom arrows */
+.custom-slider .slick-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  font-size: 24px;
+  border-radius: 50%;
+  z-index: 5;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+  user-select: none;
+}
+
+.custom-slider .slick-arrow:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+  transform: translateY(-50%) scale(1.05);
+}
+
+.custom-slider .slick-prev {
+  left: -60px;
+}
+
+.custom-slider .slick-next {
+  right: -60px;
+}
+
+/* Optional: prevent slick default arrow icon stacking */
+.custom-slider .slick-arrow::before {
+  content: none;
+}
+
 .testimonial-slide {
   display: flex !important;
   justify-content: center;
@@ -72,51 +110,22 @@
   font-weight: 500;
 }
 
-/* Кастомные стрелки */
-.custom-slider .slick-arrow {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 40px;
-  height: 40px;
-  font-size: 22px;
-  color: #fff;
-  background: rgba(0, 0, 0, 0.5);
-  border-radius: 50%;
-  z-index: 10;
-  display: flex !important;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-
-.custom-slider .slick-prev {
-  left: -50px;
-}
-
-.custom-slider .slick-next {
-  right: -50px;
-}
-
-.custom-slider .slick-arrow:hover {
-  background: rgba(0, 0, 0, 0.8);
-}
-
-/* Убираем лишние стрелки, если вдруг дублируются */
-.slick-slider .slick-arrow:not(.slick-prev):not(.slick-next) {
-  display: none !important;
-}
-
-/* Mobile */
+/* 📱 Mobile Styles */
 @media (max-width: 768px) {
   .testimonial-content {
     flex-direction: column;
     text-align: center;
+    gap: 15px;
+  }
+
+  .testimonial-text {
+    padding: 0 10px;
   }
 
   .testimonial-logo {
     padding: 0;
+    max-width: 80px;
+    margin: 0 auto;
   }
 
   .custom-slider .slick-arrow {

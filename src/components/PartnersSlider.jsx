@@ -5,16 +5,23 @@ import "slick-carousel/slick/slick-theme.css";
 import "../styles/PartnersSlider.css";
 import { useTranslation } from "react-i18next";
 
-// Custom arrow components
-const PrevArrow = ({ onClick }) => (
-  <div className="slick-arrow slick-prev" onClick={onClick}>
-    &#10094;
+const PrevArrow = ({ className, style, onClick }) => (
+  <div
+    className={className}
+    style={{ ...style, display: "flex" }}
+    onClick={onClick}
+  >
+    <span className="custom-arrow-icon">&#10094;</span>
   </div>
 );
 
-const NextArrow = ({ onClick }) => (
-  <div className="slick-arrow slick-next" onClick={onClick}>
-    &#10095;
+const NextArrow = ({ className, style, onClick }) => (
+  <div
+    className={className}
+    style={{ ...style, display: "flex" }}
+    onClick={onClick}
+  >
+    <span className="custom-arrow-icon">&#10095;</span>
   </div>
 );
 
@@ -56,14 +63,16 @@ const PartnersSlider = () => {
     prevArrow: <PrevArrow />,
     nextArrow: <NextArrow />,
     arrows: true,
-    appendDots: dots => <ul>{dots}</ul>,
+    swipe: true,
+    touchMove: true,
+    appendDots: (dots) => <ul>{dots}</ul>,
   };
 
   return (
     <div className="partners-slider-section">
       <h2 className="partners-heading">{t("title")}</h2>
       <div className="slider-container">
-        <Slider {...settings} className="custom-slider">
+        <Slider {...settings} className="custom-slider no-default-arrows">
           {partners.map((partner) => (
             <div key={partner.id} className="testimonial-slide">
               <div className="testimonial-content">
@@ -73,7 +82,8 @@ const PartnersSlider = () => {
                 <div className="testimonial-text">
                   <p className="quote">“{t(partner.quoteKey)}”</p>
                   <p className="author">
-                    <strong>{t(partner.authorKey)}</strong>, {t(partner.positionKey)}
+                    <strong>{t(partner.authorKey)}</strong>,{" "}
+                    {t(partner.positionKey)}
                   </p>
                 </div>
               </div>
