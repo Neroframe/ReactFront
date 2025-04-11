@@ -6,7 +6,13 @@
       "about": "About Us",
       "contact": "Contact",
       "partners": "Partners",
-      "request": "Leave a Request"
+      "request": "Leave a Request",
+      "layer1": "Strategic Security Consulting",
+      "layer2": "Security Assessment and Penetration Testing",
+      "layer3": "Security Awareness and Mobile Device Protection",
+      "layer4": "Endpoint Protection and Access Management",
+      "layer5": "Business Continuity and Risk Management",
+      "layer6": "Secure Development and IoT Protection"
     }
   }
   

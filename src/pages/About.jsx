@@ -10,7 +10,7 @@ const About = () => {
       <header className="about-header">
         <h1>
           {t("companyTitle")}{" "}
-          <span className="highlight">{t("companyName")}</span>
+          <span className="highlight">{t("")}</span>
         </h1>
         <p>{t("companySubtitle")}</p>
       </header>
