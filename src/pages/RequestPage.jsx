@@ -23,46 +23,44 @@ const RequestPage = () => {
 
   return (
     <div className="request-container">
-      <div className="container">
-        <div className="request-box">
-          <h2>{t("requestPage.title")}</h2>
-          <form onSubmit={handleSubmit}>
-            <input
-              type="text"
-              name="name"
-              placeholder={t("requestPage.namePlaceholder")}
-              value={formData.name}
-              onChange={handleChange}
-              required
-            />
-            <input
-              type="email"
-              name="email"
-              placeholder={t("requestPage.emailPlaceholder")}
-              value={formData.email}
-              onChange={handleChange}
-              required
-            />
-            <input
-              type="tel"
-              name="phone"
-              placeholder={t("requestPage.phonePlaceholder")}
-              value={formData.phone}
-              onChange={handleChange}
-              required
-            />
-            <textarea
-              name="problem"
-              placeholder={t("requestPage.problemPlaceholder")}
-              value={formData.problem}
-              onChange={handleChange}
-              required
-            />
-            <button type="submit" className="btn-submit">
-              {t("requestPage.submitButton")}
-            </button>
-          </form>
-        </div>
+      <div className="request-box">
+        <h2>{t("requestPage.title")}</h2>
+        <form onSubmit={handleSubmit}>
+          <input
+            type="text"
+            name="name"
+            placeholder={t("requestPage.namePlaceholder")}
+            value={formData.name}
+            onChange={handleChange}
+            required
+          />
+          <input
+            type="email"
+            name="email"
+            placeholder={t("requestPage.emailPlaceholder")}
+            value={formData.email}
+            onChange={handleChange}
+            required
+          />
+          <input
+            type="tel"
+            name="phone"
+            placeholder={t("requestPage.phonePlaceholder")}
+            value={formData.phone}
+            onChange={handleChange}
+            required
+          />
+          <textarea
+            name="problem"
+            placeholder={t("requestPage.problemPlaceholder")}
+            value={formData.problem}
+            onChange={handleChange}
+            required
+          />
+          <button type="submit" className="btn-submit">
+            {t("requestPage.submitButton")}
+          </button>
+        </form>
       </div>
     </div>
   );
