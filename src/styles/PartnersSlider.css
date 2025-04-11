@@ -22,46 +22,46 @@
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-.custom-slider {
-  position: relative;
-}
-
 /* Custom arrows */
 .custom-slider .slick-arrow {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  width: 40px;
-  height: 40px;
-  background-color: rgba(0, 0, 0, 0.5);
-  color: #fff;
-  font-size: 24px;
-  border-radius: 50%;
-  z-index: 5;
-  display: flex !important;
-  align-items: center;
-  justify-content: center;
+  color: #d32f2f;
+  font-size: 40px;
+  z-index: 10;
+  background: none;
+  border: none;
+  outline: none;
+  box-shadow: none;
   cursor: pointer;
-  transition: background 0.3s ease, transform 0.3s ease;
-  user-select: none;
+  transition: transform 0.2s ease;
+  padding: 0;
 }
 
 .custom-slider .slick-arrow:hover {
-  background-color: rgba(0, 0, 0, 0.8);
-  transform: translateY(-50%) scale(1.05);
+  transform: translateY(-50%) scale(1.1);
+  color: #ffdddd; /* subtle hover tint */
 }
 
 .custom-slider .slick-prev {
-  left: -60px;
+  left: -50px;
 }
 
 .custom-slider .slick-next {
-  right: -60px;
+  right: -50px;
 }
 
-/* Optional: prevent slick default arrow icon stacking */
+/* remove default slick icon */
 .custom-slider .slick-arrow::before {
-  content: none;
+  display: none;
+  content: "";
+}
+
+.custom-arrow-icon {
+  font-size: 40px;
+  font-weight: bold;
+  line-height: 1;
 }
 
 .testimonial-slide {

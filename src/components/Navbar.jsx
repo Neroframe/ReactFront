@@ -5,6 +5,7 @@ import { useTranslation } from "react-i18next";
 
 const NavButton = ({ to, translationKey, onClick }) => {
   const { t } = useTranslation("navbar");
+
   return (
     <li className="nav-item">
       <NavLink
@@ -49,17 +50,26 @@ const LanguageSwitcher = () => {
       {isOpen && (
         <ul className="dropdown-menu show">
           <li>
-            <button className="dropdown-item" onClick={() => changeLanguage("kz")}>
+            <button
+              className="dropdown-item"
+              onClick={() => changeLanguage("kz")}
+            >
               Қазақша
             </button>
           </li>
           <li>
-            <button className="dropdown-item" onClick={() => changeLanguage("ru")}>
+            <button
+              className="dropdown-item"
+              onClick={() => changeLanguage("ru")}
+            >
               Русский
             </button>
           </li>
           <li>
-            <button className="dropdown-item" onClick={() => changeLanguage("en")}>
+            <button
+              className="dropdown-item"
+              onClick={() => changeLanguage("en")}
+            >
               English
             </button>
           </li>
@@ -72,7 +82,7 @@ const LanguageSwitcher = () => {
 const Navbar = () => {
   const location = useLocation();
   const navigate = useNavigate();
-  const { t } = useTranslation();
+  const { t } = useTranslation("navbar");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const scrollToTop = () => {
@@ -87,7 +97,9 @@ const Navbar = () => {
     if (location.pathname !== "/") {
       navigate("/", { state: { scrollToServices: true }, replace: true });
     } else {
-      document.getElementById("services-section")?.scrollIntoView({ behavior: "smooth" });
+      document
+        .getElementById("services-section")
+        ?.scrollIntoView({ behavior: "smooth" });
     }
   };
 
@@ -122,18 +134,49 @@ const Navbar = () => {
           <span className="navbar-toggler-icon"></span>
         </button>
 
-        <div className={`collapse navbar-collapse ${isMenuOpen ? "show" : ""}`} id="navbarNav">
+        <div
+          className={`collapse navbar-collapse ${isMenuOpen ? "show" : ""}`}
+          id="navbarNav"
+        >
           <ul className="navbar-nav me-auto">
-            <NavButton to="/insights" translationKey="nav.projects" onClick={scrollToTop} />
-            <NavButton to="/" translationKey="nav.services" onClick={handleServicesClick} />
-            <NavButton to="/news" translationKey="nav.articles" onClick={scrollToTop} />
+            <NavButton
+              to="/insights"
+              translationKey="nav.projects"
+              onClick={scrollToTop}
+            />
+            <NavButton
+              to="/"
+              translationKey="nav.services"
+              onClick={handleServicesClick}
+            />
+            <NavButton
+              to="/news"
+              translationKey="nav.articles"
+              onClick={scrollToTop}
+            />
           </ul>
           <ul className="navbar-nav ms-auto">
-            <NavButton to="/about" translationKey="nav.about" onClick={scrollToTop} />
-            <NavButton to="/contact" translationKey="nav.contact" onClick={scrollToTop} />
-            <NavButton to="/partners" translationKey="nav.partners" onClick={scrollToTop} />
+            <NavButton
+              to="/about"
+              translationKey="nav.about"
+              onClick={scrollToTop}
+            />
+            <NavButton
+              to="/contact"
+              translationKey="nav.contact"
+              onClick={scrollToTop}
+            />
+            <NavButton
+              to="/partners"
+              translationKey="nav.partners"
+              onClick={scrollToTop}
+            />
           </ul>
-          <NavLink to="/request" className="btn btn-danger ms-3" onClick={scrollToTop}>
+          <NavLink
+            to="/request"
+            className="btn btn-danger ms-3"
+            onClick={scrollToTop}
+          >
             {t("nav.request")}
           </NavLink>
           <div className="ms-3">
