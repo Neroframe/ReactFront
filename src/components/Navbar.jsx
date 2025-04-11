@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import "../styles/Navbar.css";
 import { useTranslation } from "react-i18next";
@@ -49,30 +49,9 @@ const LanguageSwitcher = () => {
       <button className="btn btn-dark">🌍</button>
       {isOpen && (
         <ul className="dropdown-menu show">
-          <li>
-            <button
-              className="dropdown-item"
-              onClick={() => changeLanguage("kz")}
-            >
-              Қазақша
-            </button>
-          </li>
-          <li>
-            <button
-              className="dropdown-item"
-              onClick={() => changeLanguage("ru")}
-            >
-              Русский
-            </button>
-          </li>
-          <li>
-            <button
-              className="dropdown-item"
-              onClick={() => changeLanguage("en")}
-            >
-              English
-            </button>
-          </li>
+          <li><button className="dropdown-item" onClick={() => changeLanguage("kz")}>Қазақша</button></li>
+          <li><button className="dropdown-item" onClick={() => changeLanguage("ru")}>Русский</button></li>
+          <li><button className="dropdown-item" onClick={() => changeLanguage("en")}>English</button></li>
         </ul>
       )}
     </div>
@@ -84,27 +63,49 @@ const Navbar = () => {
   const navigate = useNavigate();
   const { t } = useTranslation("navbar");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+
+  const dropdownTimeoutRef = useRef(null);
 
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
     setIsMenuOpen(false);
   };
 
-  const handleServicesClick = (e) => {
-    e.preventDefault();
-    setIsMenuOpen(false);
-
-    if (location.pathname !== "/") {
-      navigate("/", { state: { scrollToServices: true }, replace: true });
-    } else {
-      document
-        .getElementById("services-section")
-        ?.scrollIntoView({ behavior: "smooth" });
-    }
-  };
-
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
+  };
+
+  const handleDropdownEnter = () => {
+    if (dropdownTimeoutRef.current) {
+      clearTimeout(dropdownTimeoutRef.current);
+    }
+    setIsDropdownOpen(true);
+  };
+
+  const handleDropdownLeave = () => {
+    dropdownTimeoutRef.current = setTimeout(() => {
+      setIsDropdownOpen(false);
+    }, 300); // Задержка для плавности
+  };
+
+  const handleServicesClick = () => {
+    if (location.pathname !== "/") {
+      navigate("/");
+      setTimeout(() => {
+        const servicesSection = document.getElementById("services-section");
+        if (servicesSection) {
+          servicesSection.scrollIntoView({ behavior: "smooth" });
+        }
+      }, 100);
+    } else {
+      const servicesSection = document.getElementById("services");
+      if (servicesSection) {
+        servicesSection.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+    setIsDropdownOpen(false);
+    setIsMenuOpen(false);
   };
 
   return (
@@ -134,51 +135,47 @@ const Navbar = () => {
           <span className="navbar-toggler-icon"></span>
         </button>
 
-        <div
-          className={`collapse navbar-collapse ${isMenuOpen ? "show" : ""}`}
-          id="navbarNav"
-        >
+        <div className={`collapse navbar-collapse ${isMenuOpen ? "show" : ""}`} id="navbarNav">
           <ul className="navbar-nav me-auto">
-            <NavButton
-              to="/insights"
-              translationKey="nav.projects"
-              onClick={scrollToTop}
-            />
-            <NavButton
-              to="/"
-              translationKey="nav.services"
-              onClick={handleServicesClick}
-            />
-            <NavButton
-              to="/news"
-              translationKey="nav.articles"
-              onClick={scrollToTop}
-            />
+            <NavButton to="/insights" translationKey="nav.projects" onClick={scrollToTop} />
+
+            {/* Услуги с выпадающим меню */}
+            <li
+              className="nav-item dropdown"
+              onMouseEnter={handleDropdownEnter}
+              onMouseLeave={handleDropdownLeave}
+            >
+              <span className="nav-link dropdown-toggle" role="button" onClick={handleServicesClick}>
+                {t("nav.services")}
+              </span>
+              {isDropdownOpen && (
+                <ul className="dropdown-menu show"
+                    onMouseEnter={handleDropdownEnter}
+                    onMouseLeave={handleDropdownLeave}
+                >
+                  <li><NavLink to="/layer-one" className="dropdown-item">{t("nav.layer1")}</NavLink></li>
+                  <li><NavLink to="/layer-two" className="dropdown-item">{t("nav.layer2")}</NavLink></li>
+                  <li><NavLink to="/layer-three" className="dropdown-item">{t("nav.layer3")}</NavLink></li>
+                  <li><NavLink to="/layer-four" className="dropdown-item">{t("nav.layer4")}</NavLink></li>
+                  <li><NavLink to="/layer-five" className="dropdown-item">{t("nav.layer5")}</NavLink></li>
+                  <li><NavLink to="/layer-six" className="dropdown-item">{t("nav.layer6")}</NavLink></li>
+                </ul>
+              )}
+            </li>
+
+            <NavButton to="/news" translationKey="nav.articles" onClick={scrollToTop} />
           </ul>
+
           <ul className="navbar-nav ms-auto">
-            <NavButton
-              to="/about"
-              translationKey="nav.about"
-              onClick={scrollToTop}
-            />
-            <NavButton
-              to="/contact"
-              translationKey="nav.contact"
-              onClick={scrollToTop}
-            />
-            <NavButton
-              to="/partners"
-              translationKey="nav.partners"
-              onClick={scrollToTop}
-            />
+            <NavButton to="/about" translationKey="nav.about" onClick={scrollToTop} />
+            <NavButton to="/contact" translationKey="nav.contact" onClick={scrollToTop} />
+            <NavButton to="/partners" translationKey="nav.partners" onClick={scrollToTop} />
           </ul>
-          <NavLink
-            to="/request"
-            className="btn btn-danger ms-3"
-            onClick={scrollToTop}
-          >
+
+          <NavLink to="/request" className="btn btn-danger ms-3" onClick={scrollToTop}>
             {t("nav.request")}
           </NavLink>
+
           <div className="ms-3">
             <LanguageSwitcher />
           </div>
