@@ -2,44 +2,98 @@
   max-width: 1200px;
   margin: 0 auto;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap; /* Позволяет элементам переноситься на новую строку */
-  padding: 20px;
-  gap: 20px; /* Расстояние между элементами */
+  justify-content: space-around; /* Более равномерное распределение */
+  align-items: flex-start; /* Выравнивание по верхнему краю */
+  flex-wrap: wrap;
+  padding: 15px;
+  gap: 30px 15px; /* Больший вертикальный отступ */
 }
 
 .stat-item {
-  flex: 1 1 200px; /* Блоки занимают минимум 200px и растягиваются */
+  flex: 1 1 180px; /* Меньший минимальный размер для лучшего заполнения */
   text-align: center;
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.1); /* Легкий фон для лучшей читаемости */
+  border-radius: 12px; /* Скругленные углы */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05); /* Легкая тень */
+  transition: transform 0.3s ease; /* Анимация при наведении */
+}
+
+.stat-item:hover {
+  transform: translateY(-5px); /* Эффект приподнимания */
 }
 
 .stat-icon {
-  font-size: 40px;
+  font-size: 2.5rem; /* Используем rem для масштабирования */
   color: #007bff;
+  margin-bottom: 10px;
 }
 
-h2 {
+.stat-value {
+  font-size: 2rem;
+  font-weight: 700;
   margin: 10px 0;
-  font-size: 24px;
+  color: #333;
 }
 
-/* Адаптивные стили для маленьких экранов */
+.stat-label {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.4;
+}
+
+/* Адаптация для планшетов */
+@media (max-width: 992px) {
+  .stats-section {
+    gap: 20px 10px;
+  }
+  
+  .stat-item {
+    flex: 1 1 150px;
+    padding: 12px;
+  }
+}
+
+/* Адаптация для мобильных устройств */
 @media (max-width: 768px) {
   .stats-section {
-    flex-direction: column;
-    align-items: stretch;
+    flex-direction: row; /* Оставляем строку для компактности */
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 10px;
   }
 
   .stat-item {
-    width: 100%;
-  }
-
-  h2 {
-    font-size: 20px;
+    flex: 1 1 45%; /* Два элемента в строке */
+    min-width: 120px;
+    padding: 10px;
+    margin-bottom: 0;
   }
 
   .stat-icon {
-    font-size: 32px;
+    font-size: 2rem;
+  }
+
+  .stat-value {
+    font-size: 1.5rem;
+  }
+}
+
+/* Адаптация для очень маленьких экранов */
+@media (max-width: 480px) {
+  .stats-section {
+    flex-direction: column; /* Один элемент в строку */
+    align-items: center;
+    gap: 15px;
+  }
+
+  .stat-item {
+    flex: 1 1 auto;
+    width: 90%;
+    max-width: 250px;
+  }
+  
+  .stat-icon {
+    font-size: 1.8rem;
   }
 }
