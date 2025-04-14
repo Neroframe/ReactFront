@@ -14,6 +14,20 @@ const Projects = () => {
       category: t('categories.siem')
     },
     {
+      title: t('projects.list.siem.title'),
+      description: t('projects.list.siem.description'),
+      image: "/path/to/project1.jpg",
+      link: "/projects/security-monitoring",
+      category: t('categories.siem')
+    },
+    {
+      title: t('projects.list.siem.title'),
+      description: t('projects.list.siem.description'),
+      image: "/path/to/project1.jpg",
+      link: "/projects/security-monitoring",
+      category: t('categories.siem')
+    },
+    {
       title: t('projects.list.pentest.title'),
       description: t('projects.list.pentest.description'),
       image: "/path/to/project2.jpg",

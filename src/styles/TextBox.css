@@ -1,20 +1,24 @@
 .TextBox {
   display: grid;
   grid-template-columns: repeat(10, 1fr);
-
   max-width: 90%;
   margin: 0 auto;
+  column-gap: 2rem;
+  /* зазор между колонками */
+  align-items: center;
+  /* выравнивание по центру по вертикали */
 }
 
 .TextBox-text {
-  grid-column: 1/8;
-  align-self: center;
+  grid-column: 1 / 7;
+  /* текст занимает колонки с 1 по 6 */
   text-align: left;
   padding: 1rem;
 }
 
 .TextBox-image {
-  grid-column: 8/-1;
+  grid-column: 7 / -1;
+  /* картинка занимает колонки с 7 до 10 */
   width: 100%;
   height: 250px;
   overflow: hidden;

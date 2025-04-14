@@ -107,10 +107,12 @@ function LayerOne() {
       />
 
       <div className="container">
+        {/* Обёртываем AuditSection в блок для растягивания */}
         <motion.div
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.3 }}
+          className="text-block"
         >
           <AuditSection
             title={t("layer1.auditSectionTitle")}
@@ -122,16 +124,7 @@ function LayerOne() {
 
         <InfoCard sections={auditSections} />
 
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.4 }}
-          className="cta-section"
-        >
-          <h3>{t("layer1.cta.title")}</h3>
-          <p>{t("layer1.cta.description")}</p>
-          <button className="button">{t("layer1.cta.button")}</button>
-        </motion.div>
+        {/* CTA-секция удалена */}
       </div>
     </motion.div>
   );
