@@ -7,11 +7,21 @@
   padding: 180px 0;
   margin-bottom: 3rem;
   overflow: hidden;
+  animation: fadeIn 1.5s ease-out; /* Добавлена анимация появления */
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .overlay {
-  background: linear-gradient(45deg, rgba(0,0,0,0.7), rgba(30,30,47,0.8)); /* Градиент */
-  backdrop-filter: blur(2px); /* Размытие */
+  background: linear-gradient(45deg, rgba(0,0,0,0.7), rgba(30,30,47,0.8)); /* Сделать затемнение мягче */
+  backdrop-filter: blur(4px); /* Более сильное размытие */
 }
 
 .page-title-inner {
@@ -25,14 +35,15 @@
 }
 
 .page-title {
-  font-size: 32px;
+  font-size: 36px; /* Увеличен размер шрифта */
   font-weight: bold;
   color: white;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4); /* Добавлена тень */
 }
 
 .ct-breadcrumb {
-  /* Оставь текущие стили, но добавь: */
-  font-size: 1.1rem;
+  font-size: 1.2rem; /* Увеличен размер шрифта */
+  margin-top: 10px;
 }
 
 .ct-breadcrumb li {
@@ -41,6 +52,9 @@
 
 .ct-breadcrumb .breadcrumb-entry {
   position: relative;
+  color: white;
+  font-weight: 500;
+  text-transform: capitalize;
 }
 
 
@@ -56,6 +70,7 @@
 
 .ct-breadcrumb .breadcrumb-entry:hover {
   color: #ddd;
+  text-decoration: underline; /* Добавлено подчеркивание при наведении */
 }
 
 .info-button {
