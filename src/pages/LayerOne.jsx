@@ -4,6 +4,7 @@ import InfoCard from "../components/AuditInfo";
 import pic1 from "../assets/pic1.jpg";
 import "../styles/LayerOne.css";
 import LayerInfo from "../components/LayerInfo";
+import { motion } from "framer-motion";
 
 function LayerOne() {
   const { t } = useTranslation('layerone'); // Указываем конкретный namespace
@@ -78,7 +79,12 @@ function LayerOne() {
   ];
 
   return (
-    <div>
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.5 }}
+    >
       <LayerInfo
         title={t("layer1.title")}
         backgroundImage="https://inova.kz/wp-content/uploads/2023/05/wall_4_3-1.png"
@@ -91,7 +97,7 @@ function LayerOne() {
         imageAlt="audit"
       />
       <InfoCard sections={auditSections} />
-    </div>
+    </motion.div>
   );
 }
 

@@ -1,7 +1,7 @@
 .footer {
   background-color: #222;
   color: #fff;
-  padding: 30px 20px;
+  padding: 20px 15px; /* уменьшен отступ */
   width: 100%;
   box-sizing: border-box;
 }
@@ -21,13 +21,13 @@
 .right {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 8px; /* уменьшен вертикальный отступ между элементами */
   min-width: 250px;
 }
 
 .icons {
   display: flex;
-  gap: 20px;
+  gap: 24px; /* чуть увеличили отступ между иконками */
 }
 
 .link,
@@ -35,6 +35,7 @@
   color: #ddd;
   text-decoration: none;
   transition: all 0.3s ease;
+  font-size: 36px; /* Увеличен размер иконок */
 }
 
 .link:hover,
@@ -45,26 +46,55 @@
 
 .title {
   font-weight: bold;
-  font-size: 1.1rem;
-  margin-bottom: 5px;
+  font-size: 1.05rem; /* немного меньше шрифт */
+  margin-bottom: 2px;
+}
+
+.map-icon {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 10px;
+  width: 100%;
+}
+
+.map-icon img {
+  width: 36px;
+  height: 36px;
+  transition: transform 0.3s ease;
+}
+
+.map-icon img:hover {
+  transform: scale(1.1);
+}
+
+.gis-icon {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.gis-icon:hover {
+  transform: scale(1.1);
 }
 
 /* Адаптивность для планшетов */
 @media (max-width: 768px) {
   .footer {
-    padding: 25px 15px;
+    padding: 15px 12px; /* уменьшили */
   }
-  
+
   .container {
     flex-direction: column;
-    gap: 25px;
+    gap: 20px;
   }
-  
+
   .left,
   .right {
     width: 100%;
   }
-  
+
   .icons {
     justify-content: flex-start;
   }
@@ -73,20 +103,21 @@
 /* Адаптивность для мобильных */
 @media (max-width: 480px) {
   .footer {
-    padding: 20px 10px;
+    padding: 12px 8px;
   }
-  
+
   .left p,
   .left a {
     font-size: 0.9rem;
   }
-  
+
   .icon-link {
-    padding: 8px 12px;
+    padding: 6px 10px;
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: 4px;
+    font-size: 32px; /* иконки всё ещё крупные на мобилках */
   }
-  
+
   .icon-link:hover {
     background-color: rgba(255, 255, 255, 0.2);
   }

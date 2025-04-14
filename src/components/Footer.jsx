@@ -1,6 +1,8 @@
 import React from "react";
 import "../styles/Footer.css";
 import { useTranslation } from "react-i18next";
+import gisIcon from "../assets/2gis.png";
+import { FaWhatsapp, FaInstagram } from "react-icons/fa";
 
 export default function Footer() {
   const { t } = useTranslation("footer");
@@ -14,14 +16,6 @@ export default function Footer() {
           <p>📍 {t("footer.address")}</p>
           <p>📞 {t("footer.phone")}</p>
           <p>🕒 {t("footer.hours")}</p>
-          <a
-            href="https://go.2gis.com/example"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="link"
-          >
-            {t("footer.mapLink")}
-          </a>
         </div>
 
         {/* Правая часть футера */}
@@ -32,16 +26,27 @@ export default function Footer() {
               target="_blank"
               rel="noopener noreferrer"
               className="icon-link"
+              aria-label="WhatsApp"
             >
-              {t("footer.whatsapp")}
+              <FaWhatsapp size={28} />
             </a>
             <a
               href="https://instagram.com/example"
               target="_blank"
               rel="noopener noreferrer"
               className="icon-link"
+              aria-label="Instagram"
             >
-              {t("footer.instagram")}
+              <FaInstagram size={28} />
+            </a>
+            <a
+              href="https://go.2gis.com/example"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="icon-link"
+              aria-label="2GIS"
+            >
+              <img src={gisIcon} alt="2GIS" className="gis-icon" />
             </a>
           </div>
         </div>

@@ -1,3 +1,54 @@
 .navbar-fix {
   margin-top: 10rem;
 }
+
+/* Общие стили для контента */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Карточки с информацией */
+.info-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+  padding: 2rem;
+  margin-bottom: 2rem;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.info-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.15);
+}
+
+/* Списки */
+ul {
+  padding-left: 1.5rem;
+}
+
+li {
+  margin-bottom: 0.8rem;
+  line-height: 1.6;
+}
+
+/* Кнопки (если есть) */
+.button {
+  background: linear-gradient(45deg, #6c63ff, #4a42e0);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(108, 99, 255, 0.3);
+}
+
+
