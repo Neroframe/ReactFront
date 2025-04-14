@@ -49,9 +49,30 @@ const LanguageSwitcher = () => {
       <button className="btn btn-dark">🌍</button>
       {isOpen && (
         <ul className="dropdown-menu show">
-          <li><button className="dropdown-item" onClick={() => changeLanguage("kz")}>Қазақша</button></li>
-          <li><button className="dropdown-item" onClick={() => changeLanguage("ru")}>Русский</button></li>
-          <li><button className="dropdown-item" onClick={() => changeLanguage("en")}>English</button></li>
+          <li>
+            <button
+              className="dropdown-item"
+              onClick={() => changeLanguage("kz")}
+            >
+              Қазақша
+            </button>
+          </li>
+          <li>
+            <button
+              className="dropdown-item"
+              onClick={() => changeLanguage("ru")}
+            >
+              Русский
+            </button>
+          </li>
+          <li>
+            <button
+              className="dropdown-item"
+              onClick={() => changeLanguage("en")}
+            >
+              English
+            </button>
+          </li>
         </ul>
       )}
     </div>
@@ -89,7 +110,14 @@ const Navbar = () => {
     }, 300); // Задержка для плавности
   };
 
+  const isMobile = window.innerWidth <= 768;
+
   const handleServicesClick = () => {
+    if (isMobile) {
+      setIsDropdownOpen((prev) => !prev);
+      return;
+    }
+
     if (location.pathname !== "/") {
       navigate("/");
       setTimeout(() => {
@@ -104,6 +132,7 @@ const Navbar = () => {
         servicesSection.scrollIntoView({ behavior: "smooth" });
       }
     }
+
     setIsDropdownOpen(false);
     setIsMenuOpen(false);
   };
@@ -135,9 +164,16 @@ const Navbar = () => {
           <span className="navbar-toggler-icon"></span>
         </button>
 
-        <div className={`collapse navbar-collapse ${isMenuOpen ? "show" : ""}`} id="navbarNav">
+        <div
+          className={`collapse navbar-collapse ${isMenuOpen ? "show" : ""}`}
+          id="navbarNav"
+        >
           <ul className="navbar-nav me-auto">
-            <NavButton to="/insights" translationKey="nav.projects" onClick={scrollToTop} />
+            <NavButton
+              to="/insights"
+              translationKey="nav.projects"
+              onClick={scrollToTop}
+            />
 
             {/* Услуги с выпадающим меню */}
             <li
@@ -145,36 +181,87 @@ const Navbar = () => {
               onMouseEnter={handleDropdownEnter}
               onMouseLeave={handleDropdownLeave}
             >
-              <span className="nav-link dropdown-toggle" role="button" onClick={handleServicesClick}>
+              <span
+                className="nav-link dropdown-toggle"
+                role="button"
+                onClick={handleServicesClick}
+              >
                 {t("nav.services")}
               </span>
               {isDropdownOpen && (
-                <ul className="dropdown-menu show"
-                    onMouseEnter={handleDropdownEnter}
-                    onMouseLeave={handleDropdownLeave}
+                <ul
+                  className="dropdown-menu show"
+                  onMouseEnter={handleDropdownEnter}
+                  onMouseLeave={handleDropdownLeave}
                 >
-                  <li><NavLink to="/LayerOne" className="dropdown-item">{t("nav.layer1")}</NavLink></li>
-                  <li><NavLink to="/LayerTwo" className="dropdown-item">{t("nav.layer2")}</NavLink></li>
-                  <li><NavLink to="/LayerThree" className="dropdown-item">{t("nav.layer3")}</NavLink></li>
-                  <li><NavLink to="/LayerFour" className="dropdown-item">{t("nav.layer4")}</NavLink></li>
-                  <li><NavLink to="/LayerFive" className="dropdown-item">{t("nav.layer5")}</NavLink></li>
-                  <li><NavLink to="/LayerSix" className="dropdown-item">{t("nav.layer6")}</NavLink></li>
+                  <li>
+                    <NavLink to="/LayerOne" className="dropdown-item">
+                      {t("nav.layer1")}
+                    </NavLink>
+                  </li>
+                  <li>
+                    <NavLink to="/LayerTwo" className="dropdown-item">
+                      {t("nav.layer2")}
+                    </NavLink>
+                  </li>
+                  <li>
+                    <NavLink to="/LayerThree" className="dropdown-item">
+                      {t("nav.layer3")}
+                    </NavLink>
+                  </li>
+                  <li>
+                    <NavLink to="/LayerFour" className="dropdown-item">
+                      {t("nav.layer4")}
+                    </NavLink>
+                  </li>
+                  <li>
+                    <NavLink to="/LayerFive" className="dropdown-item">
+                      {t("nav.layer5")}
+                    </NavLink>
+                  </li>
+                  <li>
+                    <NavLink to="/LayerSix" className="dropdown-item">
+                      {t("nav.layer6")}
+                    </NavLink>
+                  </li>
                 </ul>
               )}
             </li>
 
-            <NavButton to="/news" translationKey="nav.articles" onClick={scrollToTop} />
+            <NavButton
+              to="/news"
+              translationKey="nav.articles"
+              onClick={scrollToTop}
+            />
           </ul>
 
           <ul className="navbar-nav ms-auto">
-            <NavButton to="/about" translationKey="nav.about" onClick={scrollToTop} />
-            <NavButton to="/contact" translationKey="nav.contact" onClick={scrollToTop} />
-            <NavButton to="/partners" translationKey="nav.partners" onClick={scrollToTop} />
+            <NavButton
+              to="/about"
+              translationKey="nav.about"
+              onClick={scrollToTop}
+            />
+            <NavButton
+              to="/contact"
+              translationKey="nav.contact"
+              onClick={scrollToTop}
+            />
+            <NavButton
+              to="/partners"
+              translationKey="nav.partners"
+              onClick={scrollToTop}
+            />
           </ul>
 
-          <NavLink to="/request" className="btn btn-danger ms-3" onClick={scrollToTop}>
-            {t("nav.request")}
-          </NavLink>
+          <div className="navbar-button ms-3">
+            <NavLink
+              to="/request"
+              className="btn btn-danger"
+              onClick={scrollToTop}
+            >
+              {t("nav.request")}
+            </NavLink>
+          </div>
 
           <div className="ms-3">
             <LanguageSwitcher />
