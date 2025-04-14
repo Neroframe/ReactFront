@@ -3,14 +3,18 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: #f8f9fa;
+  /* Заменим background-color на фон-картинку */
+  background-image: url("../assets/requestbg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .request-box {
-  background: white;
+  background: rgba(255, 255, 255, 0.95); /* полупрозрачный белый */
   padding: 20px;
   border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   width: 400px;
   text-align: center;
 }
