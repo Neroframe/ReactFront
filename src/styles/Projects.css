@@ -4,6 +4,7 @@
   color: #333;
   line-height: 1.6;
   background-color: #f9f9f9;
+  overflow: visible;
 }
 
 /* Hero section */
@@ -60,6 +61,12 @@
   background: white;
   border-radius: 50%;
   animation: scroll 2s infinite;
+}
+
+.projects-section,
+.advantages-section,
+.testimonials-section {
+  margin-bottom: 50px; /* Добавьте отступ, если его не хватает */
 }
 
 @keyframes scroll {

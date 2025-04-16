@@ -2,6 +2,7 @@ import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import "../styles/PartnersGrid.css";
 import { useTranslation } from "react-i18next";
+import { motion } from "framer-motion";
 
 const partners = [
   {
@@ -51,8 +52,28 @@ const partners = [
 const PartnersGrid = () => {
   const { t } = useTranslation("partnersgrid");
 
+  const sectionVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6 } }
+  };
+
+  const cardVariants = {
+    hidden: { opacity: 0, scale: 0.95 },
+    visible: (i) => ({
+      opacity: 1,
+      scale: 1,
+      transition: { delay: i * 0.1, duration: 0.5 }
+    })
+  };
+
   return (
-    <div className="partners-grid">
+    <motion.div
+      className="partners-grid"
+      variants={sectionVariants}
+      initial="hidden"
+      animate="visible"
+      exit="hidden"
+    >
       <div className="justify-content-center">
         <Col xs={12} className="text-center">
           <h2 className="display-4 fw-bold">{t("partners.title")}</h2>
@@ -61,20 +82,27 @@ const PartnersGrid = () => {
       </div>
 
       <Row className="mt-4">
-        {partners.map((partner) => (
+        {partners.map((partner, index) => (
           <Col key={partner.id} xs={12} md={6} lg={4} className="mb-4">
-            <div className="partner-card">
+            <motion.div
+              className="partner-card"
+              variants={cardVariants}
+              initial="hidden"
+              whileInView="visible"
+              custom={index}
+              viewport={{ once: true }}
+            >
               <div className="partner-logo">
                 <img src={partner.logo} alt={partner.name} />
               </div>
               <div className="partner-description">
                 <p>{t(`partners.${partner.name.toLowerCase()}.description`)}</p>
               </div>
-            </div>
+            </motion.div>
           </Col>
         ))}
       </Row>
-    </div>
+    </motion.div>
   );
 };
 

@@ -2,6 +2,7 @@ import React from "react";
 import "../styles/News.css";
 import { Container, Row, Col } from "react-bootstrap";
 import { useTranslation } from "react-i18next";
+import { motion } from "framer-motion";
 
 const articles = [
   {
@@ -29,8 +30,28 @@ const articles = [
 const Articles = () => {
   const { t } = useTranslation("news");
 
+  const sectionVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6 } }
+  };
+
+  const cardVariants = {
+    hidden: { opacity: 0, scale: 0.95 },
+    visible: (i) => ({
+      opacity: 1,
+      scale: 1,
+      transition: { delay: i * 0.1, duration: 0.5 }
+    })
+  };
+
   return (
-    <section className="articles">
+    <motion.section
+      className="articles"
+      variants={sectionVariants}
+      initial="hidden"
+      animate="visible"
+      exit="hidden"
+    >
       <div>
         <h2 className="text-center mb-3">
           {t("title")} <span className="text-danger">{t("highlightedText")}</span>
@@ -40,7 +61,14 @@ const Articles = () => {
         <Row>
           {articles.map((article, index) => (
             <Col key={index} xs={12} md={6} className="mb-4">
-              <div className="article-card p-4">
+              <motion.div
+                className="article-card p-4"
+                variants={cardVariants}
+                initial="hidden"
+                whileInView="visible"
+                custom={index}
+                viewport={{ once: true }}
+              >
                 <div className="article-title d-flex align-items-center">
                   <img
                     src={article.icon}
@@ -55,12 +83,12 @@ const Articles = () => {
                 <a href={article.link} className="text-danger">
                   {t("readMore")}
                 </a>
-              </div>
+              </motion.div>
             </Col>
           ))}
         </Row>
       </div>
-    </section>
+    </motion.section>
   );
 };
 
