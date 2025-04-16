@@ -23,7 +23,7 @@ const NavButton = ({ to, translationKey, onClick }) => {
 const Logo = ({ scrollToTop }) => {
   return (
     <img
-      src="/src/assets/logo.jpg"
+      src="/src/assets/oglogo2.jpg"
       alt="Logo"
       className="logo"
       onClick={scrollToTop}
