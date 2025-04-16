@@ -188,6 +188,7 @@ const Navbar = () => {
               >
                 {t("nav.services")}
               </span>
+
               {isDropdownOpen && (
                 <ul
                   className="dropdown-menu show"
@@ -195,32 +196,74 @@ const Navbar = () => {
                   onMouseLeave={handleDropdownLeave}
                 >
                   <li>
-                    <NavLink to="/LayerOne" className="dropdown-item">
+                    <NavLink
+                      to="/LayerOne"
+                      className="dropdown-item"
+                      onClick={() => {
+                        setIsDropdownOpen(false);
+                        setIsMenuOpen(false);
+                      }}
+                    >
                       {t("nav.layer1")}
                     </NavLink>
                   </li>
                   <li>
-                    <NavLink to="/LayerTwo" className="dropdown-item">
+                    <NavLink
+                      to="/LayerTwo"
+                      className="dropdown-item"
+                      onClick={() => {
+                        setIsDropdownOpen(false);
+                        setIsMenuOpen(false);
+                      }}
+                    >
                       {t("nav.layer2")}
                     </NavLink>
                   </li>
                   <li>
-                    <NavLink to="/LayerThree" className="dropdown-item">
+                    <NavLink
+                      to="/LayerThree"
+                      className="dropdown-item"
+                      onClick={() => {
+                        setIsDropdownOpen(false);
+                        setIsMenuOpen(false);
+                      }}
+                    >
                       {t("nav.layer3")}
                     </NavLink>
                   </li>
                   <li>
-                    <NavLink to="/LayerFour" className="dropdown-item">
+                    <NavLink
+                      to="/LayerFour"
+                      className="dropdown-item"
+                      onClick={() => {
+                        setIsDropdownOpen(false);
+                        setIsMenuOpen(false);
+                      }}
+                    >
                       {t("nav.layer4")}
                     </NavLink>
                   </li>
                   <li>
-                    <NavLink to="/LayerFive" className="dropdown-item">
+                    <NavLink
+                      to="/LayerFive"
+                      className="dropdown-item"
+                      onClick={() => {
+                        setIsDropdownOpen(false);
+                        setIsMenuOpen(false);
+                      }}
+                    >
                       {t("nav.layer5")}
                     </NavLink>
                   </li>
                   <li>
-                    <NavLink to="/LayerSix" className="dropdown-item">
+                    <NavLink
+                      to="/LayerSix"
+                      className="dropdown-item"
+                      onClick={() => {
+                        setIsDropdownOpen(false);
+                        setIsMenuOpen(false);
+                      }}
+                    >
                       {t("nav.layer6")}
                     </NavLink>
                   </li>
