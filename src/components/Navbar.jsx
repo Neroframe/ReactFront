@@ -2,6 +2,8 @@ import React, { useState, useRef } from "react";
 import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import "../styles/Navbar.css";
 import { useTranslation } from "react-i18next";
+import logo from '../assets/oglogo2.jpg';
+
 
 const NavButton = ({ to, translationKey, onClick }) => {
   const { t } = useTranslation("navbar");
@@ -23,7 +25,7 @@ const NavButton = ({ to, translationKey, onClick }) => {
 const Logo = ({ scrollToTop }) => {
   return (
     <img
-      src="/src/assets/oglogo2.jpg"
+      src={logo}
       alt="Logo"
       className="logo"
       onClick={scrollToTop}
