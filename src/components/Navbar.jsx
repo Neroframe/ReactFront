@@ -52,17 +52,9 @@ const LanguageSwitcher = () => {
           <li>
             <button
               className="dropdown-item"
-              onClick={() => changeLanguage("kz")}
-            >
-              Қазақша
-            </button>
-          </li>
-          <li>
-            <button
-              className="dropdown-item"
               onClick={() => changeLanguage("ru")}
             >
-              Русский
+             Русский
             </button>
           </li>
           <li>
@@ -70,7 +62,15 @@ const LanguageSwitcher = () => {
               className="dropdown-item"
               onClick={() => changeLanguage("en")}
             >
-              English
+               English
+            </button>
+          </li>
+          <li>
+            <button
+              className="dropdown-item"
+              onClick={() => changeLanguage("kz")}
+            >
+              Қазақша
             </button>
           </li>
         </ul>

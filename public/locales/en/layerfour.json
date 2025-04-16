@@ -1,41 +1,40 @@
 {
-    "monitoring": {
-      "title": "Device Monitoring and Protection",
-      "description": "In today's environment, organizations must continuously monitor all endpoints to prevent threats and respond to security incidents promptly. We offer solutions that provide full network visibility and help minimize risks.",
-      "device_tracking": "Device Tracking in the Network",
-      "device_tracking_description": "Detection and inventory of all connected devices, monitoring their activity and security status.",
-      "security_management": "Centralized Security Management",
-      "security_management_description": "Implementing a unified security management system for all organization devices to minimize vulnerabilities.",
-      "real_time_attack_prevention": "Real-Time Attack Prevention",
-      "real_time_attack_prevention_description": "Automated user behavior analysis and suspicious activity detection mechanisms to prevent cyberattacks at early stages."
-    },
-    "usage": {
-      "title": "Access and Identity Management",
-      "description": "Effective access management policies play a key role in preventing unauthorized access and data leaks. Modern solutions help securely protect critical company information.",
-      "role_based_access": "Role-Based Access Control",
-      "role_based_access_description": "Defining access levels for different employee categories based on their job responsibilities.",
-      "two_factor_authentication": "Two-Factor Authentication (2FA)",
-      "two_factor_authentication_description": "An additional layer of account protection for employees, reducing the risk of password compromise.",
-      "data_encryption": "Data Encryption",
-      "data_encryption_description": "Protecting sensitive information using modern encryption algorithms, reducing the risk of leaks and unauthorized access."
-    },
-    "incidents": {
-      "title": "Incident Detection and Response",
-      "description": "Fast response to incidents is a key aspect of effective cybersecurity. We offer solutions that help detect threats at early stages and mitigate them with minimal business impact.",
-      "ips_ids_systems": "IDS/IPS Systems for Attack Detection",
-      "ips_ids_systems_description": "Network traffic and user activity analysis to detect suspicious behavior and prevent attacks.",
-      "automated_response_tools": "Automated Response Tools",
-      "automated_response_tools_description": "Using SIEM systems and AI-based solutions for fast threat detection and neutralization.",
-      "real_time_alerts": "Real-Time Alerts",
-      "real_time_alerts_description": "Configured security incident notifications that allow rapid response to threats and minimize damage."
-    },
-    "layer_title": "Endpoint Protection and Access Management",
-    "breadcrumbs": {
-      "layer_title": "Endpoint Protection and Access Management"
-    },
-    "endpoint_security": {
-      "title": "Endpoint Security",
-      "text1": "We manage and protect all organization endpoints (PCs, mobile devices, servers), reducing risks of attacks and data leaks."
-    }
-  }
-  
+  "monitoring": {
+    "title": "Comprehensive Endpoint Monitoring and Threat Protection",
+    "description": "In today's evolving threat landscape, organizations require continuous 24/7 monitoring of all endpoints to detect, prevent, and respond to security threats in real-time. Our enterprise-grade solutions deliver complete network visibility through advanced telemetry collection, behavioral analytics, and automated response capabilities to minimize cybersecurity risks across your entire digital infrastructure.",
+    "device_tracking": "Network Device Discovery and Inventory Management",
+    "device_tracking_description": "Complete identification and cataloging of all connected devices (managed and unmanaged) with continuous monitoring of network activity, security posture assessment, and configuration drift detection across your IT ecosystem.",
+    "security_management": "Unified Endpoint Security Management",
+    "security_management_description": "Implementation of a centralized security management platform providing consistent policy enforcement, vulnerability management, and configuration control across all organizational endpoints (Windows, macOS, Linux, IoT) from a single pane of glass.",
+    "real_time_attack_prevention": "Advanced Threat Prevention System",
+    "real_time_attack_prevention_description": "AI-powered user and entity behavior analytics (UEBA) combined with machine learning-based anomaly detection to identify and block sophisticated cyberattacks (including zero-day threats and fileless malware) during early stages of the kill chain."
+  },
+  "usage": {
+    "title": "Identity and Access Governance Solutions",
+    "description": "Modern identity-centric security strategies are critical for preventing credential-based attacks and data exfiltration. Our IAM solutions combine granular access controls with continuous authentication to protect sensitive data while maintaining operational efficiency across hybrid environments.",
+    "role_based_access": "Attribute-Based Access Control (ABAC)",
+    "role_based_access_description": "Dynamic access privilege assignment based on multiple attributes including job function, department, location, device security posture, and time-of-day, following the principle of least privilege for all users and service accounts.",
+    "two_factor_authentication": "Multi-Factor Authentication (MFA)",
+    "two_factor_authentication_description": "Implementation of phishing-resistant authentication methods (FIDO2 security keys, biometrics, TOTP) combined with risk-based adaptive authentication to significantly reduce account compromise risks across all enterprise applications.",
+    "data_encryption": "End-to-End Data Protection",
+    "data_encryption_description": "Comprehensive data security implementation including AES-256 encryption for data at rest, TLS 1.3 for data in transit, and format-preserving encryption for sensitive fields, with centralized key management using HSM-backed solutions."
+  },
+  "incidents": {
+    "title": "Advanced Threat Detection and Incident Response",
+    "description": "Our extended detection and response (XDR) platform correlates data across endpoints, networks, and cloud workloads to provide contextual threat intelligence and automated response capabilities, reducing mean time to detect (MTTD) and mean time to respond (MTTR) to security incidents by up to 90%.",
+    "ips_ids_systems": "Next-Gen Intrusion Prevention System",
+    "ips_ids_systems_description": "Network traffic analysis using deep packet inspection (DPI), encrypted traffic analysis, and protocol anomaly detection to identify and block malicious activity, including advanced persistent threats (APTs) and lateral movement attempts.",
+    "automated_response_tools": "Orchestrated Security Automation",
+    "automated_response_tools_description": "Integration of SIEM, SOAR, and EDR solutions with pre-built playbooks for automated threat containment, including process termination, network isolation, credential rotation, and threat hunting across the environment.",
+    "real_time_alerts": "Contextual Threat Intelligence",
+    "real_time_alerts_description": "Prioritized security alerts enriched with threat intelligence (MITRE ATT&CK mapping, IOC details) delivered through multiple channels (email, SMS, SIEM, mobile app) with recommended response actions and impact assessment."
+  },
+  "layer_title": "Enterprise Endpoint Protection and Identity Governance",
+  "breadcrumbs": {
+    "layer_title": "Comprehensive Endpoint Security and Access Management Platform"
+  },
+  "endpoint_security": {
+  "title": "Next-Gen Endpoint Protection",
+  "text1": "Our EDR solution safeguards all endpoints (workstations, mobile, servers, IoT) with behavioral analysis, ML threat detection, and automated response. Features include real-time monitoring, exploit prevention, encryption, and centralized management for complete protection."
+}
+}

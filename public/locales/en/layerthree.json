@@ -1,57 +1,59 @@
 {
-    "certification": {
-      "title": "Certification",
-      "description": "Cybersecurity Certification",
-      "text1": "Modern cybersecurity standards require professionals not only to have knowledge but also to have official proof of their qualifications. Certification is not just a document but a real demonstration of competence in the field of data and system protection.",
-      "CISSP": "CISSP (Certified Information Systems Security Professional)",
-      "CISSP_description": "Certification for professionals involved in developing and managing information security.",
-      "CEH": "CEH (Certified Ethical Hacker)",
-      "CEH_description": "Training specialists for testing systems for vulnerabilities and addressing them.",
-      "CompTIA_Security": "CompTIA Security+",
-      "CompTIA_Security_description": "Basic certification covering key aspects of cybersecurity.",
-      "CISM": "CISM (Certified Information Security Manager)",
-      "CISM_description": "Certification for professionals managing security processes in organizations.",
-      "features_title": "Our Approach Features:",
-      "interactive_sessions": "Interactive sessions on real threats: The training uses practical examples simulating modern cyber-attacks.",
-      "adapted_courses": "Courses adapted to your industry: Programs take into account the specifics of your company’s work to make the training as useful as possible.",
-      "course_updates": "Course updates considering new threats: Our courses are constantly refined according to the latest trends in cybersecurity."
-    },
-    "phishing": {
-      "title": "Phishing Simulations",
-      "description": "Phishing remains one of the most common threats: about 90% of attacks on companies start with fake emails or messages. Simply informing employees is not enough — it is necessary to regularly check their vigilance in real conditions.",
-      "services_title": "We offer phishing simulations that mimic real attacks to achieve the following:",
-      "realistic_emails": "Creating realistic phishing emails:",
-      "realistic_emails_description": "We develop phishing attacks that match modern social engineering methods.",
-      "employee_reactions": "Analyzing employee reactions:",
-      "employee_reactions_description": "We evaluate which employees are vulnerable, who clicked on suspicious links or provided confidential information.",
-      "weakness_identification": "Identifying weaknesses:",
-      "weakness_identification_description": "We identify departments and employees who need additional training.",
-      "personalized_feedback": "Personalized feedback:",
-      "personalized_feedback_description": "After testing, we provide individual recommendations and educational materials.",
-      "outcome": "This practice significantly reduces the likelihood of successful attacks, increases employee awareness, and helps avoid financial losses."
-    },
-    "mobile": {
-      "title": "Mobile Device Protection",
-      "description": "In today’s environment, mobile devices are not only communication tools but also potential entry points for attackers. Unsecured smartphones and tablets can lead to the leakage of confidential information, compromised credentials, and the penetration of malicious software into the corporate network.",
-      "services_title": "We offer comprehensive mobile device protection measures, including:",
-      "training": "Training employees in mobile security basics:",
-      "training_description": "Practical sessions on protecting personal and corporate devices from attacks.",
-      "policies": "Setting security policies:",
-      "policies_description": "Development and implementation of recommendations for using mobile devices in a corporate environment.",
-      "access_control": "Access control to corporate resources:",
-      "access_control_description": "Implementation of multi-factor authentication (MFA) and device management (MDM) solutions.",
-      "app_security": "Checking apps for security:",
-      "app_security_description": "Evaluation of the mobile apps used for vulnerabilities and potential threats.",
-      "risks_reduction": "We help not only protect mobile devices but also minimize risks associated with data leaks and malware."
-    },
-    "training_and_security": "Security Training and Mobile Device Protection",
-    "breadcrumbs": {
-      "training_and_security": "Security Training and Mobile Device Protection"
-    },
-    "audit_section": {
-      "title": "Training and Seminars",
-      "text1": "We organize cybersecurity courses and seminars, assist with obtaining",
-      "text2": "professional certifications, conduct phishing simulations, and develop mobile device protection measures."
-    }
+  "certification": {
+    "title": "Cybersecurity Certification Programs",
+    "description": "Advanced Certification Tracks for Cyber Professionals",
+    "text1": "In today’s evolving digital landscape, cybersecurity certifications are more than formal credentials — they are a testament to a professional’s ability to safeguard digital infrastructure, mitigate complex risks, and align with global compliance standards. Certified specialists not only elevate organizational trust but also contribute to a proactive security culture through their validated knowledge and skillsets.",
+    "CISSP": "CISSP (Certified Information Systems Security Professional)",
+    "CISSP_description": "A globally recognized certification for senior security practitioners, CISSP validates expertise in designing, implementing, and managing enterprise-wide cybersecurity programs. It covers eight domains from the (ISC)² CBK, including risk management, security architecture, and incident response.",
+    "CEH": "CEH (Certified Ethical Hacker)",
+    "CEH_description": "This certification equips professionals with penetration testing skills and knowledge of hacking tools and methodologies used by malicious actors. CEH-certified individuals simulate real-world attacks to uncover and remediate vulnerabilities before they can be exploited.",
+    "CompTIA_Security": "CompTIA Security+",
+    "CompTIA_Security_description": "An entry-level credential ideal for those beginning a career in cybersecurity. It covers foundational topics such as network defense, threat detection, risk management, and compliance frameworks — ensuring a solid base for future specialization.",
+    "CISM": "CISM (Certified Information Security Manager)",
+    "CISM_description": "Focused on security governance and program development, CISM is designed for professionals responsible for managing and overseeing information security systems. It emphasizes aligning security strategies with business goals and regulatory requirements.",
+    "features_title": "Program Highlights and Delivery Methods",
+    "interactive_sessions": "Threat-Based Interactive Sessions:",
+    "interactive_sessions_description": "Real-world attack scenarios, red/blue team simulations, and case studies drive home core concepts and teach adaptive responses to evolving cyber threats.",
+    "adapted_courses": "Industry-Aligned Curriculum:",
+    "adapted_courses_description": "All training modules are customized to reflect the specific threat models, regulatory obligations, and operational nuances of your industry sector.",
+    "course_updates": "Dynamic Content & Threat Intelligence Integration:",
+    "course_updates_description": "Course content is continuously updated based on emerging threat intelligence, ensuring that professionals are trained using the most relevant and up-to-date materials available."
+  },
+  "phishing": {
+    "title": "Phishing Attack Simulations",
+    "description": "Simulated Phishing Campaigns to Strengthen Human Firewalls",
+    "services_title": "Our phishing simulation platform delivers realistic training by replicating real-world attack patterns to drive awareness and behavior change. Key components include:",
+    "realistic_emails": "Sophisticated, Scenario-Based Emails:",
+    "realistic_emails_description": "We craft phishing messages that mirror current attacker techniques — including domain spoofing, malicious attachments, and credential harvesting pages — to emulate real adversaries.",
+    "employee_reactions": "Behavioral Analytics & Response Tracking:",
+    "employee_reactions_description": "Monitor employee interactions such as click rates, data submissions, and response times to assess awareness levels and behavioral patterns under simulated pressure.",
+    "weakness_identification": "Risk-Based User Profiling:",
+    "weakness_identification_description": "Identify high-risk user groups and departments based on simulation outcomes to guide targeted training and enhance incident response protocols.",
+    "personalized_feedback": "Real-Time Feedback and Microlearning:",
+    "personalized_feedback_description": "Provide employees with immediate feedback after each test, including personalized guidance, bite-sized lessons, and remediation steps to reinforce secure behavior.",
+    "outcome": "By operationalizing phishing simulations as an ongoing awareness strategy, organizations significantly reduce the risk of successful social engineering attacks and foster a culture of alertness and accountability."
+  },
+  "mobile": {
+    "title": "Enterprise Mobile Device Protection",
+    "description": "Secure Mobility Solutions for Today’s Hybrid Workforce",
+    "services_title": "Our mobile device security services are designed to mitigate risks associated with the growing use of mobile technologies in the workplace. Key components include:",
+    "training": "Security Awareness for Mobile Users:",
+    "training_description": "Hands-on sessions to educate employees on mobile-specific threats such as rogue apps, unsecured networks, and phishing via messaging platforms. Training includes real-life attack simulations and mobile threat defense (MTD) use cases.",
+    "policies": "Mobile Device Policy Development:",
+    "policies_description": "We assist organizations in formulating and implementing mobile usage guidelines, including acceptable use policies, device encryption standards, and data access rules.",
+    "access_control": "Access Control & Endpoint Management:",
+    "access_control_description": "Deployment of MDM (Mobile Device Management) and MFA (Multi-Factor Authentication) tools to manage, monitor, and secure endpoints across diverse operating systems and user roles.",
+    "app_security": "Application Security & Vetting:",
+    "app_security_description": "Comprehensive vetting of mobile apps through dynamic and static analysis, ensuring that applications do not introduce vulnerabilities, data leakage risks, or non-compliance issues.",
+    "risks_reduction": "Our approach not only enhances device-level security but also integrates with organizational security strategies to minimize exposure, prevent data loss, and enable safe mobile productivity across the enterprise."
+  },
+  "training_and_security": "Cybersecurity Training & Mobile Defense",
+  "breadcrumbs": {
+    "training_and_security": "Cybersecurity Training & Mobile Defense"
+  },
+  "audit_section": {
+    "title": "Training Programs & Cybersecurity Seminars",
+    "text1": "We deliver structured cybersecurity courses, professional certification assistance, phishing attack simulations, and mobile security programs to help organizations build a resilient security culture. Our training services are crafted to align with evolving cyber risks and the practical demands of your workforce.",
+    "text2": "Each course is designed with industry specificity in mind and includes real-world application, ensuring employees are prepared to handle sophisticated threats with confidence and competence."
   }
-  
+}

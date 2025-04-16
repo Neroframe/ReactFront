@@ -1,78 +1,77 @@
 {
-    "layer_title": "Secure Development and IoT Protection",
-    "breadcrumbs": {
-      "layer_title": "Secure Development and IoT Protection"
+  "layer_title": "Comprehensive Secure Development & IoT Protection Framework",
+  "breadcrumbs": {
+    "layer_title": "End-to-End Application Security & IoT Defense Solutions"
+  },
+  "secureDev": {
+    "title": "Application Security Engineering",
+    "text": "We implement enterprise-grade software protection methodologies including: static/dynamic code analysis, threat modeling, secure CI/CD pipeline integration, developer security training programs, and proactive IoT device protection strategies against emerging cyber threats including zero-day exploits and supply chain attacks."
+  },
+  "sageLifeCycle": {
+    "title": "Secure Development Lifecycle (SDLC)",
+    "description1": "Secure Software Development Framework (SSDF)",
+    "description2": "In the current evolving threat landscape, implementing security controls throughout the software development lifecycle is paramount. Our SDLC framework integrates security requirements, threat analysis, and protective measures at each phase - from requirements gathering to deployment - to prevent costly security breaches that can lead to regulatory penalties, intellectual property theft, and erosion of customer trust.",
+    "step1": {
+      "title": "Security Integration Across Development Phases",
+      "desc": "We employ Security by Design and Privacy by Design principles, conducting architectural risk analysis during design sessions to identify and mitigate potential threats before implementation begins."
     },
-    "secureDev": {
-      "title": "Application Security",
-      "text": "We implement advanced software protection methods, perform code audits, train developers in secure coding practices, and develop strategies to protect IoT devices from modern cyber threats."
+    "step2": {
+      "title": "Secure Coding Standards Implementation",
+      "desc": "We enforce coding standards aligned with OWASP Top 10, CWE/SANS Top 25, and industry-specific regulations, incorporating secure patterns for input validation, authentication, session management, and cryptographic operations."
     },
-    "sageLifeCycle": {
-      "title": "SDLC",
-      "description1": "Secure Software Development Life Cycle (SDLC)",
-      "description2": "In today’s cyber threat landscape, ensuring security at every stage of software development is critical. Neglecting protective measures can lead to data breaches, financial losses, and reputational damage.",
-      "step1": {
-        "title": "Integrating Security at All Stages",
-        "desc": "We use a Security by Design approach that allows systems to be designed with potential threats in mind before any code is written."
-      },
-      "step2": {
-        "title": "Using Secure Coding Practices",
-        "desc": "We apply best practices like input validation, error handling, and protection against SQL injection and cross-site scripting."
-      },
-      "step3": {
-        "title": "Threat Modeling",
-        "desc": "We analyze potential attack vectors and develop mitigation strategies to minimize vulnerabilities during the design phase."
-      },
-      "step4": {
-        "title": "Security Automation",
-        "desc": "We integrate automated tools for code scanning, vulnerability monitoring, and dependency management to identify issues early."
-      }
+    "step3": {
+      "title": "Comprehensive Threat Modeling",
+      "desc": "Using STRIDE and DREAD methodologies, we systematically identify potential attack surfaces, assess risks, and implement countermeasures during design phases to reduce the attack surface."
     },
-    "software": {
-      "title": "Code Audits",
-      "description1": "Code Audits and Vulnerability Assessment",
-      "description2": "Scanning code for vulnerabilities significantly reduces the risk of attacks and increases system reliability. Since automated tools detect only part of the issues, we use a comprehensive approach including manual audits.",
-      "step1": {
-        "title": "Static Code Analysis (SAST)",
-        "desc": "Analyzes source code without executing it. Helps identify data handling errors, memory leaks, and security logic flaws."
-      },
-      "step2": {
-        "title": "Dynamic Application Security Testing (DAST)",
-        "desc": "Analyzes running applications to find vulnerabilities related to input handling and interaction with external services."
-      },
-      "step3": {
-        "title": "Fuzz Testing",
-        "desc": "Tests applications by feeding them random or malformed data to uncover weaknesses."
-      },
-      "step4": {
-        "title": "Manual Code Review",
-        "desc": "Experienced specialists examine the code considering business logic and project specifics to identify complex vulnerabilities."
-      }
+    "step4": {
+      "title": "Automated Security Toolchain Integration",
+      "desc": "Our CI/CD pipelines incorporate SAST, DAST, SCA, and IaC scanning tools (Checkmarx, SonarQube, Snyk) with security gates to prevent vulnerabilities from reaching production environments."
+    }
+  },
+  "software": {
+    "title": "Comprehensive Code Security Assessments",
+    "description1": "In-Depth Code Review & Vulnerability Management",
+    "description2": "Our multi-layered code assessment approach combines automated scanning with expert manual review to identify both common and complex vulnerabilities that automated tools often miss. This comprehensive methodology reduces false negatives while providing actionable remediation guidance tailored to your technology stack and risk profile.",
+    "step1": {
+      "title": "Static Application Security Testing (SAST)",
+      "desc": "Advanced source code analysis using industry-leading tools (Fortify, Coverity) to identify security flaws in business logic, data handling, cryptographic implementations, and access control mechanisms without executing the code."
     },
-    "secureCoding": {
-      "title": "Secure Coding Training for Developers",
-      "description1": "Secure Coding Training for Developers",
-      "description2": "One of the main causes of software vulnerabilities is developer error due to insufficient security knowledge. We offer training programs that help identify and prevent vulnerabilities at the coding stage.",
-      "step1": {
-        "title": "Hands-on Secure Coding Workshops",
-        "desc": "Real-world attack scenarios and defense mechanisms are practiced in simulated environments."
-      },
-      "step2": {
-        "title": "Training Based on OWASP Top 10",
-        "desc": "Covers the ten most common web vulnerabilities such as XSS, SQL injections, insecure authentication, and more."
-      },
-      "step3": {
-        "title": "Implementing DevSecOps Practices",
-        "desc": "Integrates security into the CI/CD pipeline to detect and fix vulnerabilities early in the development process."
-      },
-      "step4": {
-        "title": "Personalized Training Programs",
-        "desc": "Courses are adapted to the knowledge level and specific needs of the development team for better adoption."
-      },
-      "step5": {
-        "title": "Testing and Certification",
-        "desc": "Final testing and certification confirms proficiency in secure coding practices."
-      }
+    "step2": {
+      "title": "Dynamic Application Security Testing (DAST)",
+      "desc": "Runtime analysis of applications in test environments to uncover vulnerabilities in authentication mechanisms, API security, server configuration, and input validation through simulated attacks."
+    },
+    "step3": {
+      "title": "Intelligent Fuzz Testing",
+      "desc": "Implementation of advanced fuzzing techniques (AFL, libFuzzer) using mutation-based and generation-based approaches to identify edge-case vulnerabilities through structured malformed input testing."
+    },
+    "step4": {
+      "title": "Expert-Led Manual Code Review",
+      "desc": "In-depth analysis by certified security professionals (OSCP, CISSP) focusing on architectural flaws, business logic vulnerabilities, and complex attack chains that evade automated detection."
+    }
+  },
+  "secureCoding": {
+    "title": "Secure Development Training Program",
+    "description1": "Secure Coding Academy for Development Teams",
+    "description2": "Our research shows that over 70% of application vulnerabilities stem from preventable coding errors. Our immersive training program transforms developer mindsets through hands-on labs, real-world scenarios, and continuous learning to build security expertise directly into your development DNA.",
+    "step1": {
+      "title": "Interactive Security Labs",
+      "desc": "Practical exercises using vulnerable applications, capture-the-flag challenges, and red team/blue team simulations to reinforce secure coding techniques in realistic environments."
+    },
+    "step2": {
+      "title": "OWASP Top 10 & Beyond",
+      "desc": "Comprehensive coverage of critical vulnerabilities (injection flaws, broken authentication, sensitive data exposure) plus emerging threats specific to your technology stack."
+    },
+    "step3": {
+      "title": "DevSecOps Implementation Workshop",
+      "desc": "Hands-on guidance for integrating security tools (SAST, DAST, SCA) into CI/CD pipelines, establishing security gates, and implementing shift-left security practices."
+    },
+    "step4": {
+      "title": "Role-Specific Learning Paths",
+      "desc": "Customized training tracks for different roles (frontend, backend, mobile developers) with language-specific secure coding patterns for Java, .NET, Python, JavaScript, and Go."
+    },
+    "step5": {
+      "title": "Certification & Continuous Learning",
+      "desc": "Final assessment leading to Certified Secure Developer credentials, complemented by ongoing security bulletins and micro-learning modules to maintain security awareness."
     }
   }
-  
+}

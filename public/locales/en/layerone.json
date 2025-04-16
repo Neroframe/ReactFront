@@ -1,55 +1,58 @@
 {
-    "layer1": {
-      "title": "Business Continuity and Disaster Recovery",
-      "auditSectionTitle": "Risk Audit and Assessment",
-      "auditSectionText": "We conduct analysis and assessment of potential threats...",
-      "risks": {
-        "title": "Risk Assessment",
-        "intro": "Risks can occur at any time:",
-        "point1": {
-          "title": "Physical Threats",
-          "text": "Fires, floods, etc."
-        },
-        "point2": {
-          "title": "Cyber Threats",
-          "text": "Malware, phishing, etc."
-        },
-        "point3": {
-          "title": "Human Errors",
-          "text": "Accidental data deletion, etc."
-        }
+  "layer1": {
+    "title": "Enterprise Business Continuity and Cyber Resilience Framework",
+    "auditSectionTitle": "Enterprise-Wide Risk Assessment and Gap Analysis",
+    "auditSectionText": "Our comprehensive risk audit methodology employs NIST SP 800-30 and ISO 27005 standards to systematically evaluate operational, technological, and environmental threats across your organizational ecosystem. Utilizing threat intelligence feeds and proprietary risk-scoring algorithms, we identify critical vulnerabilities in your infrastructure, processes, and supply chain, enabling data-driven prioritization of remediation efforts before disruptions escalate into business-impacting incidents.",
+    
+    "risks": {
+      "title": "Enterprise Risk Profiling and Threat Modeling",
+      "intro": "Through quantitative risk analysis using FAIR methodology and qualitative scenario-based assessments, we map your organization's threat landscape across three critical dimensions:",
+      "point1": {
+        "title": "Physical and Environmental Threats",
+        "text": "Our facility resilience assessment evaluates protection against natural disasters (earthquakes, floods), utility failures (power grid instability, HVAC system vulnerabilities), and physical security breaches (unauthorized access, equipment theft). We implement tiered safeguards including: UL-listed fire suppression systems, Tier III+ data center specifications, biometric access controls, and environmental monitoring with automated failover protocols to maintain uptime during disruptive events."
       },
-      "developmentStrategies": {
-        "title": "Development Strategies",
-        "intro": "The following approaches are used for effective protection:",
-        "point1": {
-          "title": "Data Backup",
-          "text": "Regular data copying"
-        },
-        "point2": {
-          "title": "Employee Training",
-          "text": "Awareness raising"
-        },
-        "point3": {
-          "title": "Action Plan",
-          "text": "Response procedures"
-        }
+      "point2": {
+        "title": "Cyber and Digital Threats",
+        "text": "Our threat intelligence team conducts penetration testing aligned with MITRE ATT&CK framework, assessing vulnerabilities to advanced persistent threats (APTs), ransomware campaigns (including double extortion variants), cloud misconfigurations, and IoT device exploits. Defense strategies incorporate: next-gen firewalls with deep packet inspection, endpoint detection and response (EDR) solutions, zero-trust network segmentation, and dark web monitoring for credential leakage, all supported by 24/7 SOC oversight."
       },
-      "recovery": {
-        "title": "Disaster Recovery",
-        "intro": "In case of an incident, quick response is crucial:",
-        "point1": {
-          "title": "Backup Systems",
-          "text": "Alternative infrastructure"
-        },
-        "point2": {
-          "title": "Monitoring",
-          "text": "Failure detection"
-        },
-        "point3": {
-          "title": "Incident Analysis",
-          "text": "Root cause identification and elimination"
-        }
+      "point3": {
+        "title": "Human and Operational Risks",
+        "text": "We deploy People Risk Analytics to quantify exposure from insider threats, privilege misuse, and process failures. Our controls framework combines: just-in-time access provisioning via PAM solutions, user behavior analytics (UBA) with machine learning anomaly detection, automated change management workflows with four-eyes approval, and mandatory security awareness training incorporating social engineering simulations and GDPR/HIPAA compliance modules."
+      }
+    },
+
+    "developmentStrategies": {
+      "title": "Business Continuity Program Development",
+      "intro": "Our resilience engineering approach transforms continuity planning from reactive documentation to proactive operational capability through three foundational pillars:",
+      "point1": {
+        "title": "Data Integrity and Availability Assurance",
+        "text": "We architect multi-tiered backup ecosystems combining: immutable cloud backups with versioning (3-2-1-1 rule), storage-area network (SAN) replication for critical databases, blockchain-verified audit trails for transaction integrity, and quarterly disaster recovery testing with failover/failback procedures validated against RPOs <15 minutes and RTOs <4 hours for Tier 1 systems."
+      },
+      "point2": {
+        "title": "Organizational Resilience Training",
+        "text": "Our cyber range platform delivers role-specific training modules for C-suite (tabletop exercises), IT staff (incident response drills), and frontline employees (phishing simulations). Programs incorporate NIST CSF alignment, real-world breach case studies, and competency assessments with certification paths for security champions across business units."
+      },
+      "point3": {
+        "title": "Incident Response Orchestration",
+        "text": "We implement SOAR (Security Orchestration, Automation and Response) platforms with pre-built playbooks for 143 incident types, integrating threat intelligence feeds (STIX/TAXII), automated containment workflows (network isolation, credential rotation), and crisis communication templates compliant with SEC, FINRA, and GDPR breach notification requirements."
+      }
+    },
+
+    "recovery": {
+      "title": "Disaster Recovery and Business Resumption Services",
+      "intro": "Our tiered recovery solutions ensure operational continuity through engineered resilience measures:",
+      "point1": {
+        "title": "High-Availability Infrastructure Design",
+        "text": "Fault-tolerant architectures featuring: multi-cloud deployment with Kubernetes cluster failover, software-defined networking (SDN) for traffic rerouting, hot-site recovery facilities with synchronized data mirrors, and geographically distributed CDN nodes ensuring <99.99% availability SLA for customer-facing systems."
+      },
+      "point2": {
+        "title": "Continuous Resilience Monitoring",
+        "text": "AI-powered operational intelligence platform correlating: infrastructure telemetry (SNMP traps, NetFlow), security alerts (SIEM events), and business process metrics (transaction volumes). Machine learning models detect degradation patterns 47% faster than threshold-based monitoring, triggering automated remediation or war room escalation."
+      },
+      "point3": {
+        "title": "Post-Incident Evolution Process",
+        "text": "Our blameless retrospective methodology combines: root cause analysis (Fishbone diagrams, 5 Whys), impact quantification (financial, reputational, regulatory), and control enhancement roadmaps. Findings are pressure-tested through purple team exercises and incorporated into updated business impact analyses (BIA) for continuous program improvement."
       }
     }
   }
+}
