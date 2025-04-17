@@ -1,7 +1,12 @@
 .articles {
-  max-width: 80%;
+  max-width: 100%;
   margin: auto;
   padding: 150px 30px;
+  background-image: url("../assets/6.jpg"); /* путь к картинке */
+  background-size: cover; /* масштабировать, чтобы покрыть весь блок */
+  background-position: center; /* центрировать изображение */
+  background-repeat: no-repeat; /* не повторять */
+  
 }
 
 .article-card {
