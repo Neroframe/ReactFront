@@ -7,21 +7,7 @@
     text-align: center;
   }
   
-  body::before {
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background-image: url("../assets/8.jpg"); /* путь к картинке */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    z-index: -1;
-    opacity: 1; /* увеличил прозрачность */
-    filter: blur(0px); /* убрал размытие, если оно было */
-}
+
 
   /* Заголовок страницы */
   .contact-header {
